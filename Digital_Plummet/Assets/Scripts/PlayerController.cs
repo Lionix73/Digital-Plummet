@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight;
 
     private float moveDirection;
+    private float moveMouseDirection;
 
 
     [Header("Ground Check")]
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 initialTouchPos;
     private bool isTouching;
 
+    //Touch Inputs Variables
+    private Vector2 initialMousePos;
+    private bool isHoldingClick;
+
     void Start (){
         rb = GetComponent<Rigidbody2D>();
 
@@ -33,7 +38,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
-        horizontal = Input.GetAxisRaw("Horizontal");
+        // horizontal = Input.GetAxisRaw("Horizontal");
 
         if(Input.GetButtonDown("Jump") && IsGrounded()){
             rb.AddForce(transform.up * jumpingPower, ForceMode2D.Impulse);
@@ -50,13 +55,13 @@ public class PlayerController : MonoBehaviour
         }
 
         Flip();
-        TouchInput();
+        MouseInput();
+        // TouchInput();
     }
 
     private void FixedUpdate(){
-        // rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
-
+        rb.velocity = new Vector2(moveMouseDirection * speed, rb.velocity.y);
+        // rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
     }
 
     private bool IsGrounded(){
@@ -72,7 +77,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void TouchInput(){
+    private void MouseInput(){
+        if(Input.GetMouseButtonDown(0)){
+            initialMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            isHoldingClick = true;
+        }
+
+        if(Input.GetMouseButton(0)){
+            Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 delta = currentTouchPos - initialTouchPos;
+
+            if(delta != Vector2.zero){
+                Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 4);
+                moveMouseDirection = clampedMagnitude.x;
+            }
+            else{
+                moveMouseDirection = 0f;
+            }
+        }
+
+        if(Input.GetMouseButtonUp(0)){
+            moveMouseDirection = 0f;
+            isHoldingClick = false;
+        }
+    }
+
+    private void TouchInput(){
 
         //For Knowing if there is at least one touch on Screen
         if(Input.touchCount > 0){
