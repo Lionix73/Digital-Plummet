@@ -5,20 +5,33 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float horizontal;
+
+    [Header("Movement Variables")]
+    
     [SerializeField] private float speed;
     [SerializeField] private float jumpingPower;
+    private float horizontal;
     private bool isFacingRight;
 
+    private float moveDirection;
+
+
+    [Header("Ground Check")]
     private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+
+    //Touch Inputs Variables
+    private Vector2 initialTouchPos;
+    private bool isTouching;
+
     void Start (){
         rb = GetComponent<Rigidbody2D>();
+
+        isTouching = false;
     }
 
-    // Update is called once per frame
     void Update(){
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -37,10 +50,13 @@ public class PlayerController : MonoBehaviour
         }
 
         Flip();
+        TouchInput();
     }
 
     private void FixedUpdate(){
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        // rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
+
     }
 
     private bool IsGrounded(){
@@ -53,6 +69,52 @@ public class PlayerController : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    void TouchInput(){
+
+        //For Knowing if there is at least one touch on Screen
+        if(Input.touchCount > 0){
+
+            //Gets the first touch
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase){
+                case TouchPhase.Began:
+                    initialTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                    isTouching = true;
+                    rb.gravityScale = 1f;
+                break;
+
+                case TouchPhase.Stationary:
+                    if (isTouching){
+
+                        //To Know the diff between initial pos and final pos
+                        Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                        Vector2 delta = currentTouchPos - initialTouchPos;
+
+                        if(delta != Vector2.zero){
+                            //Give the X of the difference to a float variable
+                            moveDirection = delta.normalized.x;
+                        }
+                        else{
+                            moveDirection = 0f;
+                        }
+                    }
+                break;
+                
+                case TouchPhase.Ended:
+                    isTouching = false;
+                    moveDirection = 0f;
+                    rb.gravityScale = -1f;
+                break;
+            }
+            //Switch End
+        }
+        else{
+            isTouching = false;
+            moveDirection = 0f;
         }
     }
 }
