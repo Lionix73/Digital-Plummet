@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,8 +29,11 @@ public class PlayerController : MonoBehaviour
     //Touch Inputs Variables
     private Vector2 initialTouchPos;
     private bool isTouching;
+    private Vector2 changeDir;
 
-    //Touch Inputs Variables
+    //Mouse Inputs Variables
+    [SerializeField] TextMeshProUGUI mouseStatus;
+    private bool activateMouse = false;
     private Vector2 initialMousePos;
     private bool isHoldingClick;
 
@@ -40,28 +46,46 @@ public class PlayerController : MonoBehaviour
     void Update(){
         // horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetButtonDown("Jump") && IsGrounded()){
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
             rb.AddForce(transform.up * jumpingPower, ForceMode2D.Impulse);
 
             Debug.Log("Eso Tilin");
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && rb.gravityScale != 1){
+        if (Input.GetKeyDown(KeyCode.LeftShift) && rb.gravityScale != 1)
+        {
             rb.gravityScale = 1f;
         }
 
-        if(Input.GetKeyUp(KeyCode.LeftShift)){
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
             rb.gravityScale = -1f;
         }
 
         Flip();
-        MouseInput();
-        // TouchInput();
+
+        if(Input.GetKeyDown(KeyCode.P)){
+            activateMouse = !activateMouse;
+        }
+
+        if (activateMouse)
+        {
+            MouseInput();
+            mouseStatus.text = "Mouse ON";
+            mouseStatus.color = Color.green;
+        }
+        else
+        {
+            TouchInput();
+            mouseStatus.text = "Mouse OFF";
+            mouseStatus.color = Color.red;
+        }
     }
 
     private void FixedUpdate(){
         rb.velocity = new Vector2(moveMouseDirection * speed, rb.velocity.y);
-        // rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
     }
 
     private bool IsGrounded(){
@@ -105,7 +129,7 @@ public class PlayerController : MonoBehaviour
     private void TouchInput(){
 
         //For Knowing if there is at least one touch on Screen
-        if(Input.touchCount > 0){
+        if (Input.touchCount > 0){
 
             //Gets the first touch
             Touch touch = Input.GetTouch(0);
@@ -115,22 +139,22 @@ public class PlayerController : MonoBehaviour
                     initialTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
                     isTouching = true;
                     rb.gravityScale = 1f;
+
                 break;
 
-                case TouchPhase.Stationary:
-                    if (isTouching){
+                case TouchPhase.Moved:
+                    //To Know the diff between initial pos and final pos
+                    Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                    Vector2 delta = currentTouchPos - initialTouchPos;
 
-                        //To Know the diff between initial pos and final pos
-                        Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
-                        Vector2 delta = currentTouchPos - initialTouchPos;
+                    if (delta != Vector2.zero)
+                    {
+                        //Give the X of the difference to a float variable
+                        Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 2);
+                        moveDirection = clampedMagnitude.x;
 
-                        if(delta != Vector2.zero){
-                            //Give the X of the difference to a float variable
-                            moveDirection = delta.normalized.x;
-                        }
-                        else{
-                            moveDirection = 0f;
-                        }
+                        changeDir = new Vector2(moveDirection, 0f);
+                        Debug.Log(changeDir.x);
                     }
                 break;
                 
