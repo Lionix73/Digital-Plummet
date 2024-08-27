@@ -26,14 +26,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
 
+    //Life Variables
+    private int life;
+
+
     //Touch Inputs Variables
     private Vector2 initialTouchPos;
     private bool isTouching;
     private Vector2 changeDir;
 
+
     //Mouse Inputs Variables
     [SerializeField] TextMeshProUGUI mouseStatus;
-    private bool activateMouse = false;
+    private bool activateMouse;
     private Vector2 initialMousePos;
     private bool isHoldingClick;
 
@@ -41,6 +46,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         isTouching = false;
+
+        activateMouse = false;
+
+        life = 1;
     }
 
     void Update(){
@@ -51,16 +60,6 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(transform.up * jumpingPower, ForceMode2D.Impulse);
 
             Debug.Log("Eso Tilin");
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && rb.gravityScale != 1)
-        {
-            rb.gravityScale = 1f;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            rb.gravityScale = -1f;
         }
 
         Flip();
@@ -84,8 +83,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        rb.velocity = new Vector2(moveMouseDirection * speed, rb.velocity.y);
-        rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
+        if (activateMouse){
+            rb.velocity = new Vector2(moveMouseDirection * speed, rb.velocity.y);
+        }
+        else{
+            rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
+        }
     }
 
     private bool IsGrounded(){
@@ -105,24 +108,24 @@ public class PlayerController : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
             initialMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             isHoldingClick = true;
+            rb.gravityScale = 1f;
         }
 
         if(Input.GetMouseButton(0)){
             Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 delta = currentTouchPos - initialTouchPos;
-
             if(delta != Vector2.zero){
-                Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 4);
+                Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 2);
                 moveMouseDirection = clampedMagnitude.x;
-            }
-            else{
-                moveMouseDirection = 0f;
+
+                Debug.Log(delta.x);
             }
         }
 
         if(Input.GetMouseButtonUp(0)){
             moveMouseDirection = 0f;
             isHoldingClick = false;
+            rb.gravityScale = -1f;
         }
     }
 
@@ -170,5 +173,12 @@ public class PlayerController : MonoBehaviour
             isTouching = false;
             moveDirection = 0f;
         }
+    }
+
+    public void TakeDmg(){
+        life -= 1;
+
+        Debug.Log("Busted");
+        Destroy(gameObject);
     }
 }
