@@ -3793,6 +3793,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:scripting/monoscript/fileName/DOTweenModuleSprite.cs: e35fb5eb1c483cffc283a374a5e25466 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:scripting/monoscript/fileName/DOTweenModulePhysics.cs: 87f8974001cd2397421cfdcad1904e83 -> 
+<<<<<<< Updated upstream
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/precompiled-assembly-types:Assembly-CSharp: d14d7f26a9c1625bd9dc659ed945aa84 -> 689ac4cfa059403eb80ec06ed201e2d6
@@ -4150,5 +4151,190 @@ AssetImportParameters requested are different than current active one (requested
   custom:scripting/monoscript/fileName/DOTweenModuleSprite.cs: e35fb5eb1c483cffc283a374a5e25466 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:scripting/monoscript/fileName/DOTweenModulePhysics.cs: 87f8974001cd2397421cfdcad1904e83 -> 
+=======
+>>>>>>> Stashed changes
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d14d7f26a9c1625bd9dc659ed945aa84 -> 689ac4cfa059403eb80ec06ed201e2d6
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.565 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.201 seconds
+Domain Reload Profiling: 1766ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (263ms)
+		LoadAssemblies (367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1202ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (610ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (435ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 8.24 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4817 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (112.1 KB). Loaded Objects now: 5946.
+Memory consumption went from 161.0 MB to 160.9 MB.
+Total: 5.670300 ms (FindLiveObjects: 1.190300 ms CreateObjectMapping: 0.465900 ms MarkObjects: 3.934700 ms  DeleteObjects: 0.075600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/Characters.cs: ddcf40b21c7c9ec821f4c63ed208d142 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUtils.cs: 34ad347c902a97803d1c13fe65e97957 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUnityVersion.cs: 5fda8b30fb2f0276062c9b201e3b53c4 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUI.cs: 53c26b618f695b59a868eebdc97332ad -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass: c3b8ba213efe735b4b5ada0ee074dcb3 -> 
+  custom:scripting/monoscript/fileName/PlayerStart.cs: 25fd734e412503e4ada9269718ff221c -> 
+  custom:scripting/precompiled-assembly-types:DOTween: 41770a3e10244ae0a34e714162bbdba6 -> 
+  custom:scripting/monoscript/fileName/CharacterManager.cs: a63a5fb4c9de31e6dfb3a2991b647dc6 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/UIManager.cs: 2595dc2cbd41cc2d023a3ebb28d87e9e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/SelectionCharacterMenu.cs: c55c09859430fddfa9791e7c80f3bf79 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/Character_Manager.cs: 94a1077d567c7a90523cb28447475aa6 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleAudio.cs: 371877257ce39f5f0996ea556debbc8a -> 
+  custom:scripting/monoscript/fileName/DOTweenModulePhysics2D.cs: 63b0e5981d81d026672954b54596f5ae -> 
+  custom:scripting/precompiled-assembly-types:DOTweenEditor: 1efdf497b099e4e6944f0dd7fb28c744 -> 
+  custom:scripting/monoscript/fileName/Character_Selection.cs: ddcf40b21c7c9ec821f4c63ed208d142 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleSprite.cs: e35fb5eb1c483cffc283a374a5e25466 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/DOTweenModulePhysics.cs: 87f8974001cd2397421cfdcad1904e83 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d14d7f26a9c1625bd9dc659ed945aa84 -> 689ac4cfa059403eb80ec06ed201e2d6
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.680 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.390 seconds
+Domain Reload Profiling: 2069ms
+	BeginReloadAssembly (308ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (286ms)
+		LoadAssemblies (386ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1391ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (741ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (536ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 5.96 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4817 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (112.1 KB). Loaded Objects now: 5962.
+Memory consumption went from 161.0 MB to 160.9 MB.
+Total: 4.706000 ms (FindLiveObjects: 0.635700 ms CreateObjectMapping: 0.438900 ms MarkObjects: 3.561000 ms  DeleteObjects: 0.068800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/Characters.cs: ddcf40b21c7c9ec821f4c63ed208d142 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUtils.cs: 34ad347c902a97803d1c13fe65e97957 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUnityVersion.cs: 5fda8b30fb2f0276062c9b201e3b53c4 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleUI.cs: 53c26b618f695b59a868eebdc97332ad -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass: c3b8ba213efe735b4b5ada0ee074dcb3 -> 
+  custom:scripting/monoscript/fileName/PlayerStart.cs: 25fd734e412503e4ada9269718ff221c -> 
+  custom:scripting/precompiled-assembly-types:DOTween: 41770a3e10244ae0a34e714162bbdba6 -> 
+  custom:scripting/monoscript/fileName/CharacterManager.cs: a63a5fb4c9de31e6dfb3a2991b647dc6 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/UIManager.cs: 2595dc2cbd41cc2d023a3ebb28d87e9e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/SelectionCharacterMenu.cs: c55c09859430fddfa9791e7c80f3bf79 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/Character_Manager.cs: 94a1077d567c7a90523cb28447475aa6 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleAudio.cs: 371877257ce39f5f0996ea556debbc8a -> 
+  custom:scripting/monoscript/fileName/DOTweenModulePhysics2D.cs: 63b0e5981d81d026672954b54596f5ae -> 
+  custom:scripting/precompiled-assembly-types:DOTweenEditor: 1efdf497b099e4e6944f0dd7fb28c744 -> 
+  custom:scripting/monoscript/fileName/Character_Selection.cs: ddcf40b21c7c9ec821f4c63ed208d142 -> 
+  custom:scripting/monoscript/fileName/DOTweenModuleSprite.cs: e35fb5eb1c483cffc283a374a5e25466 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/DOTweenModulePhysics.cs: 87f8974001cd2397421cfdcad1904e83 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d14d7f26a9c1625bd9dc659ed945aa84 -> 689ac4cfa059403eb80ec06ed201e2d6
