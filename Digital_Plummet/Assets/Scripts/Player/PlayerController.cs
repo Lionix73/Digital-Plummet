@@ -11,13 +11,22 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement Variables")]
     
+    [Tooltip("Speed multiplier for velocity gain. How fast can the player go.")]
     [SerializeField] private float speed;
+
+    [Tooltip("Is literally to jump with 'Spacebar'. I don't know why it's here")]
     [SerializeField] private float jumpingPower;
+    
+    [Tooltip("Limits the X maximums values for the velocity in change direction. It affects mostly horizontal control.")]
+    [SerializeField] private float maxChangeDirVel;
+    
     private float horizontal;
     private bool isFacingRight;
 
     private float moveDirection;
     private float moveMouseDirection;
+
+    private Vector2 gravityChangeForce;
 
 
     [Header("Ground Check")]
@@ -33,10 +42,10 @@ public class PlayerController : MonoBehaviour
     //Touch Inputs Variables
     private Vector2 initialTouchPos;
     private bool isTouching;
-    private Vector2 changeDir;
 
 
     //Mouse Inputs Variables
+    [Tooltip("The Text to know if the mouse is an active Input.")]
     [SerializeField] TextMeshProUGUI mouseStatus;
     private bool activateMouse;
     private Vector2 initialMousePos;
@@ -58,8 +67,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.AddForce(transform.up * jumpingPower, ForceMode2D.Impulse);
-
-            Debug.Log("Eso Tilin");
         }
 
         Flip();
@@ -85,6 +92,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate(){
         if (activateMouse){
             rb.velocity = new Vector2(moveMouseDirection * speed, rb.velocity.y);
+            Debug.Log("Velocity: " + rb.velocity);
         }
         else{
             rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
@@ -109,16 +117,19 @@ public class PlayerController : MonoBehaviour
             initialMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             isHoldingClick = true;
             rb.gravityScale = 1f;
+
+            gravityChangeForce.x = rb.velocity.x;
+            gravityChangeForce.y = rb.velocity.y * 0.7f;
+            rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
         }
 
         if(Input.GetMouseButton(0)){
             Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 delta = currentTouchPos - initialTouchPos;
-            if(delta != Vector2.zero){
-                Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 2);
-                moveMouseDirection = clampedMagnitude.x;
+            float delta = currentTouchPos.x - initialTouchPos.x;
+            if(delta != 0){
+                moveMouseDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
 
-                Debug.Log(delta.x);
+                Debug.DrawLine(initialMousePos, new Vector3(delta, transform.position.y, 0f), Color.red);
             }
         }
 
@@ -126,6 +137,10 @@ public class PlayerController : MonoBehaviour
             moveMouseDirection = 0f;
             isHoldingClick = false;
             rb.gravityScale = -1f;
+
+            gravityChangeForce.x = rb.velocity.x;
+            gravityChangeForce.y = rb.velocity.y * 0.7f;
+            rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
         }
     }
 
@@ -143,6 +158,10 @@ public class PlayerController : MonoBehaviour
                     isTouching = true;
                     rb.gravityScale = 1f;
 
+                    gravityChangeForce.x = rb.velocity.x;
+                    gravityChangeForce.y = rb.velocity.y * 0.7f;
+                    rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
+
                 break;
 
                 case TouchPhase.Moved:
@@ -155,9 +174,6 @@ public class PlayerController : MonoBehaviour
                         //Give the X of the difference to a float variable
                         Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 2);
                         moveDirection = clampedMagnitude.x;
-
-                        changeDir = new Vector2(moveDirection, 0f);
-                        Debug.Log(changeDir.x);
                     }
                 break;
                 
@@ -165,6 +181,10 @@ public class PlayerController : MonoBehaviour
                     isTouching = false;
                     moveDirection = 0f;
                     rb.gravityScale = -1f;
+
+                    gravityChangeForce.x = rb.velocity.x;
+                    gravityChangeForce.y = rb.velocity.y * 0.7f;
+                    rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
                 break;
             }
             //Switch End
