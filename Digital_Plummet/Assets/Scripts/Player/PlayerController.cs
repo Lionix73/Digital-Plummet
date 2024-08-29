@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
     private void MouseInput(){
         if(Input.GetMouseButtonDown(0)){
-            initialMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            initialMousePos = Camera.main.ViewportToScreenPoint(Input.mousePosition);
             isHoldingClick = true;
             rb.gravityScale = 1f;
 
@@ -124,8 +124,8 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetMouseButton(0)){
-            Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float delta = currentTouchPos.x - initialTouchPos.x;
+            Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(Input.mousePosition);
+            float delta = currentTouchPos.x - initialMousePos.x;
             if(delta != 0){
                 moveMouseDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
 
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
 
             switch (touch.phase){
                 case TouchPhase.Began:
-                    initialTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                    initialTouchPos = Camera.main.ViewportToScreenPoint(touch.position);
                     isTouching = true;
                     rb.gravityScale = 1f;
 
@@ -166,16 +166,15 @@ public class PlayerController : MonoBehaviour
 
                 case TouchPhase.Moved:
                     //To Know the diff between initial pos and final pos
-                    Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
-                    Vector2 delta = currentTouchPos - initialTouchPos;
-
-                    if (delta != Vector2.zero)
+                    Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(touch.position);
+                    float delta = currentTouchPos.x - initialTouchPos.x;
+                    if (delta != 0)
                     {
-                        //Give the X of the difference to a float variable
-                        Vector2 clampedMagnitude = Vector2.ClampMagnitude(delta, 2);
-                        moveDirection = clampedMagnitude.x;
+                        moveDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
+
+                        Debug.DrawLine(initialTouchPos, currentTouchPos, Color.red);
                     }
-                break;
+                    break;
                 
                 case TouchPhase.Ended:
                     isTouching = false;
