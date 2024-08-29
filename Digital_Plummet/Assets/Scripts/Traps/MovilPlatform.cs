@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementSaw : MonoBehaviour
+public class MovilPlatform : MonoBehaviour
 {
-    [SerializeField] float sawSpeed;
+    [SerializeField] float platSpeed;
 
     //[SerializeField] float offSet; not using right now...
     private float timeChange;
@@ -21,7 +21,7 @@ public class MovementSaw : MonoBehaviour
         transform.position=movementPoints[startingPoint].position;
         moveObjective=startingPoint+1;
         timeChange=timeChangeMax;
-        sawSpeed=(movementPoints[moveObjective].position-transform.position).magnitude/timeChange;
+        platSpeed=(movementPoints[moveObjective].position-transform.position).magnitude/timeChange;
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class MovementSaw : MonoBehaviour
             moveObjective=0;
         }
         direction=Vector3.Normalize(movementPoints[moveObjective].position-transform.position);
-        transform.Translate(direction*sawSpeed*Time.deltaTime);
+        transform.Translate(direction*platSpeed*Time.deltaTime);
         
     }
 

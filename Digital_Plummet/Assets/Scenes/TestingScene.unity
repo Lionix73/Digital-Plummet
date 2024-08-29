@@ -3959,6 +3959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProtoBean
       objectReference: {fileID: 0}
+    - target: {fileID: 6439689270018520535, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
