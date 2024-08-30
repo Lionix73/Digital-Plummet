@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 initialMousePos;
     private bool isHoldingClick;
 
+    //Effect of traps on player variables
+    private bool onEMPEffect;
+
     void Start (){
         rb = GetComponent<Rigidbody2D>();
 
@@ -59,6 +62,8 @@ public class PlayerController : MonoBehaviour
         activateMouse = false;
 
         life = 1;
+
+        onEMPEffect=false;
     }
 
     void Update(){
@@ -75,17 +80,19 @@ public class PlayerController : MonoBehaviour
             activateMouse = !activateMouse;
         }
 
-        if (activateMouse)
-        {
-            MouseInput();
-            mouseStatus.text = "Mouse ON";
-            mouseStatus.color = Color.green;
-        }
-        else
-        {
-            TouchInput();
-            mouseStatus.text = "Mouse OFF";
-            mouseStatus.color = Color.red;
+        if (!onEMPEffect){
+            if (activateMouse)
+            {
+                MouseInput();
+                mouseStatus.text = "Mouse ON";
+                mouseStatus.color = Color.green;
+            }
+            else
+            {
+                TouchInput();
+                mouseStatus.text = "Mouse OFF";
+                mouseStatus.color = Color.red;
+            }
         }
     }
 
@@ -199,5 +206,15 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Busted");
         Destroy(gameObject);
+    }
+
+    public void EMPHit(float duration){
+        StartCoroutine(nameof(EMPActivate), duration);
+    }
+
+    private IEnumerator EMPActivate(float duration){
+        onEMPEffect=true;
+        yield return new WaitForSeconds(duration);
+        onEMPEffect=false;
     }
 }

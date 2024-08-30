@@ -101,6 +101,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   shockImg: {fileID: 8127941644947158665}
   shockCD: 3
+  shockWaveDuration: 0.4
 --- !u!1 &8828948238864314588
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,3 +235,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229af09fa0b98074398eaf1576447a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectDuration: 1.2

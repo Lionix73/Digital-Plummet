@@ -7,6 +7,7 @@ public class EMP : MonoBehaviour
     [SerializeField] private Collider2D collider;
     [SerializeField] private SpriteRenderer shockImg;
     [SerializeField] float shockCD;
+    [SerializeField] private float shockWaveDuration;
     float shockTime;
 
     private void Start() {
@@ -28,7 +29,7 @@ public class EMP : MonoBehaviour
     private IEnumerator ShockWave(){
         collider.enabled=true;
         shockImg.enabled=true;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(shockWaveDuration);
         collider.enabled=false;
         shockImg.enabled=false;
     }
