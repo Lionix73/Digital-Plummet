@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
 using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -42,5 +43,16 @@ public class UIManager : MonoBehaviour
         rectTransform.DOAnchorPos(new Vector2(canvasWidth, 0f), fadeTime, false).SetEase(Ease.InOutQuint);
         canvasGroup.DOFade(1, fadeTime);
         
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
+
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
