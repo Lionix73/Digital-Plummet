@@ -10,6 +10,7 @@ public class LaserBarrier : MonoBehaviour
     [SerializeField] List<Transform> barrierPos;
     [SerializeField] LaserBar laserPrefab;
     [SerializeField] Vector3 barrierDistance;
+    [SerializeField] Vector3 scaleOfBars;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class LaserBarrier : MonoBehaviour
     private IEnumerator ActivateBarriers(){
         for (int i = 0; i<barrierPos.Count; i++){
             LaserBar laserBar=Instantiate(laserPrefab, barrierPos[i].position,Quaternion.identity);
+            laserBar.transform.localScale = scaleOfBars;
             yield return new WaitForSeconds(timeBetweenBarriers);
         }
     }

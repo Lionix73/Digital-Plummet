@@ -7,7 +7,7 @@ public class DetectionSaw : MonoBehaviour
     [SerializeField] Collider2D areaDetection;
     [SerializeField] Transform saw;
     [SerializeField] float sawSpeed;
-    [SerializeField] Vector3 objective;
+    private Vector3 objective;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +25,14 @@ public class DetectionSaw : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag=="Player"){
-            Debug.Log("Entro");
+            //Debug.Log("Entro");
             objective = other.gameObject.transform.position;
         }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.tag=="Player"){
-            Debug.Log("Entro");
+            //Debug.Log("Entro");
             objective = other.gameObject.transform.position;
         }
     }

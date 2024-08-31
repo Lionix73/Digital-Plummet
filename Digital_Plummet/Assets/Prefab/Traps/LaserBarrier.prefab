@@ -88,7 +88,7 @@ Transform:
   m_GameObject: {fileID: 8196641592892699288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.87, y: 4.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -118,6 +118,7 @@ MonoBehaviour:
   - {fileID: 3221567078589321001}
   laserPrefab: {fileID: 8670542774083825446, guid: c8f32250ef9c49b4db4b2555e1734012, type: 3}
   barrierDistance: {x: 0, y: 2, z: 0}
+  scaleOfBars: {x: 8, y: 1, z: 1}
 --- !u!1 &8667511761889478115
 GameObject:
   m_ObjectHideFlags: 0
