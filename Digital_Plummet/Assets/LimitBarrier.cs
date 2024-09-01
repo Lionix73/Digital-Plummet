@@ -17,8 +17,14 @@ public class LimitBarrier : MonoBehaviour
     }
 
     private void Update() {
-
-        distanceFromPlayer = player.position - dmgLimit.position;
-        transform.Translate(distanceFromPlayer*speed*Time.deltaTime);
+        if(player != null){
+            distanceFromPlayer = player.position - dmgLimit.position;
+            if(distanceFromPlayer.magnitude>10){
+            transform.Translate(distanceFromPlayer*speed*Time.deltaTime);
+            }
+            else {
+                transform.Translate(Vector3.down*speed*Time.deltaTime);
+            }
+        }
     }
 }
