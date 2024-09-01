@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e34c9ce8e1907404da96098e0ea39ecb, type: 3}
   m_Color: {r: 0.98689425, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -193,11 +193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfddad8506569042bd85d3cdb0faa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  moveSpeed: 10
+  maxSpeed: 20
   jumpingPower: 16
-  maxChangeDirVel: 3
+  maxChangeDirVel: 14
+  airMultiplier: 13
+  counterGravForce: 0.4
   groundCheck: {fileID: 3533479071485126195}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
-  mouseStatus: {fileID: 0}
+  touchMinTolerance: 0.1
