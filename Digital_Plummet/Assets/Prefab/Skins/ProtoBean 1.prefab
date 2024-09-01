@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 512195595612525340}
   m_Layer: 0
   m_Name: ProtoBean 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e34c9ce8e1907404da96098e0ea39ecb, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.56861687, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ff3ee74f32475f14da5b74b3a3ee974a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f553c7a5ae30c4a83a9c6feb1611f0, type: 3}
   m_Name: Character2
   m_EditorClassIdentifier: 
-  playableCharacter: {fileID: 6439689270018520535, guid: 343c1393109feab4eb750837154a14e0, type: 3}
-  image: {fileID: -2413806693520163455, guid: f15383ebbe76d2740a4eb386355b2f00, type: 3}
-  name: Circulo
+  playableCharacter: {fileID: 6439689270018520535, guid: cb00f97c4c0d2ba42bdf009578aaea0e, type: 3}
+  image: {fileID: 21300000, guid: 5a4668fb2a0df6f41a61ba1c0083d06e, type: 3}
+  name: Purple

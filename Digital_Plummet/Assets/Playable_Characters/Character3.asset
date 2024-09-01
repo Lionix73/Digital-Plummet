@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Character3
   m_EditorClassIdentifier: 
   playableCharacter: {fileID: 6439689270018520535, guid: e75e7a220f0ec1247bb94e846ac2824b, type: 3}
-  image: {fileID: -5177388603050735206, guid: c7531da1b0a961d4fadbc44614846df5, type: 3}
-  name: Cuadro
+  image: {fileID: 21300000, guid: aabd1299bdec2c441aa98fe45f162a54, type: 3}
+  name: Green

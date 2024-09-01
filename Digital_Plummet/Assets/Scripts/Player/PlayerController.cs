@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     //Mouse Inputs Variables
     [Tooltip("The Text to know if the mouse is an active Input.")]
     [SerializeField] TextMeshProUGUI mouseStatus;
+    private GameObject mouseStatusObject;
     private bool activateMouse;
     private Vector2 initialMousePos;
     private bool isHoldingClick;
@@ -56,6 +57,9 @@ public class PlayerController : MonoBehaviour
 
     void Start (){
         rb = GetComponent<Rigidbody2D>();
+
+        mouseStatusObject = GameObject.Find("MouseStatus");
+        mouseStatus = mouseStatusObject.GetComponent<TextMeshProUGUI>();
 
         isTouching = false;
 
