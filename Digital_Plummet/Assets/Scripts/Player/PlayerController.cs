@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     [Header("Touch Inputs Variables")]
 
     [Tooltip("Tolerance number for the minimun 'delta' required between touch points to move the character")]
-    [Range (1f, 200f)] [SerializeField] private float touchMinTolerance;
+    [Range (10000f, 35000f)] [SerializeField] private float touchMinTolerance;
 
     private Vector2 initialTouchPos;
     private bool isTouching;

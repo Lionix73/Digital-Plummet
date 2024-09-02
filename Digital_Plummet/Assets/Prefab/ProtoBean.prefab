@@ -196,8 +196,8 @@ MonoBehaviour:
   moveSpeed: 7
   maxSpeed: 18
   jumpingPower: 16
-  maxChangeDirVel: 13
-  airMultiplier: 12
+  maxChangeDirVel: 22
+  airMultiplier: 16
   gravMultiplier: 2
   counterGravForce: 0.6
   decelerationVel: 0.3
@@ -205,4 +205,4 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
-  touchMinTolerance: 100
+  touchMinTolerance: 25000
