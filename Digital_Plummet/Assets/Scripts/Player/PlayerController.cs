@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -28,11 +29,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Multiplier for air Control, Bigger = Easier to move.")]
     [Min(0.01f)] [SerializeField] private float airMultiplier;
 
+    [Tooltip("Multiplies gravity force for extra down acceleration")]
+    [Min (0f)] [SerializeField] private float gravMultiplier;
+
     [Tooltip("The counter vector for gravity change, helps to stop.")]
     [Range(0.1f, 1f)] [SerializeField] private float counterGravForce;
 
     [Tooltip("Deceleration velocity to stop in the X axis.")]
-    [Range(0.01f, 0.1f)][SerializeField] private float decelerationVel;
+    [Range(0.01f, 1f)][SerializeField] private float decelerationVel;
 
     private float horizontal;
     private bool isFacingRight;
@@ -61,7 +65,7 @@ public class PlayerController : MonoBehaviour
     [Header("Touch Inputs Variables")]
 
     [Tooltip("Tolerance number for the minimun 'delta' required between touch points to move the character")]
-    [Range (0.01f, 0.5f)] [SerializeField] private float touchMinTolerance;
+    [Range (1f, 200f)] [SerializeField] private float touchMinTolerance;
 
     private Vector2 initialTouchPos;
     private bool isTouching;
@@ -129,10 +133,13 @@ public class PlayerController : MonoBehaviour
         if (activateMouse){
             rb.AddForce(new Vector2(moveMouseDirection, 0f) * moveSpeed * Time.deltaTime * airMultiplier, ForceMode2D.Force);
             Debug.Log("Velocity: " + rb.velocity);
+
+            GravityMultiplier();
         }
         else{
             rb.AddForce(new Vector2(moveDirection, 0f) * moveSpeed * Time.deltaTime * airMultiplier, ForceMode2D.Force);
 
+            GravityMultiplier();
         }
     }
 
@@ -143,6 +150,10 @@ public class PlayerController : MonoBehaviour
             Vector2 limitedVel = flatVel.normalized * maxSpeed;
             rb.velocity = new Vector2(limitedVel.x, limitedVel.y);
         }
+    }
+
+    private void GravityMultiplier(){
+        rb.AddForce(Vector2.down * gravMultiplier, ForceMode2D.Force);
     }
 
     private IEnumerator Deceleration(){
@@ -273,6 +284,8 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Busted");
         Destroy(gameObject);
+
+        SceneManager.LoadScene("Level_1");
     }
 
     public void EMPHit(float duration){
