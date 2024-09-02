@@ -7,13 +7,14 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
 
     [Header("Movement Variables")]
     
     [Tooltip("Speed multiplier for velocity gain. How fast can the player go.")]
-    [SerializeField] private float moveSpeed;
+    [Min(1f)] [SerializeField] private float moveSpeed;
 
     [Tooltip("It limits general speed incluidng Y and X axis.")]
     [SerializeField] private float maxSpeed;
@@ -25,10 +26,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxChangeDirVel;
 
     [Tooltip("Multiplier for air Control, Bigger = Easier to move.")]
-    [SerializeField] private float airMultiplier;
+    [Min(0.01f)] [SerializeField] private float airMultiplier;
 
     [Tooltip("The counter vector for gravity change, helps to stop.")]
     [Range(0.1f, 1f)] [SerializeField] private float counterGravForce;
+
+    [Tooltip("Deceleration velocity to stop in the X axis.")]
+    [Range(0.01f, 0.1f)][SerializeField] private float decelerationVel;
 
     private float horizontal;
     private bool isFacingRight;
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
     private float moveDirection;
     private float moveMouseDirection;
     private Vector2 flatVel;
+    private Vector2 lastVel;
 
     private Vector2 gravityChangeForce;
 
@@ -172,10 +177,15 @@ public class PlayerController : MonoBehaviour
 
                 Debug.DrawLine(initialMousePos, new Vector3(delta, transform.position.y, 0f), Color.red);
             }
+            
+            lastVel = rb.velocity;
         }
 
         if(Input.GetMouseButtonUp(0)){
+            StartCoroutine(nameof(Deceleration));
+
             moveMouseDirection = 0f;
+            rb.velocity = new Vector2(0f, rb.velocity.y);
 
             isHoldingClick = false;
             rb.gravityScale = -1f;
@@ -183,6 +193,22 @@ public class PlayerController : MonoBehaviour
             gravityChangeForce.x = rb.velocity.x;
             gravityChangeForce.y = rb.velocity.y * counterGravForce;
             rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
+        }
+    }
+
+    private IEnumerator Deceleration(){
+        while(Mathf.Abs(lastVel.x) > 0.1f){
+
+            if(lastVel.x < 0f){
+                rb.velocity = new Vector2(lastVel.x + decelerationVel, rb.velocity.y);
+            }
+            else{
+                rb.velocity = new Vector2(lastVel.x - decelerationVel, rb.velocity.y);
+            }
+
+            lastVel = rb.velocity;
+
+            yield return null;
         }
     }
 

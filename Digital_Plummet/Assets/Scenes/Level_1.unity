@@ -4206,7 +4206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1154053547
 Transform:
   m_ObjectHideFlags: 0
@@ -10107,6 +10107,10 @@ PrefabInstance:
       propertyPath: mouseStatus
       value: 
       objectReference: {fileID: 1301210402}
+    - target: {fileID: 512195595612525340, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
+      propertyPath: decelerationDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1559654641102252367, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_Sprite
       value: 

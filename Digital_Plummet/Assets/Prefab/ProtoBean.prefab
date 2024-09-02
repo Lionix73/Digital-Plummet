@@ -199,6 +199,7 @@ MonoBehaviour:
   maxChangeDirVel: 14
   airMultiplier: 13
   counterGravForce: 0.4
+  decelerationVel: 0.1
   groundCheck: {fileID: 3533479071485126195}
   groundLayer:
     serializedVersion: 2
