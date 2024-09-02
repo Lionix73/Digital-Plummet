@@ -283,7 +283,7 @@ public class PlayerController : MonoBehaviour
         life -= 1;
 
         Debug.Log("Busted");
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
         SceneManager.LoadScene("Level_1");
     }
