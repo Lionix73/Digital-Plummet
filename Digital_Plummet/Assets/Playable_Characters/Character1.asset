@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f553c7a5ae30c4a83a9c6feb1611f0, type: 3}
   m_Name: Character1
   m_EditorClassIdentifier: 
-  playableCharacter: {fileID: 6439689270018520535, guid: 343c1393109feab4eb750837154a14e0, type: 3}
+  playableCharacter: {fileID: 3899860261647287549, guid: 5a6acfaebca4706488a9573040ec27f7, type: 3}
   image: {fileID: 21300000, guid: ff3ee74f32475f14da5b74b3a3ee974a, type: 3}
   name: Blue

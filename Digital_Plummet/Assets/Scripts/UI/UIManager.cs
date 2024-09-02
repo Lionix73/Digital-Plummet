@@ -29,11 +29,12 @@ public class UIManager : MonoBehaviour
 
     public void PanelFadeIn()
     {
-        menu.SetActive(true);
-        canvasGroup.alpha = 0f;
-        rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
-        rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime,false).SetEase(Ease.OutElastic);
-        canvasGroup.DOFade(1, fadeTime);
+            Debug.Log("Abrir Menu");
+            menu.SetActive(true);
+            canvasGroup.alpha = 0f;
+            rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
+            rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic);
+            canvasGroup.DOFade(1, fadeTime);
     }
 
     public void PanelFadeOut()

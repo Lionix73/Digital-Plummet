@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f553c7a5ae30c4a83a9c6feb1611f0, type: 3}
   m_Name: Character3
   m_EditorClassIdentifier: 
-  playableCharacter: {fileID: 6439689270018520535, guid: e75e7a220f0ec1247bb94e846ac2824b, type: 3}
+  playableCharacter: {fileID: 2030545882791941183, guid: 4efb3cac1c9412648be578aa4cf88759, type: 3}
   image: {fileID: 21300000, guid: aabd1299bdec2c441aa98fe45f162a54, type: 3}
   name: Green
