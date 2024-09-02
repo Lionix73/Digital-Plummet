@@ -145,6 +145,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private IEnumerator Deceleration(){
+        while(Mathf.Abs(lastVel.x) > 0.1f){
+
+            if(lastVel.x < 0f){
+                rb.velocity = new Vector2(lastVel.x + decelerationVel, rb.velocity.y);
+            }
+            else{
+                rb.velocity = new Vector2(lastVel.x - decelerationVel, rb.velocity.y);
+            }
+
+            lastVel = rb.velocity;
+
+            yield return null;
+        }
+    }
+
     private bool IsGrounded(){
         return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }
@@ -196,22 +212,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator Deceleration(){
-        while(Mathf.Abs(lastVel.x) > 0.1f){
-
-            if(lastVel.x < 0f){
-                rb.velocity = new Vector2(lastVel.x + decelerationVel, rb.velocity.y);
-            }
-            else{
-                rb.velocity = new Vector2(lastVel.x - decelerationVel, rb.velocity.y);
-            }
-
-            lastVel = rb.velocity;
-
-            yield return null;
-        }
-    }
-
     private void TouchInput(){
 
         //For Knowing if there is at least one touch on Screen
@@ -242,11 +242,17 @@ public class PlayerController : MonoBehaviour
 
                         Debug.DrawLine(initialTouchPos, currentTouchPos, Color.red);
                     }
+
+                    lastVel = rb.velocity;
                     break;
                 
                 case TouchPhase.Ended:
-                    isTouching = false;
+                    StartCoroutine(nameof(Deceleration));
+
                     moveDirection = 0f;
+                    rb.velocity = new Vector2(0f, rb.velocity.y);
+
+                    isTouching = false;
                     rb.gravityScale = -1f;
 
                     gravityChangeForce.x = rb.velocity.x;
