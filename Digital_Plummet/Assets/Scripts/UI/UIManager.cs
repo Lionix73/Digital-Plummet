@@ -34,8 +34,8 @@ public class UIManager : MonoBehaviour
             menu.SetActive(true);
             canvasGroup.alpha = 0f;
             rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
-            rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic);
-            canvasGroup.DOFade(1, fadeTime);
+            rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic).SetUpdate(true);
+            canvasGroup.DOFade(1, fadeTime).SetUpdate(true);
             StartCoroutine("ItemsAnimation");
     }
 
@@ -43,8 +43,8 @@ public class UIManager : MonoBehaviour
     {
         canvasGroup.alpha = 1f;
         rectTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
-        rectTransform.DOAnchorPos(new Vector2(canvasWidth, 0f), fadeTime, false).SetEase(Ease.InOutQuint);
-        canvasGroup.DOFade(1, fadeTime);
+        rectTransform.DOAnchorPos(new Vector2(canvasWidth, 0f), fadeTime, false).SetEase(Ease.InOutQuint).SetUpdate(true);
+        canvasGroup.DOFade(1, fadeTime).SetUpdate(true);
         
     }
 
@@ -65,11 +65,22 @@ public class UIManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Main_Menu");
+        UnpauseGame();
 
     }
 
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        UnpauseGame() ;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1f;
     }
 }
