@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public CanvasGroup canvasGroup;
     public RectTransform rectTransform;
     private float canvasWidth;
+    public List<GameObject> items = new List<GameObject>();
 
     public void Start()
     {
@@ -35,6 +36,7 @@ public class UIManager : MonoBehaviour
             rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
             rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic);
             canvasGroup.DOFade(1, fadeTime);
+            StartCoroutine("ItemsAnimation");
     }
 
     public void PanelFadeOut()
@@ -44,6 +46,20 @@ public class UIManager : MonoBehaviour
         rectTransform.DOAnchorPos(new Vector2(canvasWidth, 0f), fadeTime, false).SetEase(Ease.InOutQuint);
         canvasGroup.DOFade(1, fadeTime);
         
+    }
+
+    IEnumerator ItemsAnimation()
+    {
+        foreach(var item in items)
+        {
+            item.transform.localScale = Vector3.zero;
+        }
+        foreach(var item in items)
+        {
+            item.transform.DOScale(1f, fadeTime).SetEase(Ease.OutBounce);
+            yield return new WaitForSeconds(0.25f);
+        }
+
     }
 
     public void BackToMenu()
