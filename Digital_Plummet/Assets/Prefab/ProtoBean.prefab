@@ -193,16 +193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfddad8506569042bd85d3cdb0faa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
-  maxSpeed: 18
+  moveSpeed: 6
+  maxSpeedX: 15
+  maxSpeedY: 20
   jumpingPower: 16
-  maxChangeDirVel: 22
-  airMultiplier: 16
+  maxChangeDirVel: 15
+  airMultiplier: 21
   gravMultiplier: 2
-  counterGravForce: 0.6
+  counterGravForce: 0.5
   decelerationVel: 0.3
   groundCheck: {fileID: 3533479071485126195}
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  inmortal: 0
   touchMinTolerance: 25000

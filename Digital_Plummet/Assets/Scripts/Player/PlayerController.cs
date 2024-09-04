@@ -17,8 +17,11 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Speed multiplier for velocity gain. How fast can the player go.")]
     [Min(1f)] [SerializeField] private float moveSpeed;
 
-    [Tooltip("It limits general speed incluidng Y and X axis.")]
-    [SerializeField] private float maxSpeed;
+    [Tooltip("It limits general speed in X axis.")]
+    [SerializeField] private float maxSpeedX;
+
+    [Tooltip("It limits general speed in Y axis.")]
+    [SerializeField] private float maxSpeedY;
 
     [Tooltip("Is literally to apply power to jump with 'Spacebar' (The character doesn't jump). I don't know why it's here.")]
     [SerializeField] private float jumpingPower;
@@ -58,8 +61,10 @@ public class PlayerController : MonoBehaviour
 
 
     //Life Variables
+    [Header("Life Variables")]
+    [SerializeField] private bool inmortal;
     private int life;
-
+    
 
     //Touch Inputs Variables
     [Header("Touch Inputs Variables")]
@@ -82,6 +87,9 @@ public class PlayerController : MonoBehaviour
     //Effect of traps on player variables
     private bool onEMPEffect;
 
+    //Respawn Variables
+    private Scene actualScene;
+
     void Start (){
         rb = GetComponent<Rigidbody2D>();
 
@@ -95,6 +103,8 @@ public class PlayerController : MonoBehaviour
         life = 1;
 
         onEMPEffect=false;
+
+        actualScene = SceneManager.GetActiveScene();
     }
 
     void Update(){
@@ -126,6 +136,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        Debug.Log(flatVel);
         SpeedControl();
     }
 
@@ -146,9 +157,13 @@ public class PlayerController : MonoBehaviour
     private void SpeedControl(){
         flatVel = new Vector2(rb.velocity.x, rb.velocity.y);
 
-        if (MathF.Abs(flatVel.magnitude) > maxSpeed){
-            Vector2 limitedVel = flatVel.normalized * maxSpeed;
-            rb.velocity = new Vector2(limitedVel.x, limitedVel.y);
+        if (MathF.Abs(flatVel.x) > maxSpeedX){
+            Vector2 limitedVel = flatVel.normalized * maxSpeedX;
+            rb.velocity = new Vector2(limitedVel.x, rb.velocity.y);
+        }
+        else if (MathF.Abs(flatVel.y) > maxSpeedY){
+            Vector2 limitedVel = flatVel.normalized * maxSpeedY;
+            rb.velocity = new Vector2(rb.velocity.x, limitedVel.y);
         }
     }
 
@@ -280,12 +295,18 @@ public class PlayerController : MonoBehaviour
     }
 
     public void TakeDmg(){
-        life -= 1;
+        if(!inmortal){
+            life -= 1;
 
-        Debug.Log("Busted");
-        //Destroy(gameObject);
+            Debug.Log("Busted");
+            //Destroy(gameObject);
 
-        SceneManager.LoadScene("Level_1");
+            SceneManager.LoadScene(actualScene.buildIndex);
+        }
+        else{
+            //nothing...
+        }
+        
     }
 
     public void EMPHit(float duration){
