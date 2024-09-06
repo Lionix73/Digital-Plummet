@@ -11,6 +11,7 @@ public class LaserBarrier : MonoBehaviour
     [SerializeField] LaserBar laserPrefab;
     [SerializeField] Vector3 barrierDistance;
     [SerializeField] Vector3 scaleOfBars;
+    [SerializeField] float lifeTimeLaserBars;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class LaserBarrier : MonoBehaviour
         for (int i = 0; i<barrierPos.Count; i++){
             LaserBar laserBar=Instantiate(laserPrefab, barrierPos[i].position,Quaternion.identity);
             laserBar.transform.localScale = scaleOfBars;
+            laserBar.DestroyOnLifeTime(lifeTimeLaserBars);
             yield return new WaitForSeconds(timeBetweenBarriers);
         }
     }
