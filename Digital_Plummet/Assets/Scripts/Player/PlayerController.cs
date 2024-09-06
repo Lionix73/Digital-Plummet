@@ -90,6 +90,20 @@ public class PlayerController : MonoBehaviour
     //Respawn Variables
     private Scene actualScene;
 
+    [Header("MENUS")]
+    [Tooltip("Speed multiplier for velocity gain. How fast can the player go.")]
+    [SerializeField] GameObject deadMenu;
+    private UIManager uiManager;
+    [SerializeField] GameObject playerStart;
+
+    private void Awake()
+    {
+        deadMenu = GameObject.Find("PanelMuerte");
+        uiManager = deadMenu.GetComponent<UIManager>();
+        playerStart = GameObject.Find("PlayerStart");
+        Debug.Log(deadMenu.name);
+    }
+
     void Start (){
         rb = GetComponent<Rigidbody2D>();
 
@@ -105,6 +119,8 @@ public class PlayerController : MonoBehaviour
         onEMPEffect=false;
 
         actualScene = SceneManager.GetActiveScene();
+
+        
     }
 
     void Update(){
@@ -297,11 +313,22 @@ public class PlayerController : MonoBehaviour
     public void TakeDmg(){
         if(!inmortal){
             life -= 1;
+            playerStart.SetActive(false);
+            
+            
+            if(uiManager != null)
+            { 
+                uiManager.PanelFadeIn();
+            }
+            else
+            {
+                Debug.Log("No se encontro UI MANAGER");
+            }
 
             Debug.Log("Busted");
-            //Destroy(gameObject);
+            Destroy(gameObject);
 
-            SceneManager.LoadScene(actualScene.buildIndex);
+            //SceneManager.LoadScene(actualScene.buildIndex);
         }
         else{
             //nothing...
