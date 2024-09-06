@@ -88,13 +88,12 @@ public class PlayerController : MonoBehaviour
     private bool onEMPEffect;
 
     //Respawn Variables
-    private Scene actualScene;
-
     [Header("MENUS")]
-    [Tooltip("Speed multiplier for velocity gain. How fast can the player go.")]
+    [Tooltip("Menu for the moment the player faces DEATH D:")]
     [SerializeField] GameObject deadMenu;
     private UIManager uiManager;
     [SerializeField] GameObject playerStart;
+
 
     private void Awake()
     {
@@ -117,10 +116,6 @@ public class PlayerController : MonoBehaviour
         life = 1;
 
         onEMPEffect=false;
-
-        actualScene = SceneManager.GetActiveScene();
-
-        
     }
 
     void Update(){
@@ -157,6 +152,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate(){
+
         if (activateMouse){
             rb.AddForce(new Vector2(moveMouseDirection, 0f) * moveSpeed * Time.deltaTime * airMultiplier, ForceMode2D.Force);
             Debug.Log("Velocity: " + rb.velocity);
@@ -208,7 +204,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Flip(){
-        if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f){
+        if(isFacingRight && moveDirection < 0f || !isFacingRight && moveDirection > 0f){
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
@@ -327,8 +323,6 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log("Busted");
             Destroy(gameObject);
-
-            //SceneManager.LoadScene(actualScene.buildIndex);
         }
         else{
             //nothing...
