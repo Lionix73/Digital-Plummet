@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TesteoCambioDeEscena.unity
     guid: adf81a14d79557248b05855c76a8e4a9
   - enabled: 0
-    path: Assets/Scenes/Level_1 1.unity
+    path: Assets/Scenes/TestLevel1.unity
     guid: 58fc6786b465ed642a43ae25364c697a
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c632b27011a52c1499908bed20557da8, type: 2}

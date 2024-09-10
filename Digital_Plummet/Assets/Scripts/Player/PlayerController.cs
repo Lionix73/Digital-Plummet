@@ -94,6 +94,13 @@ public class PlayerController : MonoBehaviour
     private UIManager uiManager;
     [SerializeField] GameObject playerStart;
 
+    //Tutorial Variables
+    private bool tutorialBlock;
+
+    public bool TutorialBlock{
+        get{ return tutorialBlock; }
+        set{ tutorialBlock = value; }
+    }
 
     private void Awake()
     {
@@ -109,11 +116,13 @@ public class PlayerController : MonoBehaviour
         mouseStatusObject = GameObject.Find("Mouse Status");
         mouseStatus = mouseStatusObject.GetComponent<TextMeshProUGUI>();
 
+        life = 1;
+
         isTouching = false;
 
         activateMouse = false;
 
-        life = 1;
+        tutorialBlock = false;
 
         onEMPEffect=false;
     }
@@ -224,13 +233,19 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetMouseButton(0)){
-            Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(Input.mousePosition);
-            float delta = currentTouchPos.x - initialMousePos.x;
-            if(Mathf.Abs(delta) >= touchMinTolerance){
-                moveMouseDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
+            if (tutorialBlock == false){
+                Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(Input.mousePosition);
+                float delta = currentTouchPos.x - initialMousePos.x;
+                if(Mathf.Abs(delta) >= touchMinTolerance){
+                    moveMouseDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
 
-                Debug.DrawLine(initialMousePos, new Vector3(delta, transform.position.y, 0f), Color.red);
+                    Debug.DrawLine(initialMousePos, new Vector3(delta, transform.position.y, 0f), Color.red);
+                }
             }
+            else{
+                moveMouseDirection = 0f;
+            }
+            
             
             lastVel = rb.velocity;
         }
@@ -271,16 +286,21 @@ public class PlayerController : MonoBehaviour
                 break;
 
                 case TouchPhase.Moved:
-                    //To Know the diff between initial pos and final pos
-                    Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(touch.position);
-                    float delta = currentTouchPos.x - initialTouchPos.x;
-                    if (Mathf.Abs(delta) >= touchMinTolerance)
-                    {
-                        moveDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
+                    if(!tutorialBlock){
+                        //To Know the diff between initial pos and final pos
+                        Vector2 currentTouchPos = Camera.main.ViewportToScreenPoint(touch.position);
+                        float delta = currentTouchPos.x - initialTouchPos.x;
+                        if (Mathf.Abs(delta) >= touchMinTolerance)
+                        {
+                            moveDirection = Mathf.Clamp(delta, -maxChangeDirVel, maxChangeDirVel);
 
-                        Debug.DrawLine(initialTouchPos, currentTouchPos, Color.red);
+                            Debug.DrawLine(initialTouchPos, currentTouchPos, Color.red);
+                        }
                     }
-
+                    else{
+                        moveDirection = 0f;
+                    }
+                    
                     lastVel = rb.velocity;
                     break;
                 
@@ -299,10 +319,6 @@ public class PlayerController : MonoBehaviour
                 break;
             }
             //Switch End
-        }
-        else{
-            isTouching = false;
-            moveDirection = 0f;
         }
     }
 
@@ -340,3 +356,5 @@ public class PlayerController : MonoBehaviour
         onEMPEffect=false;
     }
 }
+
+

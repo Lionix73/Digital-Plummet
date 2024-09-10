@@ -4122,11 +4122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6364057255006484244, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 6364057255006484244, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63
+      value: -61
       objectReference: {fileID: 0}
     - target: {fileID: 6364057255006484244, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4467,6 +4467,10 @@ PrefabInstance:
       propertyPath: mouseStatus
       value: 
       objectReference: {fileID: 651117748}
+    - target: {fileID: 1559654641102252367, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c29eb7086842a648924fcbe25ec61c7, type: 3}
     - target: {fileID: 3533479071485126195, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1
