@@ -9,6 +9,10 @@ public class FanTrap : MonoBehaviour
 
     private Rigidbody2D playerBody;
 
+    private void Start() {
+        pushForce.Normalize();
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag=="Player"){
             playerBody = other.gameObject.GetComponent<Rigidbody2D>();
