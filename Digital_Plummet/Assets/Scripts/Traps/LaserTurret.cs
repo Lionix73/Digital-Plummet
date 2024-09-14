@@ -31,7 +31,7 @@ public class LaserTurret : MonoBehaviour
         timeBetweenBurstDelta-= Time.deltaTime;
 
         direction = objetive.position-position;
-        transform.up=Vector2.MoveTowards(transform.up, direction, rotationSpeed*Time.deltaTime);
+        transform.right=Vector2.MoveTowards(transform.right, direction, rotationSpeed*Time.deltaTime);
 
         if (timeBetweenBurstDelta < 0){
             StartCoroutine(nameof(Shooting),burstCount);
@@ -48,7 +48,7 @@ public class LaserTurret : MonoBehaviour
 
         for (int i=0;i<burstAmount;i++) {
             laser[i]=Instantiate(laserPrefab, shootPos.position, Quaternion.identity);
-            laser[i].ShootLaser(transform.up);
+            laser[i].ShootLaser(transform.right);
             yield return new WaitForSeconds(deltaTweenLaser);
         }
     } 
