@@ -6,7 +6,7 @@ public class TutorialManager : MonoBehaviour
 {
     private PlayerController playerController;
     private bool finishedFirstPart;
-
+ 
     void Start()
     {
         playerController = FindAnyObjectByType<PlayerController>();

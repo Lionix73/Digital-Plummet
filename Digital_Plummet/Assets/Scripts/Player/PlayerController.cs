@@ -327,7 +327,6 @@ public class PlayerController : MonoBehaviour
             life -= 1;
             playerStart.SetActive(false);
             
-            
             if(uiManager != null)
             { 
                 uiManager.PanelFadeIn();

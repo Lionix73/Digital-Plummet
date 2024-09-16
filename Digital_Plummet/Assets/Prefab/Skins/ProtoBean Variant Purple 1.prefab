@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1559654641102252367, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 18ea29a874d3c39439cc709e5e101443, type: 3}
+      objectReference: {fileID: 21300000, guid: ac7a7fc64ad1c424588ab9544737b374, type: 3}
     - target: {fileID: 1559654641102252367, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -70,7 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6439689270018520535, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_Name
-      value: ProtoBean Variant Purple
+      value: ProtoBean Variant Purple 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439689270018520535, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6439689270018520535, guid: 0d3b2cf172032e04980559628021edf0, type: 3}
       propertyPath: m_TagString

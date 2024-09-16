@@ -16,13 +16,15 @@ public class SelectionCharacterMenu : MonoBehaviour
     [SerializeField] private Image nextCharacter;
     [SerializeField] private Image selectedCharacter;
     [SerializeField] private Image previousCharacter;
+    [SerializeField] private Image characterMainMenu;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI selectionButton;
     private CharacterManager characterManager;
-
+    private int indexTutorial;
     private void Start()
     {
         characterManager = CharacterManager.Instance;
+        characterMainMenu.sprite = characterManager.characters[PlayerPrefs.GetInt("PlayerIndex")].image; 
 
     }
 
@@ -43,6 +45,7 @@ public class SelectionCharacterMenu : MonoBehaviour
         PlayerPrefs.SetInt("PlayerIndex", index);
         selectedIndex = index;
         selectionButton.text = "Selected";
+        characterMainMenu.sprite = characterManager.characters[index].image;
 
     }
 
@@ -117,6 +120,16 @@ public class SelectionCharacterMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(scene);
+        indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
+        Debug.Log("Cargando escena # " + indexTutorial);
+        if(indexTutorial == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
+        
     } 
 }

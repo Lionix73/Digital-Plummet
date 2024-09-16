@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
 
     public List<Characters> characters;
 
+
     private void Awake()
     {
         if(CharacterManager.Instance == null)
@@ -21,5 +22,6 @@ public class CharacterManager : MonoBehaviour
         }
     
     }
+
 }
 
