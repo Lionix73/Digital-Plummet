@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         mouseStatusObject = GameObject.Find("Mouse Status");
-        mouseStatus = mouseStatusObject.GetComponent<TextMeshProUGUI>();
+        //mouseStatus = mouseStatusObject.GetComponent<TextMeshProUGUI>();
 
         life = 1;
 
@@ -145,14 +145,14 @@ public class PlayerController : MonoBehaviour
             if (activateMouse)
             {
                 MouseInput();
-                mouseStatus.text = "Mouse ON";
-                mouseStatus.color = Color.green;
+                //mouseStatus.text = "Mouse ON";
+                //mouseStatus.color = Color.green;
             }
             else
             {
                 TouchInput();
-                mouseStatus.text = "Mouse OFF";
-                mouseStatus.color = Color.red;
+                //mouseStatus.text = "Mouse OFF";
+                //mouseStatus.color = Color.red;
             }
         }
 

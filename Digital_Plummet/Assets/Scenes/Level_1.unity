@@ -1324,6 +1324,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f5663eed0f771246b0928caec224b66, type: 2}
   - {fileID: 11400000, guid: 654863c2d09dcb643935ef44bbba0d32, type: 2}
   - {fileID: 11400000, guid: 0bcb4e594fcaebc428f8ca686fd7e0e8, type: 2}
+  scoreText: {fileID: 0}
 --- !u!4 &375854518
 Transform:
   m_ObjectHideFlags: 0

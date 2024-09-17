@@ -15,17 +15,33 @@ public class PlayerPrefsManagerEditor : EditorWindow
 
         if (GUILayout.Button("Jugar Tutorial"))
         {
-            DeletePlayerPrefs();
+            RestartTutorial(); 
         }
+        // Botón para eliminar todos los PlayerPrefs
+        if (GUILayout.Button("Eliminar todos los PlayerPrefs"))
+        {
+            DeleteAllPlayerPrefs();
+        }
+
     }
 
-    private void DeletePlayerPrefs()
+    private void RestartTutorial()
     {
         if (EditorUtility.DisplayDialog("Confirmación", "¿Estás seguro de que deseas jugar el tutorial?", "Sí", "No"))
         {
             PlayerPrefs.DeleteKey("IndexTutorial");
             PlayerPrefs.Save();
             EditorUtility.DisplayDialog("Éxito", "Ahora podrás jugar el tutorial", "OK");
+        }
+    }
+
+    private void DeleteAllPlayerPrefs()
+    {
+        if (EditorUtility.DisplayDialog("Confirmación", "¿Estás seguro de que deseas eliminar todos los PlayerPrefs?", "Sí", "No"))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            EditorUtility.DisplayDialog("Éxito", "Todos los PlayerPrefs han sido eliminados.", "OK");
         }
     }
 }

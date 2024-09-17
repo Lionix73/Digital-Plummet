@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Level Variables")]
     [Tooltip("The NAME of the Next Level (Is a String). If Null it gets you back to the Menu.")]
     [SerializeField] private string nextLevel;
-    private int indexTutorial = 0; 
+    private int indexTutorial = 0;
 
     void Start()
     {

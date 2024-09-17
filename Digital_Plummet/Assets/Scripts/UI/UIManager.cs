@@ -6,6 +6,8 @@ using Unity.VisualScripting;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using TMPro;
+using DG.Tweening.Core.Easing;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -20,6 +22,8 @@ public class UIManager : MonoBehaviour
     public RectTransform rectTransform;
     private float canvasWidth;
     public List<GameObject> items = new List<GameObject>();
+    [SerializeField] TextMeshProUGUI scoreText;
+    private GameManager gameManager;
 
     public void Start()
     {
@@ -40,6 +44,7 @@ public class UIManager : MonoBehaviour
 
         Debug.Log("Ancho del Canvas: " + canvasWidth);
     }
+
 
     public void PanelFadeIn()
     {

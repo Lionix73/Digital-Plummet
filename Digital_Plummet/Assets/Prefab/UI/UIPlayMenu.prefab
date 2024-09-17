@@ -987,6 +987,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 4354301914507454907}
   rectTransform: {fileID: 1928345851935755497}
   items: []
+  scoreText: {fileID: 0}
 --- !u!1 &5419426080762583676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1132,7 @@ GameObject:
   - component: {fileID: 5262948202829364054}
   - component: {fileID: 4214600890088731901}
   m_Layer: 5
-  m_Name: Mouse Status
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1442,6 +1443,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 5374747353214643677}
   rectTransform: {fileID: 6580930416365197390}
   items: []
+  scoreText: {fileID: 0}
 --- !u!1 &7253916189860247923
 GameObject:
   m_ObjectHideFlags: 0
