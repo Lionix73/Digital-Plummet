@@ -11,8 +11,9 @@ Escape the simulation by completing all stages.
 
 ## Authors and Credits
 Created by: 
-- Santiago Cárdenas
+- Santiago Cárdenas / [@SantiCG](https://www.instagram.com/santi_cg18/)
 - [Alejandro López](https://www.linkedin.com/in/alejandro-lopez-ramirez-34479b2a1/) / [@Lionix73](https://x.com/Lionix73/)
+- Jacobo Prada / jacoboprza2015@gmail.com
 - Emanuel Lora
 - Luisa Rodríguez / [@guaya_bas](https://www.instagram.com/guaya_bas/)
 - Alejandro Villegas
