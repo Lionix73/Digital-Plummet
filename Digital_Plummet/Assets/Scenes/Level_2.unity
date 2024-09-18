@@ -3317,6 +3317,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e39ae9b530220e34082fac0badbb0505, type: 2}
   - {fileID: 11400000, guid: 2f5663eed0f771246b0928caec224b66, type: 2}
   - {fileID: 11400000, guid: 654863c2d09dcb643935ef44bbba0d32, type: 2}
+  scoreText: {fileID: 0}
 --- !u!4 &375854518
 Transform:
   m_ObjectHideFlags: 0
@@ -6309,7 +6310,7 @@ MonoBehaviour:
   m_RefResolutionX: 1080
   m_RefResolutionY: 1920
   m_UpscaleRT: 0
-  m_PixelSnapping: 1
+  m_PixelSnapping: 0
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
@@ -9862,16 +9863,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 12.1377325, y: 15.872393}
       - {x: -12.097515, y: 15.887342}
-      - {x: -11.832296, y: -404.05344}
-      - {x: -4.162072, y: -411.95953}
-      - {x: -3.8081436, y: -440.0058}
-      - {x: 4.0385685, y: -447.09412}
-      - {x: 4.279811, y: -491.89984}
-      - {x: 27.811108, y: -491.90594}
-      - {x: 27.715477, y: -407.94443}
-      - {x: 20.096197, y: -400.21323}
-      - {x: 20.058275, y: -380.10095}
-      - {x: 12.103139, y: -372.1259}
+      - {x: -11.92427, y: -551.8998}
+      - {x: 11.990668, y: -552.09344}
   m_UseDelaunayMesh: 0
 --- !u!4 &1025976128
 Transform:
