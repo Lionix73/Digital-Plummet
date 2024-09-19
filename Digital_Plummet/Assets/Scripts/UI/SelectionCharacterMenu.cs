@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 
 public class SelectionCharacterMenu : MonoBehaviour
 {
     private int index;
+    private int coins;
     private int selectedIndex;
     private int nextIndex;
     private int previousIndex;
@@ -24,12 +26,13 @@ public class SelectionCharacterMenu : MonoBehaviour
     private void Start()
     {
         characterManager = CharacterManager.Instance;
-        characterMainMenu.sprite = characterManager.characters[PlayerPrefs.GetInt("PlayerIndex")].image; 
+        characterMainMenu.sprite = characterManager.characters[PlayerPrefs.GetInt("PlayerIndex")].unlockedSprite; 
 
     }
 
     public void OpenMenu()
     {
+        coins = PlayerPrefs.GetInt("TotalCoins");
         index = PlayerPrefs.GetInt("PlayerIndex");
         selectedIndex = index;
 
@@ -42,11 +45,28 @@ public class SelectionCharacterMenu : MonoBehaviour
     }
     public void SelectSkin()
     {
-        PlayerPrefs.SetInt("PlayerIndex", index);
-        selectedIndex = index;
-        selectionButton.text = "Selected";
-        characterMainMenu.sprite = characterManager.characters[index].image;
-
+        coins = PlayerPrefs.GetInt("TotalCoins");
+        if (characterManager.characters[index].unlocked == true)
+        {
+            PlayerPrefs.SetInt("PlayerIndex", index);
+            selectedIndex = index;
+            selectionButton.text = "Selected";
+            characterMainMenu.sprite = characterManager.characters[index].unlockedSprite;
+        }
+        //Buy phase
+        else if (characterManager.characters[index].unlocked == false && coins >= characterManager.characters[index].cost)
+        {
+            int spriteCost = characterManager.characters[index].cost;
+            characterManager.characters[index].unlocked = true;
+            selectionButton.text = "Select";
+            name.text = characterManager.characters[index].name;
+            mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
+            selectedCharacter.sprite = characterManager.characters[index].unlockedSprite;
+            int remainingCoins = coins - spriteCost;
+            PlayerPrefs.SetInt("TotalCoins", remainingCoins);
+            Debug.Log("Total coins" + PlayerPrefs.GetInt("TotalCoins"));
+            characterManager.DisplayScore();
+        }
     }
 
     private void ChangeScreen()
@@ -68,18 +88,56 @@ public class SelectionCharacterMenu : MonoBehaviour
         }
         //PlayerPrefs.SetInt("PlayerIndex", index);
         Debug.Log("PlayerIndex: " + PlayerPrefs.GetInt("PlayerIndex"));
-        mainCharacter.sprite = characterManager.characters[index].image;
-        name.text = characterManager.characters[index].name;
-        nextCharacter.sprite = characterManager.characters[nextIndex].image;
-        selectedCharacter.sprite = characterManager.characters[index].image;
-        previousCharacter.sprite = characterManager.characters[previousIndex].image;
+
+        DisplayCharacters();
+
         if (index == selectedIndex)
         {
             selectionButton.text = "Selected";
         }
-        else
+        else if(characterManager.characters[index].unlocked == true)
         {
             selectionButton.text = "Select";
+        }
+        else if(characterManager.characters[index].unlocked == false)
+        {
+            selectionButton.text = "BUY";
+        }
+    }
+
+    public void DisplayCharacters()
+    {
+        
+        
+        if (characterManager.characters[nextIndex].unlocked == true)
+        {
+            nextCharacter.sprite = characterManager.characters[nextIndex].unlockedSprite;
+
+        }
+        else
+        {
+            nextCharacter.sprite = characterManager.characters[nextIndex].lockedSprite;
+        }
+
+        if (characterManager.characters[index].unlocked == true)
+        {
+            name.text = characterManager.characters[index].name;
+            mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
+            selectedCharacter.sprite = characterManager.characters[index].unlockedSprite;
+        }
+        else
+        {
+            name.text = "???";
+            mainCharacter.sprite = characterManager.characters[index].lockedSprite;
+            selectedCharacter.sprite = characterManager.characters[index].lockedSprite;
+        }
+        if (characterManager.characters[previousIndex].unlocked == true)
+        {
+            previousCharacter.sprite = characterManager.characters[previousIndex].unlockedSprite;
+        }
+        else
+        {
+            previousCharacter.sprite = characterManager.characters[previousIndex].lockedSprite;
         }
     }
 
