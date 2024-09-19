@@ -97,6 +97,15 @@ public class PlayerController : MonoBehaviour
     //Tutorial Variables
     private bool tutorialBlock;
 
+    //Tutorial Variables
+    [Header("VFX")]
+    [Tooltip("Falling Down Particle System")]
+    [SerializeField] ParticleSystem fallingDownVFX;
+
+    [Tooltip("Falling Down Particle System")]
+    [SerializeField] ParticleSystem fallingUpVFX;
+
+
     public bool TutorialBlock{
         get{ return tutorialBlock; }
         set{ tutorialBlock = value; }
@@ -125,6 +134,9 @@ public class PlayerController : MonoBehaviour
         tutorialBlock = false;
 
         onEMPEffect=false;
+
+        fallingDownVFX.Stop();
+        fallingUpVFX.Play();
     }
 
     void Update(){
@@ -273,6 +285,11 @@ public class PlayerController : MonoBehaviour
             //Gets the first touch
             Touch touch = Input.GetTouch(0);
 
+            if(!fallingDownVFX.isPlaying || fallingUpVFX.isPlaying){
+                fallingDownVFX.Play();
+                fallingUpVFX.Stop();
+            }
+
             switch (touch.phase){
                 case TouchPhase.Began:
                     initialTouchPos = Camera.main.ViewportToScreenPoint(touch.position);
@@ -319,6 +336,12 @@ public class PlayerController : MonoBehaviour
                 break;
             }
             //Switch End
+        }
+        else if (Input.touchCount <= 0){
+            if(fallingDownVFX.isPlaying){
+                fallingDownVFX.Stop();
+                fallingUpVFX.Play();
+            }   
         }
     }
 
