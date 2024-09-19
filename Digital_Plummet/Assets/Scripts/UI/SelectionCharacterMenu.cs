@@ -21,6 +21,7 @@ public class SelectionCharacterMenu : MonoBehaviour
     [SerializeField] private Image characterMainMenu;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI selectionButton;
+    [SerializeField] private GameObject coinImage;
     private CharacterManager characterManager;
     private int indexTutorial;
     private void Start()
@@ -93,15 +94,18 @@ public class SelectionCharacterMenu : MonoBehaviour
 
         if (index == selectedIndex)
         {
+            coinImage.SetActive(false);
             selectionButton.text = "Selected";
         }
         else if(characterManager.characters[index].unlocked == true)
         {
+            coinImage.SetActive(false);
             selectionButton.text = "Select";
         }
         else if(characterManager.characters[index].unlocked == false)
         {
-            selectionButton.text = "BUY";
+            coinImage.SetActive(true);
+            selectionButton.text = (characterManager.characters[index].cost).ToString();
         }
     }
 

@@ -16,5 +16,5 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 18ea29a874d3c39439cc709e5e101443, type: 3}
   lockedSprite: {fileID: 21300000, guid: 7ee91599e59f6bc4cba39c871fcaad6f, type: 3}
   name: Main3
-  cost: 1
+  cost: 2
   unlocked: 0
