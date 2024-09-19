@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 311339190360595711, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 917633690501714407, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -475,6 +479,10 @@ PrefabInstance:
     - target: {fileID: 917633690501714407, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370697903192276445, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2554965260298041135, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
       propertyPath: m_HorizontalAlignment
