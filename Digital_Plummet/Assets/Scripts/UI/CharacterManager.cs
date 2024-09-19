@@ -8,14 +8,14 @@ public class CharacterManager : MonoBehaviour
     public static CharacterManager Instance;
 
     public List<Characters> characters;
-    private int score;
-    private int totalScore;
+    private int coins;
+    private int totalCoins;
 
     [SerializeField] TextMeshProUGUI scoreText;
 
     private void Awake()
     {
-        score = PlayerPrefs.GetInt("TotalScore");
+        coins = PlayerPrefs.GetInt("TotalCoins");
         DisplayScore();
         if(CharacterManager.Instance == null)
         {
@@ -30,18 +30,19 @@ public class CharacterManager : MonoBehaviour
     }
     public void AddScore(int amount)
     {
-        score = PlayerPrefs.GetInt("TotalScore");
-        score += amount;
-        PlayerPrefs.SetInt("TotalScore", score);
-        Debug.Log("Score: " + score);
-        DisplayScore();
+        coins = PlayerPrefs.GetInt("TotalCoins");
+        coins += amount;
+        PlayerPrefs.SetInt("TotalCoins", coins);
+        Debug.Log("Score: " + coins);
+        DisplayScore(); 
         
     }
 
     public void DisplayScore()
     {
+        coins = PlayerPrefs.GetInt("TotalCoins");
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-        scoreText.text = score.ToString();
+        scoreText.text = coins.ToString();
     }
 
 }
