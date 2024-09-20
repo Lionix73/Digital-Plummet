@@ -209,7 +209,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   inmortal: 0
-  touchMinTolerance: 25000
+  touchMinTolerance: 30000
   deadMenu: {fileID: 0}
   playerStart: {fileID: 0}
   fallingDownVFX: {fileID: 8757919175636157258}
