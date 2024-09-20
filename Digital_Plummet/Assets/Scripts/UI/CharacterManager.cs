@@ -44,6 +44,11 @@ public class CharacterManager : MonoBehaviour
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         scoreText.text = coins.ToString();
     }
-
+    public void DeleteAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        DisplayScore();
+    }
 }
 

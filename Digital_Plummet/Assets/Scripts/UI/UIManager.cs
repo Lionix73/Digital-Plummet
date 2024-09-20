@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening.Core.Easing;
 using System;
+using UnityEditor;
 
 public class UIManager : MonoBehaviour
 {
@@ -129,6 +130,7 @@ public class UIManager : MonoBehaviour
         gameIsPaused = false;
         Time.timeScale = 1f;
     }
+
     // Función para la cuenta regresiva
     IEnumerator StartCountdown()
     {
