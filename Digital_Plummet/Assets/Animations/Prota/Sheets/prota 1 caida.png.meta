@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eaa6c0bbca31e2d43afb92648a07392d
+guid: a3da6b1c7ee0dfb409eb2c62fb8748a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,11 +43,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.1, y: 0.5}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -121,7 +121,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: prota 1 caida_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634dbf764bbf5134caa05e987c483530
+      internalID: 1565020305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota 1 caida_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebd3e4e35645c04f9ce6afdc7293016
+      internalID: -1759866988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota 1 caida_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7640f76598527904198152a7bad318cc
+      internalID: 1300520308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota 1 caida_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d43da148e2830498b5e6834d7dcf6b
+      internalID: 1887827724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota 1 caida_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e6d224049c4fe4aacd1c6763071ef8
+      internalID: -1076230158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +237,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      prota 1 caida_0: 1565020305
+      prota 1 caida_1: -1759866988
+      prota 1 caida_2: 1300520308
+      prota 1 caida_3: 1887827724
+      prota 1 caida_4: -1076230158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
