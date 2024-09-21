@@ -2754,6 +2754,10 @@ PrefabInstance:
       propertyPath: barrierDistance.y
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: TimeNextActivationMax
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5135125394606424933, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.018249035
