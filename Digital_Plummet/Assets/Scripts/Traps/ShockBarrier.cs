@@ -13,7 +13,7 @@ public class ShockBarrier : MonoBehaviour
     private void Start() {
         ray.transform.position = Vector3.Lerp(RayPoints[0].position,RayPoints[1].position,0.5f);
         //ray.transform.rotation = Quaternion.Lerp(RayPoints[0].rotation,RayPoints[1].rotation,0.5f); not using...
-        ray.transform.localScale= new Vector3((RayPoints[0].position - RayPoints[1].position).magnitude,0.1f,0);
+        ray.transform.localScale= new Vector3((RayPoints[0].position - RayPoints[1].position).magnitude,0.15f,0);
 
         timeGapActivation=timeGapActivationMax;
     }
