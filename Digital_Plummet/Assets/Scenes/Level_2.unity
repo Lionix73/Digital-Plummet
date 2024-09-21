@@ -456,6 +456,14 @@ PrefabInstance:
       propertyPath: pushPower
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.y
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2031,6 +2039,14 @@ PrefabInstance:
     - target: {fileID: 5662523965566706964, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Name
       value: Fan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.y
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5917,6 +5933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8978,6 +8998,10 @@ PrefabInstance:
     - target: {fileID: 5662523965566706964, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Name
       value: Fan (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14784,6 +14808,10 @@ PrefabInstance:
     - target: {fileID: 5662523965566706964, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Name
       value: Fan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21593,6 +21621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23530,6 +23562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan
       objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23914,6 +23950,14 @@ PrefabInstance:
     - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: pushPower
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.y
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25202,6 +25246,10 @@ PrefabInstance:
     - target: {fileID: 5662523965566706964, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Name
       value: Fan (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724557966190424385, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
+      propertyPath: pushForce.x
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
