@@ -1575,6 +1575,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: barrierPos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierPos.Array.data[1]
       value: 
       objectReference: {fileID: 28711095}
@@ -2317,6 +2321,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierDistance.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: barrierPos.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}

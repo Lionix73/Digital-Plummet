@@ -360,7 +360,8 @@ public class PlayerController : MonoBehaviour
             }
 
             Debug.Log("Busted");
-            Destroy(gameObject);
+
+            OnDeathCharacter();
         }
         else{
             //nothing...
@@ -376,6 +377,21 @@ public class PlayerController : MonoBehaviour
         onEMPEffect=true;
         yield return new WaitForSeconds(duration);
         onEMPEffect=false;
+    }
+
+    public void ResetCharacter(){
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<Collider2D>().enabled = true;
+
+        rb.isKinematic = false;
+    }
+
+    private void OnDeathCharacter(){
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+
+        rb.isKinematic = true;
+        rb.velocity = Vector3.zero;
     }
 }
 

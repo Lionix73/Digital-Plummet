@@ -26,6 +26,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     private GameManager gameManager;
 
+    //Respawn
+    [SerializeField] private RespawnManager respawnManager;
+
+    void Awake(){
+        //Fingind RespawnManager
+
+        if(respawnManager == null){
+            respawnManager = FindObjectOfType<RespawnManager>();
+        }
+    }
+
     public void Start()
     {
         
@@ -113,7 +124,8 @@ public class UIManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Respawn from the Respawn Manager
+        respawnManager.Respawn();
         UnpauseGame() ;
     }
     public void PauseMenu()
@@ -131,7 +143,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Función para la cuenta regresiva
+    // Funciï¿½n para la cuenta regresiva
     IEnumerator StartCountdown()
     {
         int countdown = 3;  // Tiempo en segundos
