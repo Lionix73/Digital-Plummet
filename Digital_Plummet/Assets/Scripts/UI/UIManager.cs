@@ -127,6 +127,7 @@ public class UIManager : MonoBehaviour
         //Respawn from the Respawn Manager
         respawnManager.Respawn();
         UnpauseGame() ;
+        PanelFadeOut();
     }
     public void PauseMenu()
     {

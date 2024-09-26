@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Runtime.CompilerServices;
+using UnityEngine.TextCore.Text;
 
 public class SelectionCharacterMenu : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class SelectionCharacterMenu : MonoBehaviour
     private void Start()
     {
         characterManager = CharacterManager.Instance;
-        characterMainMenu.sprite = characterManager.characters[PlayerPrefs.GetInt("PlayerIndex")].unlockedSprite; 
+        SelectedCharacter();
 
     }
 
@@ -35,6 +36,8 @@ public class SelectionCharacterMenu : MonoBehaviour
     {
         coins = PlayerPrefs.GetInt("TotalCoins");
         index = PlayerPrefs.GetInt("PlayerIndex");
+        PlayerPrefs.SetInt(characterManager.characters[0].id, 1);
+        ArrayOfSkins();
         selectedIndex = index;
 
         if (index > characterManager.characters.Count - 1)
@@ -47,7 +50,7 @@ public class SelectionCharacterMenu : MonoBehaviour
     public void SelectSkin()
     {
         coins = PlayerPrefs.GetInt("TotalCoins");
-        if (characterManager.characters[index].unlocked == true)
+        if (characterManager.characters[index].unlocked == 1)
         {
             PlayerPrefs.SetInt("PlayerIndex", index);
             selectedIndex = index;
@@ -55,10 +58,11 @@ public class SelectionCharacterMenu : MonoBehaviour
             characterMainMenu.sprite = characterManager.characters[index].unlockedSprite;
         }
         //Buy phase
-        else if (characterManager.characters[index].unlocked == false && coins >= characterManager.characters[index].cost)
+        else if (characterManager.characters[index].unlocked == 0 && coins >= characterManager.characters[index].cost)
         {
             int spriteCost = characterManager.characters[index].cost;
-            characterManager.characters[index].unlocked = true;
+            PlayerPrefs.SetInt(characterManager.characters[index].id, 1);
+            characterManager.characters[index].unlocked = PlayerPrefs.GetInt(characterManager.characters[index].id);
             selectionButton.text = "Select";
             name.text = characterManager.characters[index].name;
             mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
@@ -69,7 +73,11 @@ public class SelectionCharacterMenu : MonoBehaviour
             characterManager.DisplayScore();
         }
     }
+    public void SelectedCharacter()
+    {
+        characterMainMenu.sprite = characterManager.characters[PlayerPrefs.GetInt("PlayerIndex")].unlockedSprite;
 
+    }
     private void ChangeScreen()
     {
         if (index == characterManager.characters.Count - 1)
@@ -97,23 +105,29 @@ public class SelectionCharacterMenu : MonoBehaviour
             coinImage.SetActive(false);
             selectionButton.text = "Selected";
         }
-        else if(characterManager.characters[index].unlocked == true)
+        else if(characterManager.characters[index].unlocked == 1)
         {
             coinImage.SetActive(false);
             selectionButton.text = "Select";
         }
-        else if(characterManager.characters[index].unlocked == false)
+        else if(characterManager.characters[index].unlocked == 0)
         {
             coinImage.SetActive(true);
             selectionButton.text = (characterManager.characters[index].cost).ToString();
         }
     }
-
+    public void ArrayOfSkins()
+    {
+        for (int i = 1; i < characterManager.characters.Count - 1; i++)
+        {
+            characterManager.characters[i].unlocked = PlayerPrefs.GetInt(characterManager.characters[i].id);
+        }
+    }
     public void DisplayCharacters()
     {
         
         
-        if (characterManager.characters[nextIndex].unlocked == true)
+        if (characterManager.characters[nextIndex].unlocked == 1)
         {
             nextCharacter.sprite = characterManager.characters[nextIndex].unlockedSprite;
 
@@ -123,7 +137,7 @@ public class SelectionCharacterMenu : MonoBehaviour
             nextCharacter.sprite = characterManager.characters[nextIndex].lockedSprite;
         }
 
-        if (characterManager.characters[index].unlocked == true)
+        if (characterManager.characters[index].unlocked == 1)
         {
             name.text = characterManager.characters[index].name;
             mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
@@ -135,7 +149,7 @@ public class SelectionCharacterMenu : MonoBehaviour
             mainCharacter.sprite = characterManager.characters[index].lockedSprite;
             selectedCharacter.sprite = characterManager.characters[index].lockedSprite;
         }
-        if (characterManager.characters[previousIndex].unlocked == true)
+        if (characterManager.characters[previousIndex].unlocked == 1)
         {
             previousCharacter.sprite = characterManager.characters[previousIndex].unlockedSprite;
         }

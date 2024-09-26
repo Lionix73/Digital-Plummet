@@ -9,6 +9,7 @@ public class Characters : ScriptableObject
     public Sprite unlockedSprite;
     public Sprite lockedSprite;
     public string name;
+    public string id;
     public int cost;
-    public bool unlocked;
+    public int unlocked;
 }

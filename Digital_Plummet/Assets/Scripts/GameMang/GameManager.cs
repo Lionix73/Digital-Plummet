@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("The NAME of the Next Level (Is a String). If Null it gets you back to the Menu.")]
     [SerializeField] private string nextLevel;
     private int indexTutorial = 0;
+    public List<Levels> levels;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("IndexTutorial", 1);
             }
+            PlayerPrefs.SetInt(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
+
             SceneManager.LoadScene(nextLevel);
         }
     }
