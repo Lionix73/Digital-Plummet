@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Cinemachine.DocumentationSortingAttribute;
 
 public class LevelManager : MonoBehaviour
@@ -26,5 +27,9 @@ public class LevelManager : MonoBehaviour
             }
         }
         
+    }
+    public void SelectLevel(string level)
+    {
+        SceneManager.LoadScene(level);
     }
 }

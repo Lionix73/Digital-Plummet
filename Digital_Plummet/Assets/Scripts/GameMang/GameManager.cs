@@ -26,8 +26,11 @@ public class GameManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("IndexTutorial", 1);
             }
-            PlayerPrefs.SetInt(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
-
+            if (indexTutorial == 1)
+            {
+                PlayerPrefs.SetInt(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
+            }
+            
             SceneManager.LoadScene(nextLevel);
         }
     }
