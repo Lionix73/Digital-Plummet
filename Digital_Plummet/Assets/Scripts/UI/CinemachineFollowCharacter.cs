@@ -8,31 +8,44 @@ using UnityEngine;
 public class CinemachineFollowCharacter : MonoBehaviour
 {
     private GameObject player;
+    private GameObject realPlayer;
     private CinemachineVirtualCamera cineMachine;
 
-        void Start()
+    void Start()
+    {
+        FindAndFollow();
+    }
+
+    void Update(){
+        player.transform.position = realPlayer.transform.position;
+    }
+
+    public void FindAndFollow(){
+        // The REAL player
+        realPlayer = GameObject.FindWithTag("Player");
+
+        // Busca el GameObject que hace de "player" para la camara
+        player = GameObject.Find("CameraFollowObject");
+
+        player.transform.position = realPlayer.transform.position;
+
+        if (player == null)
         {
-            // Busca el GameObject con la etiqueta "Player"
-            player = GameObject.Find("CameraFollowObject");
-
-            if (player == null)
-            {
-                Debug.LogError("No se encontró ningún GameObject con la etiqueta 'Player'. Asegúrate de que el jugador tenga la etiqueta correcta.");
-                return; // Salir del método si el player es null para evitar otros errores
-            }
-
-            // Obtén el componente CinemachineVirtualCamera
-            cineMachine = this.GetComponent<CinemachineVirtualCamera>();
-
-            if (cineMachine == null)
-            {
-                Debug.LogError("No se encontró el componente 'CinemachineVirtualCamera'. Asegúrate de que esté adjunto al GameObject que tiene este script.");
-                return; // Salir del método si cineMachine es null para evitar otros errores
-            }
-
-            // Asigna el Follow al Transform del jugador
-            cineMachine.Follow = player.transform;
-
+            Debug.LogError("No se encontrï¿½ ningï¿½n GameObject con la etiqueta 'Player'. Asegï¿½rate de que el jugador tenga la etiqueta correcta.");
+            return; // Salir del mï¿½todo si el player es null para evitar otros errores
         }
+
+        // Obtï¿½n el componente CinemachineVirtualCamera
+        cineMachine = this.GetComponent<CinemachineVirtualCamera>();
+
+        if (cineMachine == null)
+        {
+            Debug.LogError("No se encontrï¿½ el componente 'CinemachineVirtualCamera'. Asegï¿½rate de que estï¿½ adjunto al GameObject que tiene este script.");
+            return; // Salir del mï¿½todo si cineMachine es null para evitar otros errores
+        }
+
+        // Asigna el Follow al Transform del jugador
+        cineMachine.Follow = player.transform;
+    }
 
 }

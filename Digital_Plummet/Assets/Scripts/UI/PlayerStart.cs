@@ -18,10 +18,9 @@ public class PlayerStart : MonoBehaviour
        // cineMachineCamera.GetComponent<CinemachineVirtualCamera>().Follow = player.GetComponent<Transform>();
     }
 
-    private void Update()
+    void Update()
     {
         followCamera.transform.position = player.transform.position;
-        
     }
 
 }

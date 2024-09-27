@@ -125,8 +125,8 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         //Respawn from the Respawn Manager
-        respawnManager.Respawn();
         UnpauseGame() ;
+        respawnManager.Respawn();
         PanelFadeOut();
     }
     public void PauseMenu()

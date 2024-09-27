@@ -90,9 +90,10 @@ public class PlayerController : MonoBehaviour
     //Respawn Variables
     [Header("MENUS")]
     [Tooltip("Menu for the moment the player faces DEATH D:")]
-    [SerializeField] GameObject deadMenu;
+    [SerializeField] private GameObject deadMenu;
+    [SerializeField] private GameObject playerStart;
+    private CinemachineFollowCharacter cineMachineFollowCharacter;
     private UIManager uiManager;
-    [SerializeField] GameObject playerStart;
 
     //Tutorial Variables
     private bool tutorialBlock;
@@ -100,10 +101,10 @@ public class PlayerController : MonoBehaviour
     //Tutorial Variables
     [Header("VFX")]
     [Tooltip("Falling Down Particle System")]
-    [SerializeField] ParticleSystem fallingDownVFX;
+    [SerializeField] private ParticleSystem fallingDownVFX;
 
     [Tooltip("Falling Down Particle System")]
-    [SerializeField] ParticleSystem fallingUpVFX;
+    [SerializeField] private ParticleSystem fallingUpVFX;
 
 
     public bool TutorialBlock{
@@ -116,6 +117,7 @@ public class PlayerController : MonoBehaviour
         deadMenu = GameObject.Find("PanelMuerte");
         uiManager = deadMenu.GetComponent<UIManager>();
         playerStart = GameObject.Find("PlayerStart");
+        cineMachineFollowCharacter = FindObjectOfType<CinemachineFollowCharacter>();
         Debug.Log(deadMenu.name);
     }
 
@@ -384,6 +386,8 @@ public class PlayerController : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
 
         rb.isKinematic = false;
+
+        cineMachineFollowCharacter.FindAndFollow();
     }
 
     private void OnDeathCharacter(){
