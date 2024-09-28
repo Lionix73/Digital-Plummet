@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class MovilPlatform : MonoBehaviour
 {
-    [SerializeField] float platSpeed;
+    float platSpeed;
 
     //[SerializeField] float offSet; not using right now...
     private float timeChange;
+
+    [Tooltip("How long will take for move to one point to the next, basically affect the speed of the platform")]
     [SerializeField] float timeChangeMax;
+    [Tooltip("Point between the platform is gona move")]
     [SerializeField] Transform[] movementPoints;
+
+    [Tooltip("From where will start its movement")]
     [SerializeField] int startingPoint;
-    [SerializeField] int moveObjective;
+    int moveObjective;
     Vector3 direction;
     private Transform transform;
     // Start is called before the first frame update

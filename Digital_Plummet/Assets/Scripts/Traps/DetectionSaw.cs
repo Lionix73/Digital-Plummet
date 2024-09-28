@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DetectionSaw : MonoBehaviour
 {
+    [Tooltip("If the player enter this trigger, the saw will know")]
     [SerializeField] Collider2D areaDetection;
+    [Tooltip("The saw...")]
     [SerializeField] Transform saw;
+    [Tooltip("The speed of the saw...")]
     [SerializeField] float sawSpeed;
     private Vector3 objective;
     // Start is called before the first frame update

@@ -11,12 +11,6 @@ public class BigLaserRay : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LaserActivation(float laserDuration, float lenght){
         transform.localScale = new Vector3(transform.localScale.x,lenght,transform.localScale.z);
         StartCoroutine(nameof(LaserOn), laserDuration);

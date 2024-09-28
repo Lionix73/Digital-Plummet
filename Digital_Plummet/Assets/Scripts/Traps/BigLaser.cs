@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class BigLaser : MonoBehaviour
 {
+    [Tooltip("Where the laser its gona instantiate")]
     [SerializeField] Transform[] lasersPos;
+    [Tooltip("From where its supose to start the laser... waiting for animations")]
     [SerializeField] Transform[] turretPos;
     private int whereNext;
+    [Tooltip("How long the big laser i going to be active")]
     [SerializeField] float laserDuration;
     private float timeActive;
+    [Tooltip("Waiting time after the laser end for the next one to spawn")]
     [SerializeField] float timeBetweenLasers;
     float timeLastActivation; //no serializar
+    [Tooltip("For calculating the position of each laser, in review for using it on scales")]
     [SerializeField] float laserDistance;
+    [Tooltip("The prefab for the big laser")]
     [SerializeField] BigLaserRay prefabLaser;
     private BigLaserRay laserActive;
     private bool laserON;

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FanTrap : MonoBehaviour
 {
+    [Tooltip("Strength of the pulse")]
     [SerializeField] float pushPower;
+    [Tooltip("Just the direction, its normalize inside the code")]
     [SerializeField] Vector2 pushForce;
 
     private Rigidbody2D playerBody;

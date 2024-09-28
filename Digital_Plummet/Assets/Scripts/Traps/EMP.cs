@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EMP : MonoBehaviour
 {
+    [Tooltip("The area of the effect")]
     [SerializeField] private Collider2D collider;
+    [Tooltip("Placeholder for the alpha, This will probably change, waiting for animation")]
     [SerializeField] private SpriteRenderer shockImg;
+    [Tooltip("Time bewtween each pulse")]
     [SerializeField] float shockCD;
+    [Tooltip("How long the area of the pulse is active")]
     [SerializeField] private float shockWaveDuration;
     float shockTime;
 

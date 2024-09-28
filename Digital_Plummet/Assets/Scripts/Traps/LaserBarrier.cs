@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class LaserBarrier : MonoBehaviour
 {
-    [SerializeField] float timeBetweenBarriers;
-    [SerializeField] float TimeNextActivation;
+    [Tooltip("Little wait time bewtween each bar of the same activation sequence")]
+    [Range(0.1f,1.0f)][SerializeField] float timeBetweenBarriers;
+    float TimeNextActivation;
+    [Tooltip("Waiting time between sequences")]
     [SerializeField] float TimeNextActivationMax;
+    [Tooltip("Where the barriers are gona spawn, its just for the amount and sprites, the real distance is aouto set")]
     [SerializeField] List<Transform> barrierPos;
-    [SerializeField] LaserBar laserPrefab;
+    
+    [Tooltip("The distance bewtween laser bars, calculated from the first one in the array order")]
     [SerializeField] Vector3 barrierDistance;
+    [Tooltip("The size of the laser bars, needs some manual adjustments")]
     [SerializeField] Vector3 scaleOfBars;
+    [Tooltip("How long the bars are activate")]
     [SerializeField] float lifeTimeLaserBars;
+
+    [Tooltip("The prefab of the laser bars")]
+    [SerializeField] LaserBar laserPrefab;
     // Start is called before the first frame update
     void Start()
     {

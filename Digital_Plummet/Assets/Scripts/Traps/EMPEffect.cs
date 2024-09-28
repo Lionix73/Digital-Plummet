@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EMPEffect : MonoBehaviour
 {
+    [Tooltip("How long the EMP affect the player")]
     [SerializeField] float effectDuration;
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player"){

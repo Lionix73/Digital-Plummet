@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class MovementSaw : MonoBehaviour
 {
-    [SerializeField] float sawSpeed;
+    float sawSpeed;
 
     //[SerializeField] float offSet; not using right now...
     private float timeChange;
+
+    [Tooltip("How long the saw will take form each point to another, basically affects the speed of the saw")]
     [SerializeField] float timeChangeMax;
+
+    [Tooltip("Point where the saw will move, in order of the list")]
     [SerializeField] Transform[] movementPoints;
+
+    [Tooltip("Where the saw will start its movement")]
     [SerializeField] int startingPoint;
-    [SerializeField] int moveObjective;
+    int moveObjective;
     Vector3 direction;
     private Transform transform;
     // Start is called before the first frame update

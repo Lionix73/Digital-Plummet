@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LaserProjectile : MonoBehaviour
 {
+    [Tooltip("How fast is going the bullet")]
     [SerializeField] float speed;
+    
+    [Tooltip("How long will it last if dont hit anything")]
     [SerializeField] float lifeTime;
     private Rigidbody2D projectileRb;
     

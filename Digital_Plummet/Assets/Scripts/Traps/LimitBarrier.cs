@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class LimitBarrier : MonoBehaviour
 {
+    [Tooltip("How fast the barrier moves")]
     [SerializeField] private float speed;
     private Transform player;
+
+    [Tooltip("Distance where the player will die, manually located")]
     [SerializeField] private Transform dmgLimit;
 
-    [SerializeField] Vector3 distanceFromPlayer;
+    Vector3 distanceFromPlayer;
 
     private void Start() {
         if(GameObject.FindWithTag("Player").TryGetComponent<Transform>(out Transform transform)){

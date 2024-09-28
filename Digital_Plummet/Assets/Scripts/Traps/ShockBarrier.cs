@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ShockBarrier : MonoBehaviour
 {
+    [Tooltip("Extremes of the ray, form where its calculated")]
     [SerializeField] Transform[] RayPoints;
     float timeGapActivation;
+
+    [Tooltip("Time betwenn blinks")]
     [SerializeField] float timeGapActivationMax;
+    [Tooltip("The liitle blink duration")]
     [SerializeField] float gapTime;
+    [Tooltip("The ray...")]
     [SerializeField] GameObject ray;
 
     private void Start() {
