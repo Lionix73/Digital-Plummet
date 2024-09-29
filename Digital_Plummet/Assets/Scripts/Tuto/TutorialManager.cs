@@ -9,7 +9,7 @@ public class TutorialManager : MonoBehaviour
  
     void Start()
     {
-        playerController = FindAnyObjectByType<PlayerController>();
+        playerController = FindObjectOfType<PlayerController>();
 
         if (playerController != null){
             playerController.TutorialBlock = true; 
