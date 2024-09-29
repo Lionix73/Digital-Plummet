@@ -28,8 +28,9 @@ public class LevelManager : MonoBehaviour
         }
         
     }
-    public void SelectLevel(string level)
+    public void SelectLevel(int level)
     {
+        PlayerPrefs.SetInt("SelectedLevel", level);
         SceneManager.LoadScene(level);
     }
 }

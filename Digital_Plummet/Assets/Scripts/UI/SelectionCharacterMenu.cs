@@ -202,9 +202,14 @@ public class SelectionCharacterMenu : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        else if(PlayerPrefs.GetInt("SelectedLevel") == 0 && indexTutorial == 1)
+        {
+            
+            SceneManager.LoadScene(2);
+        }
         else
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("SelectedLevel"));
         }
         
     } 
