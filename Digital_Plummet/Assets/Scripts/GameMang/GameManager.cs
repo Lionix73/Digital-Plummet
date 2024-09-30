@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string nextLevel;
     private int indexTutorial = 0;
     public List<Levels> levels;
+    PlayerPrefsManager playerPrefsManager;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class GameManager : MonoBehaviour
             indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
             if (indexTutorial == 0)
             {
-                PlayerPrefs.SetInt("IndexTutorial", 1);
+                PlayerPrefsManager.Instance.SetPlayerPref("IndexTutorial", 1);
+                //PlayerPrefs.SetInt("IndexTutorial", 1);
             }
             
             SceneManager.LoadScene(nextLevel);

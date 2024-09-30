@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    private PlayerController playerController;
+    private PlayerControllerV2 playerController;
     private bool finishedFirstPart;
  
     void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = FindObjectOfType<PlayerControllerV2>();
 
         if (playerController != null){
             playerController.TutorialBlock = true; 
@@ -20,7 +20,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playerController.TutorialBlock);
+        //Debug.Log(playerController.TutorialBlock);
 
         if (!playerController.TutorialBlock && !finishedFirstPart){
             playerController.TutorialBlock = true; 

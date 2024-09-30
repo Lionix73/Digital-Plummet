@@ -37,7 +37,7 @@ public class Collectible : MonoBehaviour
             }
 
             // Mark the collectible as collected
-            PlayerPrefs.SetInt(collectibleID, 1);
+            PlayerPrefsManager.Instance.SetPlayerPref(collectibleID, 1);
             PlayerPrefs.Save();  // Save the changes
 
             // Remove the collectible from the scene

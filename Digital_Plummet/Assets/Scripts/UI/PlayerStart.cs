@@ -9,10 +9,10 @@ public class PlayerStart : MonoBehaviour
     private GameObject player;
     private GameObject followCamera;
     public List<Levels> levels;
+    PlayerPrefsManager playerPrefsManager;
     // Start is called before the first frame update
     void Awake()
     {
-
         int indexPlayer = PlayerPrefs.GetInt("PlayerIndex");
         Instantiate(CharacterManager.Instance.characters[indexPlayer].playableCharacter, transform.position,Quaternion.identity);
         player = GameObject.FindWithTag("Player");
@@ -21,7 +21,7 @@ public class PlayerStart : MonoBehaviour
         // cineMachineCamera.GetComponent<CinemachineVirtualCamera>().Follow = player.GetComponent<Transform>();
         if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
-            PlayerPrefs.SetInt(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
+            PlayerPrefsManager.Instance.SetPlayerPref(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
         }
     }
 

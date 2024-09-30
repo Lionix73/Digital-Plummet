@@ -23,7 +23,7 @@ public class FloatingSprite : MonoBehaviour
         // Calcular la nueva posición en función de la función seno
         float newY = initialPosition.y + Mathf.Sin(Time.time * speed) * amplitude;
 
-        Debug.Log(Mathf.Sin(Time.time));
+        //Debug.Log(Mathf.Sin(Time.time));
 
         // Obtener el color actual del Image
         Color currentColor1 = UpArrow.color;

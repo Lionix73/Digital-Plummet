@@ -32,7 +32,8 @@ public class CharacterManager : MonoBehaviour
     {
         coins = PlayerPrefs.GetInt("TotalCoins");
         coins += amount;
-        PlayerPrefs.SetInt("TotalCoins", coins);
+        PlayerPrefsManager.Instance.SetPlayerPref("TotalCoins", coins);
+        //PlayerPrefs.SetInt("TotalCoins", coins);
         Debug.Log("Score: " + coins);
         DisplayScore(); 
         

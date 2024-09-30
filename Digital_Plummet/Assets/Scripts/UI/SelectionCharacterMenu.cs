@@ -52,7 +52,8 @@ public class SelectionCharacterMenu : MonoBehaviour
         coins = PlayerPrefs.GetInt("TotalCoins");
         if (characterManager.characters[index].unlocked == 1)
         {
-            PlayerPrefs.SetInt("PlayerIndex", index);
+            PlayerPrefsManager.Instance.SetPlayerPref("PlayerIndex", index);
+            //PlayerPrefs.SetInt("PlayerIndex", index);
             selectedIndex = index;
             selectionButton.text = "Selected";
             characterMainMenu.sprite = characterManager.characters[index].unlockedSprite;
@@ -61,13 +62,15 @@ public class SelectionCharacterMenu : MonoBehaviour
         else if (characterManager.characters[index].unlocked == 0 && coins >= characterManager.characters[index].cost)
         {
             int spriteCost = characterManager.characters[index].cost;
-            PlayerPrefs.SetInt(characterManager.characters[index].id, 1);
+           // PlayerPrefs.SetInt(characterManager.characters[index].id, 1);
+            PlayerPrefsManager.Instance.SetPlayerPref(characterManager.characters[index].id, 1);
             characterManager.characters[index].unlocked = PlayerPrefs.GetInt(characterManager.characters[index].id);
             selectionButton.text = "Select";
             name.text = characterManager.characters[index].name;
             mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
             selectedCharacter.sprite = characterManager.characters[index].unlockedSprite;
             int remainingCoins = coins - spriteCost;
+            PlayerPrefsManager.Instance.SetPlayerPref("TotalCoins", remainingCoins);
             PlayerPrefs.SetInt("TotalCoins", remainingCoins);
             Debug.Log("Total coins" + PlayerPrefs.GetInt("TotalCoins"));
             characterManager.DisplayScore();

@@ -190,7 +190,7 @@ public class PlayerControllerV2 : MonoBehaviour
                         Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
                         float delta = currentTouchPos.x - initialTouchPos.x;
 
-                        Debug.Log(delta);
+                        //Debug.Log(delta);
 
                         if(Math.Abs(delta) >= touchMinTolerance){
                             // Follow the finger uwu

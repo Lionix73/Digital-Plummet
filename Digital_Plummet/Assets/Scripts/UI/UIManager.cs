@@ -121,7 +121,11 @@ public class UIManager : MonoBehaviour
         UnpauseGame();
 
     }
-
+    public void RestartPlayerPrefs()
+    {
+        PlayerPrefsManager.Instance.DeleteAllStoredPlayerPrefs();
+        CharacterManager.Instance.DisplayScore();
+    }
     public void Restart()
     {
         //Respawn from the Respawn Manager
