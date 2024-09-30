@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: 5c60825e0c066f04e9f40bb4e6be954d
   - enabled: 1
     path: Assets/Scenes/Level_2.unity
-    guid: ffb40261d44025644955de4a76f91331
+    guid: 8f7109d2a455f3040a50b243acec8d48
   - enabled: 0
     path: Assets/Scenes/TesteoCambioDeEscena.unity
     guid: adf81a14d79557248b05855c76a8e4a9

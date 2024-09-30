@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f553c7a5ae30c4a83a9c6feb1611f0, type: 3}
   m_Name: Character4
   m_EditorClassIdentifier: 
-  playableCharacter: {fileID: 2492774803694985206, guid: ef633ff3b033a38419f909c1f2d28fdc, type: 3}
+  playableCharacter: {fileID: 6102952483634160913, guid: 29670200d6a1be240810881b68378249, type: 3}
   unlockedSprite: {fileID: 21300000, guid: ac7a7fc64ad1c424588ab9544737b374, type: 3}
   lockedSprite: {fileID: 21300000, guid: 64b1fdaf461b4dc47b07c637798d7ece, type: 3}
   name: Main4
