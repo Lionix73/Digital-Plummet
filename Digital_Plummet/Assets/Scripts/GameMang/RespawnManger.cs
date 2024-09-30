@@ -25,7 +25,8 @@ public class RespawnManager : MonoBehaviour
         }
 
         playerGO.transform.position = respawnPoint.transform.position;
-        playerGO.GetComponent<PlayerController>().ResetCharacter();
+        //playerGO.GetComponent<PlayerController>().ResetCharacter();
+        playerGO.GetComponent<PlayerControllerV2>().ResetCharacter();
     }
 
     public Transform RespawnPoint{

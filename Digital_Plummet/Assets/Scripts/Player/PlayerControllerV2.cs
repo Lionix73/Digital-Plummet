@@ -270,6 +270,8 @@ public class PlayerControllerV2 : MonoBehaviour
 
         rb.isKinematic = true;
         rb.velocity = Vector3.zero;
+
+        isTouching = false;
     }
 }
 

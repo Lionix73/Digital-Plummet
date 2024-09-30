@@ -22,8 +22,10 @@ public class LaserProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player"){
-            PlayerController player = other.gameObject.GetComponent<PlayerController>();
-            player.TakeDmg();
+            //PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            PlayerControllerV2 playerV2 = other.gameObject.GetComponent<PlayerControllerV2>();
+            //player.TakeDmg();
+            playerV2.TakeDmg();
         }
         if(other.gameObject.tag != "Projectile"){
             Destroy(gameObject);

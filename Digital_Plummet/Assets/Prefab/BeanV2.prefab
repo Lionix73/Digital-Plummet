@@ -200,7 +200,7 @@ MonoBehaviour:
   maxSpeedY: 12
   gravMultiplier: 2
   counterGravForce: 0.8
-  inmortal: 1
+  inmortal: 0
   touchMinTolerance: 2
   deadMenu: {fileID: 0}
   playerStart: {fileID: 0}
