@@ -1,12 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControllerV2 : MonoBehaviour
@@ -55,11 +50,14 @@ public class PlayerControllerV2 : MonoBehaviour
     [Range (0.1f, 5f)] [SerializeField] private float touchMinTolerance;
 
     private Vector2 initialTouchPos;
+    private Vector2 touchTemp;
     private float delta;
     private bool isTouching;
 
+
     //Effect of traps on player variables
     private bool onEMPEffect;
+
 
     //Respawn Variables
     [Header("MENUS")]
@@ -69,8 +67,10 @@ public class PlayerControllerV2 : MonoBehaviour
     private CinemachineFollowCharacter cineMachineFollowCharacter;
     private UIManager uiManager;
 
+
     //Tutorial Variables
     private bool tutorialBlock;
+
 
     //Tutorial Variables
     [Header("VFX")]
@@ -119,7 +119,7 @@ public class PlayerControllerV2 : MonoBehaviour
             TouchInput();
         }
         
-        Debug.DrawLine(rb.position, new Vector2(moveDirection, rb.position.y), Color.red);
+        Debug.DrawLine(initialTouchPos, touchTemp, Color.red);
 
         SpeedControl();
     }
@@ -133,7 +133,7 @@ public class PlayerControllerV2 : MonoBehaviour
             Debug.Log(moveDirection);
 
             if(Mathf.Abs(delta) > touchMinTolerance){
-                rb.velocity = new Vector2(moveDirection, currentVelocity.y);
+                rb.velocity = new Vector2(moveDirection * moveSpeed, currentVelocity.y);
             }
         }
 
@@ -167,6 +167,7 @@ public class PlayerControllerV2 : MonoBehaviour
     }
 
     private void TouchInput(){
+        Vector2 currentTouchPos;
 
         //For Knowing if there is at least one touch on Screen
         if (Input.touchCount > 0){
@@ -190,19 +191,34 @@ public class PlayerControllerV2 : MonoBehaviour
                 case TouchPhase.Moved:
                     if(!tutorialBlock){
                         // Actual Pos Depending on the world
-                        Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                        currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                        touchTemp = currentTouchPos;
                         delta = currentTouchPos.x - initialTouchPos.x;
 
-                        moveDirection = currentTouchPos.x;
+                        moveDirection = Mathf.Clamp(delta, -4f, 4f);
                     }
                     
                 break;
 
                 case TouchPhase.Ended:
+                    isTouching = false;
+                    rb.gravityScale = -1f;
+
+                    initialTouchPos = Vector2.zero;
+                    currentTouchPos = Vector2.zero;
+                    moveDirection = 0f;
+                    
+                    gravityChangeForce.x = rb.velocity.x;
+                    gravityChangeForce.y = rb.velocity.y * counterGravForce;
+                    rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
+
+                break;
                 case TouchPhase.Canceled:
                     isTouching = false;
                     rb.gravityScale = -1f;
 
+                    initialTouchPos = Vector2.zero;
+                    currentTouchPos = Vector2.zero;
                     moveDirection = 0f;
                     
                     gravityChangeForce.x = rb.velocity.x;
