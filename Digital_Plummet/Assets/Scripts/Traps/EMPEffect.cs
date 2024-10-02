@@ -8,7 +8,7 @@ public class EMPEffect : MonoBehaviour
     [SerializeField] float effectDuration;
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player"){
-            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            PlayerControllerV2 player = other.gameObject.GetComponent<PlayerControllerV2>();
             //Activacion de cosa que hace... falta hacer
 
             player.EMPHit(effectDuration);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RespawnManager : MonoBehaviour
 {
@@ -24,9 +25,16 @@ public class RespawnManager : MonoBehaviour
             //nothing to do with the barrier...
         }
 
-        playerGO.transform.position = respawnPoint.transform.position;
-        //playerGO.GetComponent<PlayerController>().ResetCharacter();
-        playerGO.GetComponent<PlayerControllerV2>().ResetCharacter();
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            playerGO.transform.position = respawnPoint.transform.position;
+            //playerGO.GetComponent<PlayerController>().ResetCharacter();
+            playerGO.GetComponent<PlayerControllerV2>().ResetCharacter();
+        }
     }
 
     public Transform RespawnPoint{

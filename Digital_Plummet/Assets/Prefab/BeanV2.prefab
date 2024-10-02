@@ -195,13 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237beceb07095514ca9f769b102237a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  maxSpeedX: 12
+  moveSpeed: 25
+  maxSpeedX: 17
   maxSpeedY: 12
   gravMultiplier: 2
   counterGravForce: 0.8
   inmortal: 0
-  touchMinTolerance: 2
+  touchMinTolerance: 0.3
   deadMenu: {fileID: 0}
   playerStart: {fileID: 0}
   fallingDownVFX: {fileID: 7059787839446086353}

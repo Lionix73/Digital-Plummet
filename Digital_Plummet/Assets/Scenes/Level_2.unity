@@ -7223,7 +7223,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18
+  orthographic size: 21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7248,7 +7248,7 @@ Transform:
   m_GameObject: {fileID: 693083980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00007724762, y: -7.1253796, z: -10}
+  m_LocalPosition: {x: -0.0019245148, y: -10.120119, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11246,10 +11246,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.1377325, y: 15.872393}
-      - {x: -12.097515, y: 15.887342}
-      - {x: -11.60905, y: -599.34045}
-      - {x: 11.990668, y: -599.9428}
+    - - {x: 10.063586, y: 14.190651}
+      - {x: -9.967312, y: 13.981369}
+      - {x: -9.873416, y: -599.4983}
+      - {x: 9.702787, y: -598.8383}
   m_UseDelaunayMesh: 0
 --- !u!4 &1025976128
 Transform:
@@ -12752,7 +12752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defb2e5d89e83c5438e83f66e9f3dd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 
+  nextLevel: MainMenu
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
@@ -13185,7 +13185,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 18
+    OrthographicSize: 21
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

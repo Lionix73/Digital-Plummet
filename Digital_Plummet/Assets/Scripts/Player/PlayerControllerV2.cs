@@ -55,6 +55,7 @@ public class PlayerControllerV2 : MonoBehaviour
     [Range (0.1f, 5f)] [SerializeField] private float touchMinTolerance;
 
     private Vector2 initialTouchPos;
+    private float delta;
     private bool isTouching;
 
     //Effect of traps on player variables
@@ -118,6 +119,8 @@ public class PlayerControllerV2 : MonoBehaviour
             TouchInput();
         }
         
+        Debug.DrawLine(rb.position, new Vector2(moveDirection, rb.position.y), Color.red);
+
         SpeedControl();
     }
 
@@ -127,11 +130,11 @@ public class PlayerControllerV2 : MonoBehaviour
 
         if (isTouching)
         {
-            // Mantener la velocidad en Y y solo actualizar la velocidad en X
-            float newVelocityX = Mathf.Lerp(currentVelocity.x, (moveDirection - rb.position.x) * moveSpeed, Time.fixedDeltaTime);
+            Debug.Log(moveDirection);
 
-            // Asignar la nueva velocidad
-            rb.velocity = new Vector2(newVelocityX, currentVelocity.y);
+            if(Mathf.Abs(delta) > touchMinTolerance){
+                rb.velocity = new Vector2(moveDirection, currentVelocity.y);
+            }
         }
 
         GravityMultiplier();
@@ -188,14 +191,9 @@ public class PlayerControllerV2 : MonoBehaviour
                     if(!tutorialBlock){
                         // Actual Pos Depending on the world
                         Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
-                        float delta = currentTouchPos.x - initialTouchPos.x;
+                        delta = currentTouchPos.x - initialTouchPos.x;
 
-                        //Debug.Log(delta);
-
-                        if(Math.Abs(delta) >= touchMinTolerance){
-                            // Follow the finger uwu
-                            moveDirection = currentTouchPos.x;
-                        }
+                        moveDirection = currentTouchPos.x;
                     }
                     
                 break;
@@ -205,6 +203,7 @@ public class PlayerControllerV2 : MonoBehaviour
                     isTouching = false;
                     rb.gravityScale = -1f;
 
+                    moveDirection = 0f;
                     
                     gravityChangeForce.x = rb.velocity.x;
                     gravityChangeForce.y = rb.velocity.y * counterGravForce;
@@ -274,5 +273,4 @@ public class PlayerControllerV2 : MonoBehaviour
         isTouching = false;
     }
 }
-
 
