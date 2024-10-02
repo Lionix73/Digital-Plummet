@@ -86,7 +86,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,13 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e221e2221f57c224eae83a94c780db9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetive: {fileID: 4941571664382479059}
   shootPos: {fileID: 212022100535552102}
+  objetive: {fileID: 4941571664382479059}
   rotationSpeed: 1
   laserPrefab: {fileID: 6418398568972227642, guid: 78e678c585f3cff4cafd4d1d0fe59c59, type: 3}
   timeBetweenBurst: 4
   burstAmount: 5
-  burstCount: 0
   deltaTweenLaser: 0.2
 --- !u!61 &6625950045399228465
 BoxCollider2D:

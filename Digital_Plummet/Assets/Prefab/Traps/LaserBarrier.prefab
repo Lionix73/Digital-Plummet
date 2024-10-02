@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -797,16 +797,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenBarriers: 0.3
-  TimeNextActivation: 5
   TimeNextActivationMax: 5
   barrierPos:
   - {fileID: 4095758463088104451}
   - {fileID: 7424374123505570927}
   - {fileID: 8603066846334549095}
-  laserPrefab: {fileID: 8670542774083825446, guid: c8f32250ef9c49b4db4b2555e1734012, type: 3}
   barrierDistance: {x: 0, y: 2, z: 0}
   scaleOfBars: {x: 13, y: 1, z: 1}
   lifeTimeLaserBars: 3
+  laserPrefab: {fileID: 8670542774083825446, guid: c8f32250ef9c49b4db4b2555e1734012, type: 3}
 --- !u!1 &8406720191123133722
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +859,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

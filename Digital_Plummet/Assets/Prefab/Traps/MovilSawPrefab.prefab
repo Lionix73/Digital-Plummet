@@ -151,7 +151,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,10 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4152a9e4f5dba41b7b28864e3e5ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawSpeed: 4
   timeChangeMax: 4
   movementPoints:
   - {fileID: 640023834202116019}
   - {fileID: 722463591314008362}
   startingPoint: 0
-  moveObjective: 0
