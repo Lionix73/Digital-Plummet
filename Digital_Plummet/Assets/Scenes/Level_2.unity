@@ -438,19 +438,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839294132656039892, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 5.6347165
+      value: 4.7234178
       objectReference: {fileID: 0}
     - target: {fileID: 4839294132656039892, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -0.86915267
+      value: -0.90887547
       objectReference: {fileID: 0}
     - target: {fileID: 4839294132656039892, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 5.661295
+      value: 4.7120347
       objectReference: {fileID: 0}
     - target: {fileID: 4839294132656039892, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: 0.8151646
+      value: 0.81516457
       objectReference: {fileID: 0}
     - target: {fileID: 5662523965566706964, guid: d719baeab9a71eb49bcec72b45f0d8c6, type: 3}
       propertyPath: m_Name
@@ -1792,7 +1792,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.x
-      value: 8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierDistance.y
@@ -2545,7 +2545,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.x
-      value: 8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierDistance.y
@@ -7388,7 +7388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.x
-      value: 4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.y
@@ -7647,7 +7647,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.x
-      value: 4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: scaleOfBars.y

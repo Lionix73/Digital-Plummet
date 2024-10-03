@@ -789,7 +789,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4785207293186831082}
   - {fileID: 4095758463088104451}
   - {fileID: 7424374123505570927}
   - {fileID: 8603066846334549095}
@@ -814,7 +813,7 @@ MonoBehaviour:
   - {fileID: 7424374123505570927}
   - {fileID: 8603066846334549095}
   barrierDistance: {x: 0, y: 2, z: 0}
-  scaleOfBars: {x: 13, y: 1, z: 1}
+  scaleOfBars: {x: 1, y: 1, z: 1}
   lifeTimeLaserBars: 3
   laserPrefab: {fileID: 8670542774083825446, guid: c8f32250ef9c49b4db4b2555e1734012, type: 3}
 --- !u!1 &8406720191123133722
@@ -1151,68 +1150,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4676141404845024958, guid: 2624d22e277794b40a87e78af32e1c38, type: 3}
   m_PrefabInstance: {fileID: 1228386797225520141}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1240990480617817725
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5135125394606424933}
-    m_Modifications:
-    - target: {fileID: 1774264428782170051, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_Name
-      value: VFX_LaserLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
---- !u!4 &4785207293186831082 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6003468634337293463, guid: 6f24a068b6f16fd4ea2f8fea25992091, type: 3}
-  m_PrefabInstance: {fileID: 1240990480617817725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2963060346902740867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,6 +1161,10 @@ PrefabInstance:
     - target: {fileID: 2731600233854283715, guid: 95ee0c12481a2704a963f68b5012df4d, type: 3}
       propertyPath: m_Name
       value: VFX_Beam
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731600233854283715, guid: 95ee0c12481a2704a963f68b5012df4d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6834808009595232588, guid: 95ee0c12481a2704a963f68b5012df4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,6 +1563,10 @@ PrefabInstance:
     - target: {fileID: 7450364199695676221, guid: 2624d22e277794b40a87e78af32e1c38, type: 3}
       propertyPath: m_Name
       value: VFX_LaserDust
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450364199695676221, guid: 2624d22e277794b40a87e78af32e1c38, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
