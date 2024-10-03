@@ -1828,6 +1828,7 @@ Transform:
   - {fileID: 1142434044}
   - {fileID: 693083985}
   - {fileID: 1907227183}
+  - {fileID: 593180215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424934889
@@ -2239,7 +2240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &593180215
 Transform:
   m_ObjectHideFlags: 0
@@ -2248,13 +2249,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593180214}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1137672786}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 420826866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603589643 stripped
 GameObject:
@@ -2875,7 +2876,7 @@ Transform:
   m_GameObject: {fileID: 693083980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.008331299, y: -9.125377, z: -10}
+  m_LocalPosition: {x: -0.008327484, y: -9.124425, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5024,19 +5025,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -375.995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180775149928610989, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_Pivot.x
@@ -5124,19 +5125,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -584.005
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17251,7 +17252,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 975992466}
   - {fileID: 1172657160}
-  - {fileID: 593180215}
   - {fileID: 420826866}
   - {fileID: 1228040935}
   - {fileID: 660895629}
