@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,11 +127,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 960
-        width: 192.6
-        height: 192
+        y: 977
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: prota 1 spwan v1_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 960
-        width: 192.6
-        height: 192
+        x: 193
+        y: 977
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: prota 1 spwan v1_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 960
-        width: 192.6
-        height: 192
+        x: 386
+        y: 977
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: prota 1 spwan v1_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 960
-        width: 192.6
-        height: 192
+        x: 579
+        y: 977
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: prota 1 spwan v1_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 960
-        width: 192.6
-        height: 192
+        x: 0
+        y: 784
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: prota 1 spwan v1_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 768
-        width: 192.6
-        height: 192
+        x: 193
+        y: 784
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: prota 1 spwan v1_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 768
-        width: 192.6
-        height: 192
+        x: 386
+        y: 784
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: prota 1 spwan v1_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 768
-        width: 192.6
-        height: 192
+        x: 579
+        y: 784
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: prota 1 spwan v1_8
       rect:
         serializedVersion: 2
-        x: 576
-        y: 768
-        width: 192.6
-        height: 192
+        x: 0
+        y: 591
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: prota 1 spwan v1_9
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
-        width: 192.6
-        height: 192
+        x: 193
+        y: 591
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: prota 1 spwan v1_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 576
-        width: 192.6
-        height: 192
+        x: 386
+        y: 591
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: prota 1 spwan v1_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 576
-        width: 192.6
-        height: 192
+        x: 579
+        y: 591
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: prota 1 spwan v1_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 576
-        width: 192.6
-        height: 192
+        x: 0
+        y: 398
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: prota 1 spwan v1_13
       rect:
         serializedVersion: 2
-        x: 576
-        y: 576
-        width: 192.6
-        height: 192
+        x: 193
+        y: 398
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,12 +420,12 @@ TextureImporter:
       name: prota 1 spwan v1_14
       rect:
         serializedVersion: 2
-        x: 768
-        y: 576
-        width: 192.6
-        height: 192
+        x: 386
+        y: 398
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,12 +441,12 @@ TextureImporter:
       name: prota 1 spwan v1_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
-        width: 192.6
-        height: 192
+        x: 579
+        y: 398
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,12 +462,12 @@ TextureImporter:
       name: prota 1 spwan v1_16
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
-        width: 192.6
-        height: 192
+        x: 0
+        y: 205
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,12 +483,12 @@ TextureImporter:
       name: prota 1 spwan v1_17
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 192.6
-        height: 192
+        x: 193
+        y: 205
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: prota 1 spwan v1_18
       rect:
         serializedVersion: 2
-        x: 576
-        y: 384
-        width: 192.6
-        height: 192
+        x: 386
+        y: 205
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,12 +525,12 @@ TextureImporter:
       name: prota 1 spwan v1_19
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
-        width: 192.6
-        height: 192
+        x: 579
+        y: 205
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -547,11 +547,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 192.6
-        height: 192
+        y: 12
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,12 +567,12 @@ TextureImporter:
       name: prota 1 spwan v1_21
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192.6
-        height: 192
+        x: 193
+        y: 12
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,12 +588,12 @@ TextureImporter:
       name: prota 1 spwan v1_22
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192.6
-        height: 192
+        x: 386
+        y: 12
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,19 +609,19 @@ TextureImporter:
       name: prota 1 spwan v1_23
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
-        width: 192.6
-        height: 192
+        x: 770
+        y: 975
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1362080f9f879e84d9d2285e52390d04
-      internalID: -1795784912
+      spriteID: 8f2ad63406a4b18479330bb4353df8aa
+      internalID: 1117121808
       vertices: []
       indices: 
       edges: []
@@ -630,19 +630,19 @@ TextureImporter:
       name: prota 1 spwan v1_24
       rect:
         serializedVersion: 2
-        x: 768
-        y: 192
-        width: 192.6
-        height: 192
+        x: 770
+        y: 784
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5675ebf91ae819145a3060719fe24ced
-      internalID: -1210756328
+      spriteID: dd6ce26dce805f54ba63b5ba00969e38
+      internalID: -462677198
       vertices: []
       indices: 
       edges: []
@@ -651,19 +651,19 @@ TextureImporter:
       name: prota 1 spwan v1_25
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192.6
-        height: 192
+        x: 770
+        y: 591
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73c1cd1c996c18b4fb9661a5b860023c
-      internalID: -98741478
+      spriteID: 90dbed6b9dba0e549a79f7c4a25de8a9
+      internalID: 38980667
       vertices: []
       indices: 
       edges: []
@@ -672,19 +672,19 @@ TextureImporter:
       name: prota 1 spwan v1_26
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192.6
-        height: 192
+        x: 770
+        y: 398
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39559cc9b621b504da79b2e50da1a1be
-      internalID: 1941673501
+      spriteID: 2fea7d41d126ab748b888b0d2c4fca69
+      internalID: -1804166795
       vertices: []
       indices: 
       edges: []
@@ -693,19 +693,19 @@ TextureImporter:
       name: prota 1 spwan v1_27
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192.6
-        height: 192
+        x: 770
+        y: 205
+        width: 193
+        height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6c52989809a0554f84d8b824335b546
-      internalID: -171742704
+      spriteID: b55cc9b29485b8741972c94e416ad2c9
+      internalID: -1868655849
       vertices: []
       indices: 
       edges: []
@@ -737,11 +737,11 @@ TextureImporter:
       prota 1 spwan v1_20: 1763157529
       prota 1 spwan v1_21: 1455415350
       prota 1 spwan v1_22: -563031544
-      prota 1 spwan v1_23: -1795784912
-      prota 1 spwan v1_24: -1210756328
-      prota 1 spwan v1_25: -98741478
-      prota 1 spwan v1_26: 1941673501
-      prota 1 spwan v1_27: -171742704
+      prota 1 spwan v1_23: 1117121808
+      prota 1 spwan v1_24: -462677198
+      prota 1 spwan v1_25: 38980667
+      prota 1 spwan v1_26: -1804166795
+      prota 1 spwan v1_27: -1868655849
       prota 1 spwan v1_3: -1076832615
       prota 1 spwan v1_4: 537705124
       prota 1 spwan v1_5: -144531772

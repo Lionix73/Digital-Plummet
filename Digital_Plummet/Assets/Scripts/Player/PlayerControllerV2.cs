@@ -80,6 +80,10 @@ public class PlayerControllerV2 : MonoBehaviour
     [Tooltip("Falling Down Particle System")]
     [SerializeField] private ParticleSystem fallingUpVFX;
 
+    //Animation
+    private Animator animator;
+    private bool spawning;
+
 
     public bool TutorialBlock{
         get{ return tutorialBlock; }
@@ -88,7 +92,7 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
         deadMenu = GameObject.Find("PanelMuerte");
         uiManager = deadMenu.GetComponent<UIManager>();
         playerStart = GameObject.Find("PlayerStart");
@@ -97,7 +101,9 @@ public class PlayerControllerV2 : MonoBehaviour
     }
 
     void Start (){
-        rb = GetComponent<Rigidbody2D>();;
+        //spawning=true;
+
+        rb = GetComponent<Rigidbody2D>();
 
         life = 1;
 
@@ -287,6 +293,16 @@ public class PlayerControllerV2 : MonoBehaviour
         rb.velocity = Vector3.zero;
 
         isTouching = false;
+    }
+
+    public void SpawnAnim(){
+        StartCoroutine(nameof(CutMovement),2.0f);
+    }
+
+    private IEnumerator CutMovement(float timer){
+        yield return new WaitForSeconds(timer);
+        spawning=false;
+        animator.SetBool("spawning", spawning);
     }
 }
 

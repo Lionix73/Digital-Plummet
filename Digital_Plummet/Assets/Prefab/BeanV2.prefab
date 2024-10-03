@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8720130740895262118}
   - component: {fileID: 3502764798784580317}
   - component: {fileID: 8328763787040327368}
+  - component: {fileID: 1533198208081393025}
   m_Layer: 0
   m_Name: BeanV2
   m_TagString: Player
@@ -206,6 +207,27 @@ MonoBehaviour:
   playerStart: {fileID: 0}
   fallingDownVFX: {fileID: 7059787839446086353}
   fallingUpVFX: {fileID: 6140705038207421439}
+--- !u!95 &1533198208081393025
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070948757191027559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4991070086299019684
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1533198208081393025, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27ca13b06e3b64d4e8cfb251986fcd75, type: 2}
+    - target: {fileID: 1598786247694798189, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598786247694798189, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: m_Size.x
+      value: 1.515625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598786247694798189, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: m_Size.y
+      value: 1.515625
+      objectReference: {fileID: 0}
     - target: {fileID: 1598786247694798189, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -55,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 8070948757191027559, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
       propertyPath: m_Name
       value: BeanV2 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720130740895262118, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
