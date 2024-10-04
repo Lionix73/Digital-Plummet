@@ -117,7 +117,9 @@ public class PlayerControllerV2 : MonoBehaviour
 
     void Update(){
 
-        Flip();
+        if(!spawning){
+            Flip();
+        }
 
         if (!onEMPEffect || !spawning){
             TouchInput();
