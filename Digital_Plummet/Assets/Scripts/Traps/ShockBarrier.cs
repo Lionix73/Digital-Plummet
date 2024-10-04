@@ -15,12 +15,15 @@ public class ShockBarrier : MonoBehaviour
     [Tooltip("The ray...")]
     [SerializeField] GameObject ray;
 
+    AudioSource sound;
+
     private void Start() {
         ray.transform.position = Vector3.Lerp(RayPoints[0].position,RayPoints[1].position,0.5f);
         //ray.transform.rotation = Quaternion.Lerp(RayPoints[0].rotation,RayPoints[1].rotation,0.5f); not using...
         ray.transform.localScale= new Vector3((RayPoints[0].position - RayPoints[1].position).magnitude,0.15f,0);
 
         timeGapActivation=timeGapActivationMax;
+        sound = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -33,6 +36,7 @@ public class ShockBarrier : MonoBehaviour
     }
 
     private IEnumerator Activation(){
+        sound.Play();
         ray.SetActive(false);
         yield return new WaitForSeconds(gapTime);
         ray.SetActive(true);

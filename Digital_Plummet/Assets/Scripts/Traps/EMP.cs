@@ -14,8 +14,11 @@ public class EMP : MonoBehaviour
     [SerializeField] private float shockWaveDuration;
     float shockTime;
 
+    AudioSource sound;
+
     private void Start() {
         collider = GetComponentInChildren<Collider2D>();
+        sound = GetComponent<AudioSource>();
         collider.enabled = false;
         shockImg.enabled = false;
         shockTime=shockCD;
@@ -31,6 +34,7 @@ public class EMP : MonoBehaviour
     }
 
     private IEnumerator ShockWave(){
+        sound.Play();
         collider.enabled=true;
         shockImg.enabled=true;
         yield return new WaitForSeconds(shockWaveDuration);

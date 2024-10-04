@@ -21,9 +21,16 @@ public class LaserBarrier : MonoBehaviour
 
     [Tooltip("The prefab of the laser bars")]
     [SerializeField] LaserBar laserPrefab;
+
+    AudioSource sound;
+    bool m_Play;
+
     // Start is called before the first frame update
     void Start()
     {
+        sound = GetComponent<AudioSource>();
+        m_Play = true;
+
         for (int i = 0;i<barrierPos.Count; i++){
            barrierPos[i].position = barrierPos[0].position + barrierDistance*i;
         } 
@@ -34,6 +41,11 @@ public class LaserBarrier : MonoBehaviour
     {
         TimeNextActivation-= Time.deltaTime;
 
+        if (TimeNextActivation < 1.8f && sound.isPlaying == false)
+        {
+            sound.Play();
+        }
+
         if (TimeNextActivation < 0){
             StartCoroutine(nameof(ActivateBarriers));
             TimeNextActivation=TimeNextActivationMax;
@@ -42,7 +54,7 @@ public class LaserBarrier : MonoBehaviour
 
     private IEnumerator ActivateBarriers(){
         for (int i = 0; i<barrierPos.Count; i++){
-            LaserBar laserBar=Instantiate(laserPrefab, barrierPos[i].position,Quaternion.identity);
+            LaserBar laserBar =Instantiate(laserPrefab, barrierPos[i].position,Quaternion.identity);
             laserBar.transform.localScale = scaleOfBars;
             laserBar.DestroyOnLifeTime(lifeTimeLaserBars);
             yield return new WaitForSeconds(timeBetweenBarriers);

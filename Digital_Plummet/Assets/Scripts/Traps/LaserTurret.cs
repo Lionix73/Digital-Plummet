@@ -28,11 +28,15 @@ public class LaserTurret : MonoBehaviour
     [Range(0.1f,2f)][SerializeField] float deltaTweenLaser;
     LaserProjectile[] laser = new LaserProjectile[3];
 
+    AudioSource sound;
+
     void Start()
     {
         position= gameObject.transform.position;
         timeBetweenBurstDelta=timeBetweenBurst;
         laser= new LaserProjectile[burstAmount];
+
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +56,7 @@ public class LaserTurret : MonoBehaviour
     private IEnumerator Shooting(){
 
         for (int i=0;i<burstAmount;i++) {
+            sound.Play();
             laser[i]=Instantiate(laserPrefab, shootPos.position, Quaternion.identity);
             laser[i].ShootLaser(transform.right);
             yield return new WaitForSeconds(deltaTweenLaser);
