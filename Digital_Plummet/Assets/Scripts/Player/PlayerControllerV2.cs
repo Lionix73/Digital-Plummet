@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -15,14 +14,14 @@ public class PlayerControllerV2 : MonoBehaviour
     [Tooltip("It limits general speed in X axis.")]
     [SerializeField] private float maxSpeedX;
 
-    [Tooltip("It limits general speed in Y axis.")]
-    [SerializeField] private float maxSpeedY;
+    [Tooltip("It limits general speed in Y axis when falling fast.")]
+    [SerializeField] private float maxSpeedYFast;
+
+    [Tooltip("It limits general speed in Y axis when falling slow.")]
+    [SerializeField] private float maxSpeedYSlow;
 
     [Tooltip("Multiplies gravity force for extra down acceleration")]
     [Min (0f)] [SerializeField] private float gravMultiplier;
-
-    [Tooltip("The counter vector for gravity change, helps to stop.")]
-    [Range(0.1f, 1f)] [SerializeField] private float counterGravForce;
 
     private float horizontal;
     private bool isFacingRight;
@@ -69,16 +68,15 @@ public class PlayerControllerV2 : MonoBehaviour
 
 
     //Tutorial Variables
-    private bool tutorialBlock;
-
-
-    //Tutorial Variables
     [Header("VFX")]
     [Tooltip("Falling Down Particle System")]
     [SerializeField] private ParticleSystem fallingDownVFX;
 
     [Tooltip("Falling Down Particle System")]
     [SerializeField] private ParticleSystem fallingUpVFX;
+
+    private bool tutorialBlock;
+
 
     //Animation
     private Animator animator;
@@ -101,8 +99,6 @@ public class PlayerControllerV2 : MonoBehaviour
     }
 
     void Start (){
-        //spawning=true;
-
         rb = GetComponent<Rigidbody2D>();
 
         life = 1;
@@ -113,6 +109,8 @@ public class PlayerControllerV2 : MonoBehaviour
 
         onEMPEffect=false;
 
+        spawning = true;
+
         fallingDownVFX.Stop();
         fallingUpVFX.Play();
     }
@@ -121,13 +119,19 @@ public class PlayerControllerV2 : MonoBehaviour
 
         Flip();
 
-        if (!onEMPEffect){
+        if (!onEMPEffect || !spawning){
             TouchInput();
+        }
+
+        if(spawning){
+            rb.velocity = Vector2.zero;
         }
         
         Debug.DrawLine(initialTouchPos, touchTemp, Color.red);
 
         SpeedControl();
+
+        SilouetteTrail.me.Silouette_Trail();
     }
 
     private void FixedUpdate(){
@@ -142,8 +146,6 @@ public class PlayerControllerV2 : MonoBehaviour
                 rb.velocity = new Vector2(moveDirection * moveSpeed, currentVelocity.y);
             }
         }
-
-        GravityMultiplier();
     }
 
     private void SpeedControl(){
@@ -153,23 +155,43 @@ public class PlayerControllerV2 : MonoBehaviour
             Vector2 limitedVel = flatVel.normalized * maxSpeedX;
             rb.velocity = new Vector2(limitedVel.x, rb.velocity.y);
         }
-        else if (MathF.Abs(flatVel.y) > maxSpeedY){
-            Vector2 limitedVel = flatVel.normalized * maxSpeedY;
+        else if (MathF.Abs(flatVel.y) > maxSpeedYFast){
+            Vector2 limitedVel = flatVel.normalized * maxSpeedYFast;
+            rb.velocity = new Vector2(rb.velocity.x, limitedVel.y);
+        }
+        else if (MathF.Abs(flatVel.y) > maxSpeedYSlow && rb.gravityScale == 1f){
+            Vector2 limitedVel = flatVel.normalized * maxSpeedYSlow;
             rb.velocity = new Vector2(rb.velocity.x, limitedVel.y);
         }
     }
 
-    private void GravityMultiplier(){
-        rb.AddForce(Vector2.down * gravMultiplier, ForceMode2D.Force);
-    }
-
     private void Flip(){
-        if(isFacingRight && moveDirection < transform.position.x || !isFacingRight && moveDirection > transform.position.x){
+        float rotationValue;
+
+        if(isFacingRight && moveDirection > 0f || !isFacingRight && moveDirection < 0f){
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+
+        if(isFacingRight){
+            rotationValue = 30f;
+        }
+        else{
+            rotationValue = -30f;
+        }
+
+        Quaternion targetRotation;
+        if (rb.gravityScale == 1f) {
+            targetRotation = Quaternion.Euler(0f, 0f, 0f);
+        } else if (rb.gravityScale > 1f) {
+            targetRotation = Quaternion.Euler(0f, 0f, rotationValue);
+        } else {
+            targetRotation = transform.rotation;
+        }
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 0.7f);
     }
 
     private void TouchInput(){
@@ -190,7 +212,7 @@ public class PlayerControllerV2 : MonoBehaviour
                 case TouchPhase.Began:
                     initialTouchPos = Camera.main.ScreenToWorldPoint(touch.position);
                     isTouching = true;
-                    rb.gravityScale = 1f;
+                    rb.gravityScale = rb.gravityScale * gravMultiplier;
 
                 break;
 
@@ -201,35 +223,33 @@ public class PlayerControllerV2 : MonoBehaviour
                         touchTemp = currentTouchPos;
                         delta = currentTouchPos.x - initialTouchPos.x;
 
-                        moveDirection = Mathf.Clamp(delta, -4f, 4f);
+                        moveDirection = Mathf.Clamp(delta, -1f, 1f);
                     }
                     
                 break;
 
                 case TouchPhase.Ended:
                     isTouching = false;
-                    rb.gravityScale = -1f;
+                    rb.gravityScale = 1f;
+                    rb.AddForce(new Vector2(-rb.velocity.x * 0.9f, -rb.velocity.y * 0.8f), ForceMode2D.Impulse);
 
                     initialTouchPos = Vector2.zero;
                     currentTouchPos = Vector2.zero;
                     moveDirection = 0f;
                     
-                    gravityChangeForce.x = rb.velocity.x;
-                    gravityChangeForce.y = rb.velocity.y * counterGravForce;
-                    rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
+                    //rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
 
                 break;
                 case TouchPhase.Canceled:
                     isTouching = false;
-                    rb.gravityScale = -1f;
+                    rb.gravityScale = 1f;
+                    rb.AddForce(new Vector2(-rb.velocity.x * 0.9f, -rb.velocity.y * 0.8f), ForceMode2D.Impulse);
 
                     initialTouchPos = Vector2.zero;
                     currentTouchPos = Vector2.zero;
                     moveDirection = 0f;
                     
-                    gravityChangeForce.x = rb.velocity.x;
-                    gravityChangeForce.y = rb.velocity.y * counterGravForce;
-                    rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
+                    //rb.AddForce(-gravityChangeForce, ForceMode2D.Impulse);
                 break;
             }
             //Switch End
@@ -295,14 +315,11 @@ public class PlayerControllerV2 : MonoBehaviour
         isTouching = false;
     }
 
-    public void SpawnAnim(){
-        StartCoroutine(nameof(CutMovement),2.0f);
-    }
-
-    private IEnumerator CutMovement(float timer){
-        yield return new WaitForSeconds(timer);
-        spawning=false;
+    public void EndSpawnAnim(){
+        spawning = false;
         animator.SetBool("spawning", spawning);
+
+        rb.isKinematic = false;
     }
 }
 

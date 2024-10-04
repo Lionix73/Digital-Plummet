@@ -771,7 +771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34182275}
   - component: {fileID: 34182276}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &39842651
 MonoBehaviour:
@@ -987,7 +987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42220492}
   - component: {fileID: 42220493}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3042,7 +3042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237939190}
   - component: {fileID: 237939191}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3785,7 +3785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347185204}
   - component: {fileID: 347185205}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3912,7 +3912,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &375854517
 MonoBehaviour:
@@ -5777,7 +5777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 561182678}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BG Modules
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6123,7 +6123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595138613}
   - component: {fileID: 595138614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6701,7 +6701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661777580}
   - component: {fileID: 661777581}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6790,7 +6790,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &662621303
 MonoBehaviour:
@@ -7839,7 +7839,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!156049354 &736442320
 Grid:
@@ -8272,7 +8272,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &779261744
 Transform:
@@ -8357,7 +8357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779271931}
   - component: {fileID: 779271932}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8772,7 +8772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826310998}
   - component: {fileID: 826310999}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9253,7 +9253,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &872019379
 Transform:
@@ -9741,7 +9741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902268461}
   - component: {fileID: 902268462}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9951,7 +9951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911037000}
   - component: {fileID: 911037001}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10096,7 +10096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918293653}
   - component: {fileID: 918293654}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10186,7 +10186,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &930248669
 Transform:
@@ -12400,7 +12400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100175385}
   - component: {fileID: 1100175386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12812,7 +12812,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1124189780
 Transform:
@@ -12848,7 +12848,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1131159401
 BoxCollider2D:
@@ -12936,7 +12936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133495245}
   - component: {fileID: 1133495246}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13085,7 +13085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137048547}
   - component: {fileID: 1137048548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14010,7 +14010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186726889}
   - component: {fileID: 1186726890}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15543,7 +15543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205928898}
   - component: {fileID: 1205928899}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15627,7 +15627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206330105}
   - component: {fileID: 1206330106}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15821,8 +15821,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1025976128}
-  - {fileID: 1703231560}
   - {fileID: 736442321}
+  - {fileID: 1703231560}
   - {fileID: 1154053547}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15901,7 +15901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1243152381}
   - component: {fileID: 1243152382}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15990,7 +15990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251732445}
   - component: {fileID: 1251732446}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16154,7 +16154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277360330}
   - component: {fileID: 1277360331}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16244,7 +16244,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1277798779
 Transform:
@@ -16329,7 +16329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277850429}
   - component: {fileID: 1277850430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17089,7 +17089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307086659}
   - component: {fileID: 1307086660}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17178,7 +17178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310382227}
   - component: {fileID: 1310382228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17348,7 +17348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318727487}
   - component: {fileID: 1318727488}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17965,7 +17965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359913714}
   - component: {fileID: 1359913715}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21097,7 +21097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397007020}
   - component: {fileID: 1397007021}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21931,7 +21931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467526800}
   - component: {fileID: 1467526801}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22707,7 +22707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513859082}
   - component: {fileID: 1513859083}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22876,7 +22876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517647324}
   - component: {fileID: 1517647325}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22960,7 +22960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519537471}
   - component: {fileID: 1519537472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23132,7 +23132,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1541051258
 Transform:
@@ -25986,7 +25986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746911895}
   - component: {fileID: 1746911896}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26313,7 +26313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782562671}
   - component: {fileID: 1782562672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26487,7 +26487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794496830}
   - component: {fileID: 1794496831}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27051,7 +27051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824940021}
   - component: {fileID: 1824940022}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28381,7 +28381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1950748426
 Transform:
@@ -28938,7 +28938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006370149}
   - component: {fileID: 2006370148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29718,7 +29718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070297486}
   - component: {fileID: 2070297487}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29891,7 +29891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082383051}
   - component: {fileID: 2082383052}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30382,7 +30382,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2116980579
 Transform:
@@ -30676,7 +30676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129378525}
   - component: {fileID: 2129378526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Niv-2-1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
