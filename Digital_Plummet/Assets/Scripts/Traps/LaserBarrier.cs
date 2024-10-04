@@ -23,13 +23,11 @@ public class LaserBarrier : MonoBehaviour
     [SerializeField] LaserBar laserPrefab;
 
     AudioSource sound;
-    bool m_Play;
 
     // Start is called before the first frame update
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        m_Play = true;
 
         for (int i = 0;i<barrierPos.Count; i++){
            barrierPos[i].position = barrierPos[0].position + barrierDistance*i;

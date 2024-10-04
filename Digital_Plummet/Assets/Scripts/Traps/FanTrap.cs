@@ -10,18 +10,22 @@ public class FanTrap : MonoBehaviour
     [SerializeField] Vector2 pushForce;
 
     private Rigidbody2D playerBody;
+    AudioSource sound;
 
     private void Start() {
         pushForce.Normalize();
+        sound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag=="Player"){
+            sound.Play();
             playerBody = other.gameObject.GetComponent<Rigidbody2D>();
         }
     }
     private void OnTriggerStay2D(Collider2D other) {
-        if (playerBody!=null){
+        if (playerBody!=null)
+        {
             playerBody.AddForce(pushForce*pushPower,ForceMode2D.Force);
         }
     }

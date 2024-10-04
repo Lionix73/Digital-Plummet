@@ -23,13 +23,16 @@ public class SelectionCharacterMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI selectionButton;
     [SerializeField] private GameObject coinImage;
+    [SerializeField] private AudioSource[] CharacterSounds;
+
     private CharacterManager characterManager;
     private int indexTutorial;
+    AudioSource sound;
     private void Start()
     {
         characterManager = CharacterManager.Instance;
         SelectedCharacter();
-
+        sound = GetComponent<AudioSource>();
     }
 
     public void OpenMenu()
@@ -57,6 +60,7 @@ public class SelectionCharacterMenu : MonoBehaviour
             selectedIndex = index;
             selectionButton.text = "Selected";
             characterMainMenu.sprite = characterManager.characters[index].unlockedSprite;
+            CharacterSounds[0].Play();
         }
         //Buy phase
         else if (characterManager.characters[index].unlocked == 0 && coins >= characterManager.characters[index].cost)
@@ -74,6 +78,11 @@ public class SelectionCharacterMenu : MonoBehaviour
             PlayerPrefs.SetInt("TotalCoins", remainingCoins);
             Debug.Log("Total coins" + PlayerPrefs.GetInt("TotalCoins"));
             characterManager.DisplayScore();
+            CharacterSounds[1].Play();
+        }
+        else
+        {
+            CharacterSounds[2].Play();
         }
     }
     public void SelectedCharacter()

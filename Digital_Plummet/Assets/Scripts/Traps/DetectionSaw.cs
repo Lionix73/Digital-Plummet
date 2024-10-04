@@ -11,11 +11,16 @@ public class DetectionSaw : MonoBehaviour
     [Tooltip("The speed of the saw...")]
     [SerializeField] float sawSpeed;
     private Vector3 objective;
+
+    AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
         areaDetection=GetComponent<Collider2D>();
-        objective=saw.position;
+        sound = GetComponent<AudioSource>();
+
+        objective = saw.position;
     }
 
     // Update is called once per frame
@@ -29,6 +34,7 @@ public class DetectionSaw : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag=="Player"){
             //Debug.Log("Entro");
+            sound.Play();
             objective = other.gameObject.transform.position;
         }
     }
