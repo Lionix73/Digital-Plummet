@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
                 PlayerPrefsManager.Instance.SetPlayerPref("IndexTutorial", 1);
                 //PlayerPrefs.SetInt("IndexTutorial", 1);
             }
-            animatedPanel.FadeIn();
-            SceneManager.LoadScene(nextLevel);
+            animatedPanel.LoadNameScene(nextLevel);
+            //SceneManager.LoadScene(nextLevel);
         }
     }
 }

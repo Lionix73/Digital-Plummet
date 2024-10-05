@@ -123,23 +123,11 @@ public class UIManager : MonoBehaviour
 
     public void BackToMenu()
     {
-        StartCoroutine(FadeAndLoadScene(0));
-
-    }
-
-    private IEnumerator FadeAndLoadScene(int sceneNumber)
-    {
-        animatedPanel.FadeIn();
-
-        // Espera el tiempo de la animación de fade antes de cambiar la escena
-        yield return new WaitForSecondsRealtime(animatedPanel.fadeTime);
-        // Cambia a la escena del menú principal
-        SceneManager.LoadScene(sceneNumber);
-
-        // Aquí puedes despausar el juego si estaba en pausa
+        animatedPanel.LoadIntScene(0);
         UnpauseGame();
 
     }
+
 
     public void RestartPlayerPrefs()
     {
@@ -174,16 +162,17 @@ public class UIManager : MonoBehaviour
         Debug.Log("Cargando escena # " + indexTutorial);
         if (indexTutorial == 0)
         {
-            StartCoroutine(FadeAndLoadScene(1));
+            animatedPanel.LoadIntScene(1);
+            //StartCoroutine(FadeAndLoadScene(1));
         }
         else if (PlayerPrefs.GetInt("SelectedLevel") == 0 && indexTutorial == 1)
         {
-
-            StartCoroutine(FadeAndLoadScene(2));
+            animatedPanel.LoadIntScene(2);
+            //StartCoroutine(FadeAndLoadScene(2));
         }
         else
         {
-            StartCoroutine(FadeAndLoadScene(PlayerPrefs.GetInt("SelectedLevel")));
+            animatedPanel.LoadIntScene(PlayerPrefs.GetInt("SelectedLevel"));
             //SceneManager.LoadScene(PlayerPrefs.GetInt("SelectedLevel"));
         }
 

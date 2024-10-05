@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     int status;
     public List<GameObject> levelButton;
     public List<Levels> levels;
+    [SerializeField]  FadesAnimation animatedPanel;
     
     // Start is called before the first frame update
     public void LevelStatus()
@@ -31,9 +32,13 @@ public class LevelManager : MonoBehaviour
     }
     public void SelectLevel(int level)
     {
-
+        if (animatedPanel == null)
+        {
+            animatedPanel = FindObjectOfType<FadesAnimation>();
+        }
         PlayerPrefsManager.Instance.SetPlayerPref("SelectedLevel", level);
        // PlayerPrefs.SetInt("SelectedLevel", level);
-        SceneManager.LoadScene(level);
+        animatedPanel.LoadIntScene(level);
+        //SceneManager.LoadScene(level);
     }
 }
