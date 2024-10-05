@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int indexTutorial = 0;
     public List<Levels> levels;
     PlayerPrefsManager playerPrefsManager;
+    [SerializeField] FadesAnimation animatedPanel;
 
     void Start()
     {
@@ -21,14 +22,19 @@ public class GameManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
+        if (animatedPanel == null)
+        {
+            animatedPanel = FindObjectOfType<FadesAnimation>();
+        }
+
+        if (other.CompareTag("Player")){
             indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
             if (indexTutorial == 0)
             {
                 PlayerPrefsManager.Instance.SetPlayerPref("IndexTutorial", 1);
                 //PlayerPrefs.SetInt("IndexTutorial", 1);
             }
-            
+            animatedPanel.FadeIn();
             SceneManager.LoadScene(nextLevel);
         }
     }

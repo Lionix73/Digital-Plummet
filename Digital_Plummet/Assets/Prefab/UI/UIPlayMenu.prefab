@@ -1349,13 +1349,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5882085632289165400}
   - {fileID: 100155445100507314}
   - {fileID: 6580930416365197390}
   - {fileID: 8358361563540120394}
   - {fileID: 1928345851935755497}
   - {fileID: 8405161736490039663}
   - {fileID: 8462142513597670698}
+  - {fileID: 5882085632289165400}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1512,8 +1512,8 @@ CanvasGroup:
   m_GameObject: {fileID: 4517319351292387830}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &3587189053831184397
 MonoBehaviour:
@@ -1641,6 +1641,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1928345851935755497}
   items: []
   scoreText: {fileID: 0}
+  animatedPanel: {fileID: 0}
   respawnManager: {fileID: 0}
 --- !u!1 &5419426080762583676
 GameObject:
@@ -1976,6 +1977,7 @@ MonoBehaviour:
   rectTransform: {fileID: 6580930416365197390}
   items: []
   scoreText: {fileID: 0}
+  animatedPanel: {fileID: 0}
   respawnManager: {fileID: 0}
 --- !u!1 &7253916189860247923
 GameObject:

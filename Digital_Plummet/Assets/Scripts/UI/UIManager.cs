@@ -25,15 +25,21 @@ public class UIManager : MonoBehaviour
     public List<GameObject> items = new List<GameObject>();
     [SerializeField] TextMeshProUGUI scoreText;
     private GameManager gameManager;
-
+    [SerializeField] FadesAnimation animatedPanel;
     //Respawn
     [SerializeField] private RespawnManager respawnManager;
+
+    private int indexTutorial;
 
     void Awake(){
         //Fingind RespawnManager
 
         if(respawnManager == null){
             respawnManager = FindObjectOfType<RespawnManager>();
+        }
+        if (animatedPanel == null)
+        {
+            animatedPanel = FindObjectOfType<FadesAnimation>();
         }
     }
 
@@ -117,10 +123,24 @@ public class UIManager : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Main_Menu");
+        StartCoroutine(FadeAndLoadScene(0));
+
+    }
+
+    private IEnumerator FadeAndLoadScene(int sceneNumber)
+    {
+        animatedPanel.FadeIn();
+
+        // Espera el tiempo de la animación de fade antes de cambiar la escena
+        yield return new WaitForSecondsRealtime(animatedPanel.fadeTime);
+        // Cambia a la escena del menú principal
+        SceneManager.LoadScene(sceneNumber);
+
+        // Aquí puedes despausar el juego si estaba en pausa
         UnpauseGame();
 
     }
+
     public void RestartPlayerPrefs()
     {
         PlayerPrefsManager.Instance.DeleteAllStoredPlayerPrefs();
@@ -148,6 +168,26 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void StartGame()
+    {
+        indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
+        Debug.Log("Cargando escena # " + indexTutorial);
+        if (indexTutorial == 0)
+        {
+            StartCoroutine(FadeAndLoadScene(1));
+        }
+        else if (PlayerPrefs.GetInt("SelectedLevel") == 0 && indexTutorial == 1)
+        {
+
+            StartCoroutine(FadeAndLoadScene(2));
+        }
+        else
+        {
+            StartCoroutine(FadeAndLoadScene(PlayerPrefs.GetInt("SelectedLevel")));
+            //SceneManager.LoadScene(PlayerPrefs.GetInt("SelectedLevel"));
+        }
+
+    }
     // Funci�n para la cuenta regresiva
     IEnumerator StartCountdown()
     {
