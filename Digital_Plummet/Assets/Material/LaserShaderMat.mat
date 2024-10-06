@@ -51,9 +51,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _LaserEdgeSmoothness: 3
-    - _LaserScale: 4
-    - _LaserThickness: 2
+    - _LaserScale: 2
+    - _LaserThickness: 1.5
     m_Colors:
-    - _Color: {r: 7.0339622, g: 0.7101361, b: 0.6768528, a: 0}
-    - _LaserSpeed: {r: -1, g: 0, b: 0, a: 0}
+    - _Color: {r: 3.6377356, g: 0.021149626, b: 0, a: 0}
+    - _LaserSpeed: {r: -1, g: -1, b: 0, a: 0}
   m_BuildTextureStacks: []

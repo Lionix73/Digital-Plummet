@@ -26,6 +26,7 @@ public class SilouetteTrail : MonoBehaviour
                 pool[i].SetActive(true);
                 pool[i].transform.position = transform.position;
                 pool[i].transform.rotation = transform.rotation;
+                pool[i].transform.localScale = transform.localScale;
                 pool[i].GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
                 pool[i].GetComponent<Silouette>().Color = color;
                 return pool[i];
