@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6825225157363060296}
   - component: {fileID: 170865978992490473}
   m_Layer: 0
-  m_Name: Shadow
+  m_Name: Shadow_VFX
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

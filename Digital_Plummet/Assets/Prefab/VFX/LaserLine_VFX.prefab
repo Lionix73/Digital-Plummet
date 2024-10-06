@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9123285715141534733}
   - component: {fileID: 3200400286706991980}
   m_Layer: 0
-  m_Name: VFX_LaserLine
+  m_Name: LaserLine_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

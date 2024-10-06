@@ -564,6 +564,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1103748547}
     m_Modifications:
+    - target: {fileID: 2115682716085294223, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4323920993449706734, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -610,6 +614,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4323920993449706734, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041712204707489868, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5076306278275432192, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
@@ -4688,6 +4696,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1103748547}
     m_Modifications:
+    - target: {fileID: 2115682716085294223, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3203346747300814940, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: pushPower
       value: 30
@@ -4738,6 +4750,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4323920993449706734, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041712204707489868, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5076306278275432192, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
@@ -13229,6 +13245,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1103748547}
     m_Modifications:
+    - target: {fileID: 2115682716085294223, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3203346747300814940, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: pushPower
       value: 40
@@ -13279,6 +13299,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4323920993449706734, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041712204707489868, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5076306278275432192, guid: d17fa2941bf3f4f409064b55a278a06b, type: 3}
