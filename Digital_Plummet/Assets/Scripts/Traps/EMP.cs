@@ -14,6 +14,8 @@ public class EMP : MonoBehaviour
     [SerializeField] private float shockWaveDuration;
     float shockTime;
 
+    private Animator animator;
+
     AudioSource sound;
 
     private void Start() {
@@ -22,12 +24,14 @@ public class EMP : MonoBehaviour
         collider.enabled = false;
         shockImg.enabled = false;
         shockTime=shockCD;
+        animator = GetComponent<Animator>();
     }
 
     private void Update() {
         shockTime-=Time.deltaTime;
 
         if (shockTime < 0){
+            animator.SetTrigger("In");
             StartCoroutine(nameof(ShockWave));
             shockTime=shockCD;
         }
@@ -38,6 +42,7 @@ public class EMP : MonoBehaviour
         collider.enabled=true;
         shockImg.enabled=true;
         yield return new WaitForSeconds(shockWaveDuration);
+        animator.SetTrigger("Out");
         collider.enabled=false;
         shockImg.enabled=false;
     }
