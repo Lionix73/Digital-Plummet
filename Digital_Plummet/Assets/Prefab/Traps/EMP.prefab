@@ -342,3 +342,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectDuration: 1.2
+  pushPower: 20

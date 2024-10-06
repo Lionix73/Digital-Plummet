@@ -288,11 +288,12 @@ public class PlayerControllerV2 : MonoBehaviour
         
     }
 
-    public void EMPHit(float duration){
-        StartCoroutine(nameof(EMPActivate), duration);
+    public void EMPHit(Vector3 pumpum, float power){
+        //StartCoroutine(nameof(EMPActivate), duration); //Sin uso de momento
+        rb.AddForce(pumpum*power,ForceMode2D.Impulse);
     }
 
-    private IEnumerator EMPActivate(float duration){
+    private IEnumerator EMPActivate(float duration){ // Sin uso de momento
         onEMPEffect=true;
         yield return new WaitForSeconds(duration);
         onEMPEffect=false;
