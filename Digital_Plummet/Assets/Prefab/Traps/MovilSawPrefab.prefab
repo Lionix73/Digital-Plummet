@@ -46,7 +46,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point B
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -77,7 +77,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point A
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4277669188063803795}
   - component: {fileID: 1785296369511196560}
+  - component: {fileID: 2456358708183932680}
   - component: {fileID: 190679999673019925}
   - component: {fileID: 2562495823261830489}
   - component: {fileID: 5336397920062740080}
@@ -184,6 +185,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2456358708183932680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7215671115207528016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ff6208157b2e54b9877c87139e6114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -600
 --- !u!58 &190679999673019925
 CircleCollider2D:
   m_ObjectHideFlags: 0
