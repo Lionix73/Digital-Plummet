@@ -46,7 +46,7 @@ public class PlayerControllerV2 : MonoBehaviour
     [Header("Touch Inputs Variables")]
 
     [Tooltip("Tolerance number for the minimun 'delta' required between touch points to move the character")]
-    [Range (0.1f, 5f)] [SerializeField] private float touchMinTolerance;
+    [SerializeField] private float touchMinTolerance;
 
     private Vector2 initialTouchPos;
     private Vector2 touchTemp;
@@ -130,6 +130,7 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         
         Debug.DrawLine(initialTouchPos, touchTemp, Color.red);
+        Debug.Log(moveDirection);
 
         SpeedControl();
 
@@ -144,7 +145,7 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             Debug.Log(moveDirection);
 
-            if(Mathf.Abs(delta) > touchMinTolerance){
+            if(Mathf.Abs(moveDirection) > touchMinTolerance){
                 rb.velocity = new Vector2(moveDirection * moveSpeed, currentVelocity.y);
             }
         }
@@ -225,7 +226,7 @@ public class PlayerControllerV2 : MonoBehaviour
                         touchTemp = currentTouchPos;
                         delta = currentTouchPos.x - initialTouchPos.x;
 
-                        moveDirection = Mathf.Clamp(delta, -1f, 1f);
+                        moveDirection = Mathf.Clamp(delta / 5f, -1f, 1f);
                     }
                     
                 break;
@@ -263,6 +264,7 @@ public class PlayerControllerV2 : MonoBehaviour
             }   
         }
     }
+    
 
     public void TakeDmg(){
         if(!inmortal){
