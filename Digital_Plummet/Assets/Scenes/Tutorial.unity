@@ -134,6 +134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShockBarrier (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3426482666041553808, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141095997272210520, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.81
+      objectReference: {fileID: 0}
     - target: {fileID: 5128760949394949830, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.89
@@ -1778,6 +1786,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShockBarrier
       objectReference: {fileID: 0}
+    - target: {fileID: 3426482666041553808, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141095997272210520, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141095997272210520, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5128760949394949830, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.85
@@ -3091,7 +3111,7 @@ Transform:
   m_GameObject: {fileID: 731788248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -727.6, z: 0}
+  m_LocalPosition: {x: 0, y: -721.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4313,8 +4333,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 10, y: 62.5}
       - {x: -10, y: 62.5}
-      - {x: -10, y: -695}
-      - {x: 10, y: -695}
+      - {x: -10.886763, y: -702.22076}
+      - {x: 10.126684, y: -702.6008}
   m_UseDelaunayMesh: 0
 --- !u!4 &1025976128
 Transform:
@@ -5407,7 +5427,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
@@ -7545,7 +7565,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
