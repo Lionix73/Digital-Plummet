@@ -82,7 +82,10 @@ public class PlayerControllerV2 : MonoBehaviour
     private Animator animator;
     private bool spawning;
 
-
+    public int Life
+    {
+        get { return life; }
+    }
     public bool TutorialBlock{
         get{ return tutorialBlock; }
         set{ tutorialBlock = value; }
@@ -306,7 +309,7 @@ public class PlayerControllerV2 : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
 
         rb.isKinematic = false;
-
+        life = 1;
         cineMachineFollowCharacter.FindAndFollow();
     }
 

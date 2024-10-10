@@ -7,4 +7,5 @@ public class Levels : ScriptableObject
 {
     public int status;
     public string levelName;
+    public float timeRecord;
 }
