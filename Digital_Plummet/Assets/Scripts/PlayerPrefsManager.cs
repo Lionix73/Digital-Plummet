@@ -73,6 +73,9 @@ public class PlayerPrefsManager : MonoBehaviour
     // Método para borrar todas las claves de la lista
     public void DeleteAllStoredPlayerPrefs()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        /*
         // Obtener la lista de claves
         List<string> keysList = GetKeysList();
 
@@ -87,6 +90,6 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.DeleteKey(keysListKey);
 
         // Guardar los cambios
-        PlayerPrefs.Save();
+        PlayerPrefs.Save();*/
     }
 }
