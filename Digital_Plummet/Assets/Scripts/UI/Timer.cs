@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     int sceneIndex;
 
     [SerializeField] float timeLeft;
-    float timeRecord;
+    [SerializeField]float timeRecord;
     [SerializeField] int timerOn = 0;
 
     [SerializeField] TextMeshProUGUI timerText;
@@ -27,10 +27,20 @@ public class Timer : MonoBehaviour
     private UIManager uiManager;
     [SerializeField] GameObject nextLevelPanel;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        nextLevelPanel = GameObject.Find("NextLevelPanel");
+        uiManager = nextLevelPanel.GetComponent<UIManager>();
+    }
     void Start()
     {
-        player = FindObjectOfType<PlayerControllerV2>();
+        indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (sceneIndex >= 2)
+        {
+            timeRecord = PlayerPrefs.GetFloat(levels[sceneIndex - 2].levelRecord);
+        }
+        player = FindObjectOfType<PlayerControllerV2>();
         timeLeft = 0;
         timerOn = 1;
         if (timerOn == 0 || indexTutorial == 0)
@@ -42,14 +52,13 @@ public class Timer : MonoBehaviour
         {
             nextLevel = "Main_Menu";
         }
-        nextLevelPanel = GameObject.Find("NextLevelPanel");
-        uiManager = nextLevelPanel.GetComponent<UIManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.Life > 0 && timerOn == 1)
+        if (player.Life > 0 && timerOn == 1 && indexTutorial == 1)
         {
             timeLeft += Time.deltaTime;
             UpdateTimer(timeLeft, timerText);
@@ -70,51 +79,57 @@ public class Timer : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
-            if (indexTutorial == 0)
-            {
-                PlayerPrefsManager.Instance.SetPlayerPref("IndexTutorial", 1);
-                animatedPanel.LoadIntScene(2);
-                //PlayerPrefs.SetInt("IndexTutorial", 1);
-            }
-            else
+            if (indexTutorial == 1)
             {
                 timerText.text = "";
                 UpdateTimer(timeLeft, timerPanel);
                 uiManager.PanelFadeIn();
                 GetActiveLevel();
             }
+            else
+            {
+
+                PlayerPrefsManager.Instance.SetPlayerPref("IndexTutorial", 1);
+                animatedPanel.LoadIntScene(2);
+                //PlayerPrefs.SetInt("IndexTutorial", 1);
+            }
         }
     }
 
     private void GetActiveLevel()
     {
-         
-        if (sceneIndex >= 2)
-        {
-            PlayerPrefsManager.Instance.SetPlayerPref(levels[sceneIndex - 2].levelName, 1);
-            timeRecord = PlayerPrefs.GetFloat(levels[sceneIndex - 2].levelRecord);
-        }
 
-        if (timeLeft > timeRecord)
+        if (timeLeft < timeRecord || timeRecord == 0)
         {
             PlayerPrefs.SetFloat(levels[sceneIndex -2].levelRecord, timeLeft);
             timerPanel.text = "NEW RECORD";
-            recordPanel.text = timeLeft.ToString();
+            recordPanel.text = GetTimer(timeLeft);
+            //recordPanel.text = timeLeft.ToString();
         }
-        else if (timeLeft < timeRecord)
+        else if (timeLeft > timeRecord)
         {
-            timerPanel.text = "Time: " + timeLeft.ToString();
-            recordPanel.text = "Record: " + timeRecord.ToString();
+            timerPanel.text = "Time: " + GetTimer(timeLeft);
+            recordPanel.text = "Record: " + GetTimer(timeRecord);
+            //timerPanel.text = "Time: " + timeLeft.ToString();
+            //recordPanel.text = "Record: " + timeRecord.ToString();
         }
         activeLevel.text = levels[sceneIndex].levelName + "COMPLETE";
+        PlayerPrefs.Save();
     }
     private void UpdateTimer(float currentTime, TextMeshProUGUI textVisual)
     {
         //currentTime += 1;
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
-        textVisual.text = string.Format("{00} : {1:00}", minutes, seconds);
+        textVisual.text = string.Format("{00}:{1:00}", minutes, seconds);
+    }
+
+    private string GetTimer(float currentTime)
+    {
+        //currentTime += 1;
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        return string.Format("{00} : {1:00}", minutes, seconds);
     }
 
     public void ChangeLevel()

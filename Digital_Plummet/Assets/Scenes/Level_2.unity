@@ -7297,7 +7297,7 @@ Transform:
   m_GameObject: {fileID: 693083980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05242634, y: -12.017875, z: -10}
+  m_LocalPosition: {x: 0.051335335, y: -11.809319, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12971,6 +12971,7 @@ GameObject:
   - component: {fileID: 1131159403}
   - component: {fileID: 1131159402}
   - component: {fileID: 1131159401}
+  - component: {fileID: 1131159404}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13030,7 +13031,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131159400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: defb2e5d89e83c5438e83f66e9f3dd6d, type: 3}
   m_Name: 
@@ -13039,6 +13040,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  animatedPanel: {fileID: 0}
 --- !u!4 &1131159403
 Transform:
   m_ObjectHideFlags: 0
@@ -13054,6 +13056,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1124189780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131159404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131159400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d1318b69b480d458bfa267ffc93932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  timeLeft: 0
+  timeRecord: 0
+  timerOn: 0
+  timerText: {fileID: 1137672790}
+  activeLevel: {fileID: 1137672789}
+  timerPanel: {fileID: 1137672788}
+  recordPanel: {fileID: 1137672787}
+  nextLevel: 
+  levels:
+  - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
+  - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  animatedPanel: {fileID: 0}
+  nextLevelPanel: {fileID: 0}
 --- !u!1 &1133495244
 GameObject:
   m_ObjectHideFlags: 0
@@ -13421,6 +13449,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1180775149928610989, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
   m_PrefabInstance: {fileID: 1137672785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137672787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2816545067318844413, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1137672788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7969717519826161921, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1137672789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7404331381117796715, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1137672790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2743138035775551136, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1140057940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3688820760759093261, guid: 2d412d795fb049c4da87219b1fe08059, type: 3}
