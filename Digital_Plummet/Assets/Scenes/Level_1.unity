@@ -2972,7 +2972,6 @@ Transform:
   - {fileID: 1142434044}
   - {fileID: 693083985}
   - {fileID: 1907227183}
-  - {fileID: 593180215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424934889
@@ -4207,7 +4206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1137672786}
-  m_Father: {fileID: 420826866}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &593819988 stripped
 Transform:
@@ -24445,6 +24444,7 @@ SceneRoots:
   - {fileID: 975992466}
   - {fileID: 1172657160}
   - {fileID: 420826866}
+  - {fileID: 593180215}
   - {fileID: 1228040935}
   - {fileID: 660895629}
   - {fileID: 424934890}

@@ -133,7 +133,7 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         
         Debug.DrawLine(initialTouchPos, touchTemp, Color.red);
-        Debug.Log(moveDirection);
+        //Debug.Log(moveDirection);
 
         SpeedControl();
 
@@ -146,7 +146,7 @@ public class PlayerControllerV2 : MonoBehaviour
 
         if (isTouching)
         {
-            Debug.Log(moveDirection);
+            //Debug.Log(moveDirection);
 
             if(Mathf.Abs(moveDirection) > touchMinTolerance){
                 rb.velocity = new Vector2(moveDirection * moveSpeed, currentVelocity.y);
