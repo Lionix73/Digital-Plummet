@@ -46,7 +46,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point B
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -77,7 +77,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point A
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -96,7 +96,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 122689796849016267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7215671115207528016
+--- !u!1 &6929000938750817091
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,42 +104,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4277669188063803795}
-  - component: {fileID: 1785296369511196560}
-  - component: {fileID: 2456358708183932680}
-  - component: {fileID: 190679999673019925}
-  - component: {fileID: 2562495823261830489}
-  - component: {fileID: 5336397920062740080}
-  - component: {fileID: 7584754048471275523}
+  - component: {fileID: 2342443457955432004}
+  - component: {fileID: 6699527844938486263}
+  - component: {fileID: 671373162487914616}
   m_Layer: 0
-  m_Name: MovilSaw
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4277669188063803795
+--- !u!4 &2342443457955432004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7215671115207528016}
+  m_GameObject: {fileID: 6929000938750817091}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.6, y: 6.6, z: 6.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 122689796849016267}
+  m_Father: {fileID: 4277669188063803795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1785296369511196560
+--- !u!212 &6699527844938486263
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7215671115207528016}
+  m_GameObject: {fileID: 6929000938750817091}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -185,19 +181,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2456358708183932680
+--- !u!114 &671373162487914616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7215671115207528016}
+  m_GameObject: {fileID: 6929000938750817091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ff6208157b2e54b9877c87139e6114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: -600
+  rotationSpeed: 100
+--- !u!1 &7215671115207528016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4277669188063803795}
+  - component: {fileID: 190679999673019925}
+  - component: {fileID: 2562495823261830489}
+  - component: {fileID: 5336397920062740080}
+  - component: {fileID: 7584754048471275523}
+  m_Layer: 0
+  m_Name: MovilSaw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4277669188063803795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7215671115207528016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.6, y: 6.6, z: 6.6}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2342443457955432004}
+  m_Father: {fileID: 122689796849016267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &190679999673019925
 CircleCollider2D:
   m_ObjectHideFlags: 0
