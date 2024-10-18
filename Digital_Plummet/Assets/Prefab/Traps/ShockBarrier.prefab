@@ -431,12 +431,20 @@ PrefabInstance:
       value: ElectricBarrier_VFX
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalPosition.z
@@ -448,15 +456,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7863287855098479082, guid: eaecb5b170d431944b7e617732520260, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

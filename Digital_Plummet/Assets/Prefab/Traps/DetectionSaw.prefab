@@ -51,6 +51,7 @@ MonoBehaviour:
   areaDetection: {fileID: 0}
   saw: {fileID: 6096343291845914586}
   sawSpeed: 20
+  vertical: 1
 --- !u!61 &5296600366217351325
 BoxCollider2D:
   m_ObjectHideFlags: 0
