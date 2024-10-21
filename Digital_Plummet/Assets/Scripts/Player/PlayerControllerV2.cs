@@ -309,6 +309,7 @@ public class PlayerControllerV2 : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
 
         rb.isKinematic = false;
+        rb.velocity = Vector3.zero;
         life = 1;
         cineMachineFollowCharacter.FindAndFollow();
     }

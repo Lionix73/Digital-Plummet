@@ -13281,6 +13281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 745999390}
   limitBarrier: {fileID: 0}
+  noCheckPoint: 0
 --- !u!1 &1938011217
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,12 @@ public class RespawnManager : MonoBehaviour
 {
     [SerializeField] private Transform respawnPoint;
     [SerializeField] private GameObject limitBarrier;
+    [SerializeField] private bool noCheckPoint = false;
 
     private GameObject playerGO;
 
     void Start(){
+
         if (playerGO == null){
             playerGO = GameObject.FindGameObjectWithTag("Player");
         }
@@ -25,7 +27,7 @@ public class RespawnManager : MonoBehaviour
             //nothing to do with the barrier...
         }
 
-        if (SceneManager.GetActiveScene().name == "Tutorial")
+        if (noCheckPoint)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
