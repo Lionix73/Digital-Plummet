@@ -15,3 +15,4 @@ MonoBehaviour:
   status: 0
   levelName: Level_1
   levelRecord: Record_Level1
+  timerLevel: 40

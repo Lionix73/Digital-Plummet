@@ -9,13 +9,16 @@ public class Timer : MonoBehaviour
     int sceneIndex;
 
     [SerializeField] float timeLeft;
+    [SerializeField] float timer;
     [SerializeField]float timeRecord;
     [SerializeField] int timerOn = 0;
+
 
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI activeLevel;
     [SerializeField] TextMeshProUGUI timerPanel;
     [SerializeField] TextMeshProUGUI recordPanel;
+    
 
     [Header("Level Variables")]
     [Tooltip("The NAME of the Next Level (Is a String). If Null it gets you back to the Menu.")]
@@ -36,13 +39,15 @@ public class Timer : MonoBehaviour
     {
         indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        timerOn = PlayerPrefs.GetInt("GameMode");
         if (sceneIndex >= 2)
         {
             timeRecord = PlayerPrefs.GetFloat(levels[sceneIndex - 2].levelRecord);
+            timeLeft = levels[sceneIndex - 2].timerLevel;
+
         }
         player = FindObjectOfType<PlayerControllerV2>();
-        timeLeft = 0;
-        timerOn = 1;
+        timer = 0;
         if (timerOn == 0 || indexTutorial == 0)
         {
             timerText.text = "";
@@ -58,14 +63,15 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.Life > 0 && timerOn == 1 && indexTutorial == 1)
+        if (player.Life > 0 && timerOn == 0 && indexTutorial == 1)
         {
-            timeLeft += Time.deltaTime;
-            UpdateTimer(timeLeft, timerText);
+            timer += Time.deltaTime;
+            //UpdateTimer(timer, timerText);
         }
-        else
+        else if (player.Life > 0 && timerOn == 1 && indexTutorial ==1)
         {
-
+            timeLeft -= Time.deltaTime;
+            UpdateTimer(timeLeft, timerText);
         }
     }
 
@@ -99,14 +105,14 @@ public class Timer : MonoBehaviour
     private void GetActiveLevel()
     {
 
-        if (timeLeft < timeRecord || timeRecord == 0)
+        if ((timeLeft < timeRecord || timeRecord == 0) && timerOn == 0)
         {
             PlayerPrefs.SetFloat(levels[sceneIndex -2].levelRecord, timeLeft);
             timerPanel.text = "NEW RECORD";
             recordPanel.text = GetTimer(timeLeft);
             //recordPanel.text = timeLeft.ToString();
         }
-        else if (timeLeft > timeRecord)
+        else if (timeLeft > timeRecord && timerOn == 0)
         {
             timerPanel.text = "Time: " + GetTimer(timeLeft);
             recordPanel.text = "Record: " + GetTimer(timeRecord);
