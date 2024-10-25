@@ -1350,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1441974452299588205, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c2caad963c76144dbec45a04900bae0, type: 3}
     - target: {fileID: 1681067761008500668, guid: ddb5c353fbc600640b6ab42d05e17c40, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
