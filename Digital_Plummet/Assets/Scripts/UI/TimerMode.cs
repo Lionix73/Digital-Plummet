@@ -6,7 +6,8 @@ using TMPro;
 public class TimerMode : MonoBehaviour
 {
     int numTimerMode;
-    [SerializeField] TextMeshProUGUI mode;
+    [SerializeField] GameObject[] mode; 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -14,11 +15,13 @@ public class TimerMode : MonoBehaviour
         numTimerMode = PlayerPrefs.GetInt("GameMode");
         if (numTimerMode == 0)
         {
-            mode.text = "Normal";
+            mode[0].SetActive(true);
+            mode[1].SetActive(false);
         }
         else
         {
-            mode.text = "Timer";
+            mode[0].SetActive(false);
+            mode[1].SetActive(true);
         }
     }
 
@@ -33,12 +36,14 @@ public class TimerMode : MonoBehaviour
          numTimerMode = PlayerPrefs.GetInt("GameMode");
         if (numTimerMode == 0 )
         {
-            mode.text = "Timer";
+            mode[0].SetActive(false);
+            mode[1].SetActive(true);
             PlayerPrefs.SetInt("GameMode", 1);
         }
         else
         {
-            mode.text = "Normal";
+            mode[0].SetActive(true);
+            mode[1].SetActive(false);
             PlayerPrefs.SetInt("GameMode", 0);
         }
 
