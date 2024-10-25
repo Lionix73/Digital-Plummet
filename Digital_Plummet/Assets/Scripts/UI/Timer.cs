@@ -73,6 +73,11 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
             UpdateTimer(timeLeft, timerText);
         }
+
+        if(timeLeft <= 0 && timerOn == 1)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
