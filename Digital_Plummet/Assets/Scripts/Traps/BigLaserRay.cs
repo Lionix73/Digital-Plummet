@@ -12,7 +12,7 @@ public class BigLaserRay : MonoBehaviour
     }
 
     public void LaserActivation(float laserDuration, float lenght){
-        transform.localScale = new Vector3(transform.localScale.x,lenght,transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x,600,transform.localScale.z);
         StartCoroutine(nameof(LaserOn), laserDuration);
     }
     

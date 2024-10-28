@@ -15,7 +15,7 @@ public class BigLaser : MonoBehaviour
     [Tooltip("Waiting time after the laser end for the next one to spawn")]
     [SerializeField] float timeBetweenLasers;
     float timeLastActivation; //no serializar
-    [Tooltip("For calculating the position of each laser, in review for using it on scales")]
+    [Tooltip("For calculating the position of each laser, in review for using it on scales (in animation)")]
     [SerializeField] float laserDistance;
     [Tooltip("The prefab for the big laser")]
     [SerializeField] BigLaserRay prefabLaser;

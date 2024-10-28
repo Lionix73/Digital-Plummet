@@ -29,4 +29,10 @@ public class FanTrap : MonoBehaviour
             playerBody.AddForce(pushForce*pushPower,ForceMode2D.Force);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.tag=="Player"){
+            playerBody = null;
+        }
+    }
 }

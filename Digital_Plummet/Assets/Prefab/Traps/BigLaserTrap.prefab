@@ -87,8 +87,7 @@ MonoBehaviour:
   - {fileID: 2635569250375156553}
   laserDuration: 3
   timeBetweenLasers: 5
-  timeLastActivation: 0
-  laserDistance: 200
+  laserDistance: 1000
   prefabLaser: {fileID: 2604380967599260727, guid: 95ae3fbc32ac6604caa70b4fe4236877, type: 3}
 --- !u!1 &5885813541339123433
 GameObject:

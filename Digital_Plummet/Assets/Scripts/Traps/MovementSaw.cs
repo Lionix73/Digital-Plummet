@@ -27,7 +27,7 @@ public class MovementSaw : MonoBehaviour
         transform.position=movementPoints[startingPoint].position;
         moveObjective=startingPoint+1;
         timeChange=timeChangeMax;
-        sawSpeed=(movementPoints[moveObjective].position-transform.position).magnitude/timeChange;
+        sawSpeed=(movementPoints[moveObjective].position-transform.position).magnitude/timeChangeMax;
     }
 
     // Update is called once per frame
@@ -37,10 +37,14 @@ public class MovementSaw : MonoBehaviour
         if (timeChange<=0){
             NextPoint();
             timeChange=timeChangeMax;
+            if (moveObjective<movementPoints.Length-1){
+            VelocityChange();
+            }
         }
 
         if(moveObjective>movementPoints.Length-1){
             moveObjective=0;
+            VelocityChange();
         }
         direction=Vector3.Normalize(movementPoints[moveObjective].position-transform.position);
         transform.Translate(direction*sawSpeed*Time.deltaTime);
@@ -49,6 +53,11 @@ public class MovementSaw : MonoBehaviour
 
     void NextPoint(){
         moveObjective++;
+        
         Debug.Log("Next");
+    }
+
+    private void VelocityChange(){
+        sawSpeed=(movementPoints[moveObjective].position-transform.position).magnitude/timeChangeMax;
     }
 }

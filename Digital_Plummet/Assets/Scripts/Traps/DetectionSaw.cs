@@ -10,6 +10,7 @@ public class DetectionSaw : MonoBehaviour
     [SerializeField] Transform saw;
     [Tooltip("The speed of the saw...")]
     [SerializeField] float sawSpeed;
+    [SerializeField] float sawSpeedBack;
     private Vector3 objective; private Vector3 origin;
     [SerializeField] bool vertical;
     private bool following;
@@ -32,20 +33,23 @@ public class DetectionSaw : MonoBehaviour
     {
         
         Vector3 direction = Vector3.Normalize((objective)-(saw.position));
+        if (!following){
+            direction = Vector3.Normalize((origin)-(saw.position));
+        }
 
         if (vertical){
-        saw.Translate(0,direction.y*sawSpeed*Time.deltaTime,0);
+            
             if (!following){
-                direction = Vector3.Normalize((origin)-(saw.position));
-                saw.Translate(0,direction.y*sawSpeed*Time.deltaTime,0);
+                saw.Translate(0,direction.y*sawSpeedBack*Time.deltaTime,0);
             }
+            else{saw.Translate(0,direction.y*sawSpeed*Time.deltaTime,0);}
         }
         else {
-            saw.Translate(direction.x*sawSpeed*Time.deltaTime,0,0);
+            
             if (!following){
-                direction = Vector3.Normalize((origin)-(saw.position));
-                saw.Translate(direction.x*sawSpeed*Time.deltaTime,0,0);
+                saw.Translate(direction.x*(sawSpeedBack)*Time.deltaTime,0,0);
             }
+            else{saw.Translate(direction.x*sawSpeed*Time.deltaTime,0,0);}
         }
     }
 
