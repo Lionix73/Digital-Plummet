@@ -81,4 +81,8 @@ public class DetectionSaw : MonoBehaviour
             objective = other.gameObject.transform.position;
         }
     }
+
+    public void ResetPosition(){
+        saw.position = origin;
+    }
 }
