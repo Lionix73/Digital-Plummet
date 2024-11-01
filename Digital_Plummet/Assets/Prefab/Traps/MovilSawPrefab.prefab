@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 2342443457955432004}
   - component: {fileID: 6699527844938486263}
   - component: {fileID: 671373162487914616}
+  - component: {fileID: 3979827681657111217}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -188,12 +189,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6929000938750817091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ff6208157b2e54b9877c87139e6114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!95 &3979827681657111217
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929000938750817091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6048295fae5deb84bb65e13857d72111, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7215671115207528016
 GameObject:
   m_ObjectHideFlags: 0

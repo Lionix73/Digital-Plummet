@@ -53213,6 +53213,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticSaw (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5542332680437333227, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542332680437333227, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
+      propertyPath: rotationSpeed
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 6364057255006484244, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.46
