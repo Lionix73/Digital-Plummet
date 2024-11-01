@@ -124,7 +124,7 @@ public class Timer : MonoBehaviour
             //timerPanel.text = "Time: " + timeLeft.ToString();
             //recordPanel.text = "Record: " + timeRecord.ToString();
         }
-        activeLevel.text = levels[sceneIndex].levelName + "COMPLETE";
+        //activeLevel.text = levels[sceneIndex].levelName + "COMPLETE";
         PlayerPrefs.Save();
     }
     private void UpdateTimer(float currentTime, TextMeshProUGUI textVisual)

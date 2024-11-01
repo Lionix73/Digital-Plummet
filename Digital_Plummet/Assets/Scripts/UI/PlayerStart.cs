@@ -21,7 +21,8 @@ public class PlayerStart : MonoBehaviour
         // cineMachineCamera.GetComponent<CinemachineVirtualCamera>().Follow = player.GetComponent<Transform>();
         if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
-            PlayerPrefsManager.Instance.SetPlayerPref(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
+            //PlayerPrefsManager.Instance.SetPlayerPref(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
+            PlayerPrefs.SetInt(levels[SceneManager.GetActiveScene().buildIndex - 2].levelName, 1);
         }
     }
 

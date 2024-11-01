@@ -20059,7 +20059,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1131159403}
-  - component: {fileID: 1131159402}
   - component: {fileID: 1131159401}
   - component: {fileID: 1131159404}
   m_Layer: 0
@@ -20114,23 +20113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16, y: 3.5}
   m_EdgeRadius: 0
---- !u!114 &1131159402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131159400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defb2e5d89e83c5438e83f66e9f3dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextLevel: MainMenu
-  levels:
-  - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
-  - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
-  animatedPanel: {fileID: 0}
 --- !u!4 &1131159403
 Transform:
   m_ObjectHideFlags: 0
@@ -20140,7 +20122,7 @@ Transform:
   m_GameObject: {fileID: 1131159400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1594.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1594.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20167,12 +20149,13 @@ MonoBehaviour:
   activeLevel: {fileID: 1137672789}
   timerPanel: {fileID: 1137672788}
   recordPanel: {fileID: 1137672787}
-  nextLevel: MainMenu
+  nextLevel: Level_3
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
   animatedPanel: {fileID: 0}
-  nextLevelPanel: {fileID: 0}
+  nextLevelPanel: {fileID: 1412428584}
 --- !u!1 &1133495244
 GameObject:
   m_ObjectHideFlags: 0
@@ -20514,6 +20497,14 @@ PrefabInstance:
     - target: {fileID: 1180775149928610989, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699716476752525940, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1131159404}
+    - target: {fileID: 2699716476752525940, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLevel
       objectReference: {fileID: 0}
     - target: {fileID: 4331580542249389880, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_Name
@@ -34377,6 +34368,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5902917975950422135, guid: da2a1922c5c5b1941be54d4a38a56894, type: 3}
   m_PrefabInstance: {fileID: 1418649734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1412428584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3008021843926949396, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414863611
 GameObject:
   m_ObjectHideFlags: 0
@@ -44486,6 +44482,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
 --- !u!4 &1879235562
 Transform:
   m_ObjectHideFlags: 0

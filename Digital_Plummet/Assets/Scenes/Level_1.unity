@@ -8416,6 +8416,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
   animatedPanel: {fileID: 0}
   nextLevelPanel: {fileID: 387581064}
 --- !u!1001 &1137672785
@@ -8426,22 +8427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 593180215}
     m_Modifications:
-    - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 995118196943543238, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1180775149928610989, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8522,10 +8507,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2201560582772928600, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a4572165586c68a4887c40992d2eeff4, type: 3}
     - target: {fileID: 2699716476752525940, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8533,26 +8514,6 @@ PrefabInstance:
     - target: {fileID: 4331580542249389880, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_Name
       value: UIPlayMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493677564702471583, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7708275051055466054, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
-      propertyPath: m_Name
-      value: ButtonNextLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20761,6 +20722,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
   - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
+  - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
 --- !u!4 &1879235562
 Transform:
   m_ObjectHideFlags: 0
