@@ -267,9 +267,14 @@ public class PlayerControllerV2 : MonoBehaviour
             }   
         }
     }
-    
 
-    public void TakeDmg(){
+    public void DeadAnimation(string kind){
+        animator.SetBool("Dead",true);
+        animator.SetTrigger(kind);
+
+        OnDeathCharacter();
+    }
+    public void TakeDmg(){ //its called as an event at the end of each animation...
         if(!inmortal){
             life -= 1;
             playerStart.SetActive(false);
@@ -284,8 +289,7 @@ public class PlayerControllerV2 : MonoBehaviour
             }
 
             Debug.Log("Busted");
-
-            OnDeathCharacter();
+            // OnDeathCharacter(); now its called on DeadAnimation();
         }
         else{
             //nothing...
@@ -305,6 +309,7 @@ public class PlayerControllerV2 : MonoBehaviour
     }
 
     public void ResetCharacter(){
+        animator.SetBool("Dead", false); spawning=true;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
 
@@ -315,7 +320,7 @@ public class PlayerControllerV2 : MonoBehaviour
     }
 
     private void OnDeathCharacter(){
-        GetComponent<SpriteRenderer>().enabled = false;
+        //GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
 
         rb.isKinematic = true;

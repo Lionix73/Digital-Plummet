@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserProjectile : MonoBehaviour
 {
+    [SerializeField] string deadKind;
     [Tooltip("How fast is going the bullet")]
     [SerializeField] float speed;
     
@@ -25,7 +26,7 @@ public class LaserProjectile : MonoBehaviour
             //PlayerController player = other.gameObject.GetComponent<PlayerController>();
             PlayerControllerV2 playerV2 = other.gameObject.GetComponent<PlayerControllerV2>();
             //player.TakeDmg();
-            playerV2.TakeDmg();
+            playerV2.DeadAnimation(deadKind);
         }
         if(other.gameObject.tag != "Projectile"){
             Destroy(gameObject);

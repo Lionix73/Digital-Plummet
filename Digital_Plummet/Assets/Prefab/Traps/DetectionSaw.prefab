@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18657427bc8c772439caff9a00d53897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadType: Saw
 --- !u!1 &7364124642651505279
 GameObject:
   m_ObjectHideFlags: 0

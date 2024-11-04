@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0594697fab32fc4da5d0125be733613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadKind: Laser
   speed: 14
   lifeTime: 4
 --- !u!1 &5745486062496476812

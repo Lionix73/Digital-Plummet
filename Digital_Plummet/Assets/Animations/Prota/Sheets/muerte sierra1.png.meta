@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: f9dbcead4f8dfa04da3cbf96e75b725f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: muerte sierra 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 578.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a954092f549b184983d439588c12415
+      internalID: 1687836721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 578.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d88ec4de20852d41bbc8dd4ca6a044d
+      internalID: 261843975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 578.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e5659cc3c978c45be027de1ca24cb5
+      internalID: 1060660842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 578.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb6d44fc2e709c4aa1f37c40609b5fd
+      internalID: 85711895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 578.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff908f243e5ced3469ba60acd1b8d253
+      internalID: -994178797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006e85ae2cacc964ea40c53ba196454f
+      internalID: -1380036866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 386.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e073c881f5e88644e85d873c1713b80b
+      internalID: -587152146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 386.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572eb43b2f2434643bb378aed3a821e3
+      internalID: 741737145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 386.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3a245006d3dba4f947faeaf7b7caf0
+      internalID: 1390559765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 386.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201d5c32e7c8f774597fac74e45140b4
+      internalID: 1472724291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224a97caac25c1e4d8ae5516cfef3d9e
+      internalID: -121122459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 194.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5308d7a0f61717d4f9c9cba83dffebad
+      internalID: 1127055830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 194.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1756980b37ded6149ae18be671535013
+      internalID: -839163068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 194.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e432135da16d14449955227c644f51f9
+      internalID: -1407863833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 194.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6cdd4cb2ef4e5438efbd4fcc0b2439
+      internalID: -1802942043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb014941ecf6ae74e9148efc04352830
+      internalID: 601232798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47d3aeb39f986c41905c1519d9cf1f7
+      internalID: 2062707625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7044d8815455d4cab2f7dc9a6911ae
+      internalID: 453586877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa3ff737dceede4794df4fea122ebd3
+      internalID: 126006069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte sierra 2_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2.25
+        width: 192.6
+        height: 192.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553acdaac25a4e1469dbbffa88ed7c7c
+      internalID: 1452278155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      muerte sierra 2_0: 1687836721
+      muerte sierra 2_1: 261843975
+      muerte sierra 2_10: -121122459
+      muerte sierra 2_11: 1127055830
+      muerte sierra 2_12: -839163068
+      muerte sierra 2_13: -1407863833
+      muerte sierra 2_14: -1802942043
+      muerte sierra 2_15: 601232798
+      muerte sierra 2_16: 2062707625
+      muerte sierra 2_17: 453586877
+      muerte sierra 2_18: 126006069
+      muerte sierra 2_19: 1452278155
+      muerte sierra 2_2: 1060660842
+      muerte sierra 2_3: 85711895
+      muerte sierra 2_4: -994178797
+      muerte sierra 2_5: -1380036866
+      muerte sierra 2_6: -587152146
+      muerte sierra 2_7: 741737145
+      muerte sierra 2_8: 1390559765
+      muerte sierra 2_9: 1472724291
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
