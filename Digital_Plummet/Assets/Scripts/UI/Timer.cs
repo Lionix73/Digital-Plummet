@@ -29,7 +29,10 @@ public class Timer : MonoBehaviour
     [SerializeField] FadesAnimation animatedPanel;
     private UIManager uiManager;
     [SerializeField] GameObject nextLevelPanel;
-    // Start is called before the first frame update
+
+    [Header("Alarm Variables")]
+    [SerializeField] private GameObject alarm;
+
     private void Awake()
     {
         nextLevelPanel = GameObject.Find("NextLevelPanel");
@@ -77,6 +80,11 @@ public class Timer : MonoBehaviour
         if(timeLeft <= 0 && timerOn == 1)
         {
             SceneManager.LoadScene(sceneIndex);
+        }
+
+        if(timeLeft <= 20 && timerOn == 1)
+        {
+            alarm.SetActive(true);
         }
     }
 
