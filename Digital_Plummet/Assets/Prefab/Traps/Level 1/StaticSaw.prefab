@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18657427bc8c772439caff9a00d53897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadType: Saw2
+  deadType: Saw3
 --- !u!114 &5542332680437333227
 MonoBehaviour:
   m_ObjectHideFlags: 0

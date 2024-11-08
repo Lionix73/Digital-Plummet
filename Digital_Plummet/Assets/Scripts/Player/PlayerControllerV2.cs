@@ -290,6 +290,7 @@ public class PlayerControllerV2 : MonoBehaviour
 
             Debug.Log("Busted");
             // OnDeathCharacter(); now its called on DeadAnimation();
+            GetComponent<SpriteRenderer>().enabled = false;
         }
         else{
             //nothing...

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18657427bc8c772439caff9a00d53897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadType: Laser
+  deadType: BigLaser
 --- !u!114 &2604380967599260727
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f6090f1058038c42a987a0221a95bba
+guid: 1536e0f482ddd954fa346b32172868d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: muerte rayo 1_0
+      name: muerte desintegracion 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 192.75
-        width: 64.2
-        height: 64.25
+        y: 386
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,62 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dff8b61f8b8928469567d770c65fbce
-      internalID: -1400260913
+      spriteID: 320a536bfd37e8545923f14c999d8502
+      internalID: -927108528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc6fa0410fad14e47abaad0208e03582
-      internalID: 1534026106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a28c056357eba7479ba83b1299e0aa6
-      internalID: -635339803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_3
+      name: muerte desintegracion 2_1
       rect:
         serializedVersion: 2
         x: 192
-        y: 192.75
-        width: 64.2
-        height: 64.25
+        y: 386
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c63adc56a7dbf4ca3e9520077756d7
-      internalID: -84034872
+      spriteID: e1929b3aec5e4634e8831a7dd142b1b7
+      internalID: 850788339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_4
+      name: muerte desintegracion 2_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192.75
-        width: 64.2
-        height: 64.25
+        x: 384
+        y: 386
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +179,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8218d1fbce1010042879cadda4608155
-      internalID: -1026080684
+      spriteID: 93dfebe5cc09a8841aadf9cf0d35e0ee
+      internalID: -1692712972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_5
+      name: muerte desintegracion 2_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 386
+        width: 192.6
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d360e47c8b8d54144982efeacbafd335
+      internalID: 593963865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte desintegracion 2_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 386
+        width: 192.6
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf1906784ddb6c4c9ba783ca2b06642
+      internalID: 649830847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte desintegracion 2_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 128.75
-        width: 64.2
-        height: 64.25
+        y: 193
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,62 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16fbb7a1148962a45a08599aebc7df71
-      internalID: -1927862533
+      spriteID: f49b2920c07ef5c4ab40a418e984bf59
+      internalID: 1467084859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 803a5c5ce7ef7f940bac73dadf9b7a35
-      internalID: 1564705579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ff00e8bac428c94caf292088261546c
-      internalID: -1563986145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_8
+      name: muerte desintegracion 2_6
       rect:
         serializedVersion: 2
         x: 192
-        y: 128.75
-        width: 64.2
-        height: 64.25
+        y: 193
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 290fffab89b41f94e8c99e938a8d4d27
-      internalID: -1651157156
+      spriteID: 3a430554b2a71af4f96a3ebcc99ba9c0
+      internalID: -686053605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_9
+      name: muerte desintegracion 2_7
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128.75
-        width: 64.2
-        height: 64.25
+        x: 384
+        y: 193
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +284,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f688bb3d3a6a9e44fb902797a420661b
-      internalID: 1088120057
+      spriteID: e5f8e03926bb4794bb2c8381e906d015
+      internalID: -1006331587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_10
+      name: muerte desintegracion 2_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 193
+        width: 192.6
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e8c06e1deb2f34ba11750130ca71a4
+      internalID: -2115767700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte desintegracion 2_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 193
+        width: 192.6
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4e20b7aafc6ba4d911ab3ed5eff488
+      internalID: 2110423401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte desintegracion 2_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 64.75
-        width: 64.2
-        height: 64.25
+        y: 0
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,62 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70145ee3669db4b4f920cee83f0bb75a
-      internalID: 1682629693
+      spriteID: caed0a6c423363546bc9271b0b5e1629
+      internalID: 1408617990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0195e3abdc0dd7f419ef04c493d56bdf
-      internalID: -123843215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_12
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64.75
-        width: 64.2
-        height: 64.25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f659ba791cfa2640bbd2e0f967f88c3
-      internalID: -432560899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muerte rayo 1_13
+      name: muerte desintegracion 2_11
       rect:
         serializedVersion: 2
         x: 192
-        y: 64.75
-        width: 64.2
-        height: 64.25
+        y: 0
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7bcfb2195d65443b92611e169f55ef
-      internalID: 619914878
+      spriteID: d9f110576d1b5d24f9cd6a91da873622
+      internalID: -533681055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_14
+      name: muerte desintegracion 2_12
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64.75
-        width: 64.2
-        height: 64.25
+        x: 384
+        y: 0
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ada051af888944f882196e881abb8a
-      internalID: 314322866
+      spriteID: a6dc9d26be7dabf4183f768ae35a943a
+      internalID: 1561275994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: muerte rayo 1_15
+      name: muerte desintegracion 2_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0.75
-        width: 64.2
-        height: 64.25
+        x: 576
+        y: 0
+        width: 192.6
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,8 +410,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b2ad55f49de12646bc853be64cd1387
-      internalID: -359349657
+      spriteID: 834aaa6fd1c9ef24abc559bd7d9c5c1a
+      internalID: -1239598168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte desintegracion 2_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192.6
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e36531d19b74549a5e07fd8776f21b
+      internalID: 1449046546
       vertices: []
       indices: 
       edges: []
@@ -469,22 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      muerte rayo 1_0: -1400260913
-      muerte rayo 1_1: 1534026106
-      muerte rayo 1_10: 1682629693
-      muerte rayo 1_11: -123843215
-      muerte rayo 1_12: -432560899
-      muerte rayo 1_13: 619914878
-      muerte rayo 1_14: 314322866
-      muerte rayo 1_15: -359349657
-      muerte rayo 1_2: -635339803
-      muerte rayo 1_3: -84034872
-      muerte rayo 1_4: -1026080684
-      muerte rayo 1_5: -1927862533
-      muerte rayo 1_6: 1564705579
-      muerte rayo 1_7: -1563986145
-      muerte rayo 1_8: -1651157156
-      muerte rayo 1_9: 1088120057
+      muerte desintegracion 2_0: -927108528
+      muerte desintegracion 2_1: 850788339
+      muerte desintegracion 2_10: 1408617990
+      muerte desintegracion 2_11: -533681055
+      muerte desintegracion 2_12: 1561275994
+      muerte desintegracion 2_13: -1239598168
+      muerte desintegracion 2_14: 1449046546
+      muerte desintegracion 2_2: -1692712972
+      muerte desintegracion 2_3: 593963865
+      muerte desintegracion 2_4: 649830847
+      muerte desintegracion 2_5: 1467084859
+      muerte desintegracion 2_6: -686053605
+      muerte desintegracion 2_7: -1006331587
+      muerte desintegracion 2_8: -2115767700
+      muerte desintegracion 2_9: 2110423401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
