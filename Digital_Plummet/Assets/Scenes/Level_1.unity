@@ -5660,6 +5660,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1981338165}
     m_Modifications:
+    - target: {fileID: 2416773040821515179, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierDistance.x
       value: 7
@@ -5668,6 +5672,10 @@ PrefabInstance:
       propertyPath: barrierDistance.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4400931612588444279, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 5135125394606424933, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -5708,10 +5716,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6481097415340443575, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 8196641592892699288, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: m_Name
       value: LaserBarrier
       objectReference: {fileID: 0}
+    - target: {fileID: 8694684268483290124, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: f4cafe5b078555248aa94f13692e8e3e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 82bcd250a166e1e4087a7d8fc77a2d3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -80,7 +80,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _Color: {r: 1, g: 0.48867923, b: 0.90624464, a: 1}
-    - _ColorB: {r: 1, g: 0.76398575, b: 0, a: 0}
-    - _ColorG: {r: 0.7938001, g: 1, b: 0, a: 0}
-    - _ColorR: {r: 0.23577036, g: 0.69803923, b: 0.1764706, a: 0}
+    - _ColorB: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorG: {r: 1, g: 0.05424162, b: 0, a: 0}
+    - _ColorR: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

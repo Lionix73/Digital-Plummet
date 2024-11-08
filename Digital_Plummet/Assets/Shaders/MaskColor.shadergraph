@@ -713,7 +713,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"f76f0e78764ffde4bb160c9e2f45bc71\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"4fe770956b9ad3242a7d4c7512fef0ca\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -989,7 +989,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"f76f0e78764ffde4bb160c9e2f45bc71\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"af8d4fa4dee44834d817db122a331840\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
