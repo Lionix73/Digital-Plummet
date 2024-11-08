@@ -9,10 +9,12 @@ using TMPro;
 using DG.Tweening.Core.Easing;
 using System;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] public float fadeTime = 1.0f;
+    GameObject backgroundObject;
     [SerializeField] GameObject menu;
     [SerializeField] GameObject buttonsMenu;
     [SerializeField] TextMeshProUGUI countdownText;
@@ -33,8 +35,9 @@ public class UIManager : MonoBehaviour
 
     void Awake(){
         //Fingind RespawnManager
+        backgroundObject = GameObject.FindGameObjectWithTag("Background");
 
-        if(respawnManager == null){
+        if (respawnManager == null){
             respawnManager = FindObjectOfType<RespawnManager>();
         }
         if (animatedPanel == null)
@@ -107,6 +110,53 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void PanelZoomIn()
+    {
+        menu.SetActive(true);
+        GameObject backgroundObject = GameObject.FindGameObjectWithTag("Background");
+        RectTransform rectTransformBG = backgroundObject.GetComponent<RectTransform>();
+        CanvasGroup canvasGroupBG = backgroundObject.GetComponent<CanvasGroup>();
+        canvasGroupBG.DOFade(1, fadeTime);
+
+
+        Debug.Log("Abrir Menu");
+        if (playMenu)
+        {
+            buttonsMenu.SetActive(true);
+        }
+
+       // canvasGroup.alpha = 0f;
+       // rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
+
+        rectTransformBG.DOScale(1.75f, fadeTime);
+       // rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic).SetUpdate(true);
+        //.DOFade(1, fadeTime).SetUpdate(true);
+
+        StartCoroutine("ItemsAnimation");
+    }
+    public void PanelZoomOut()
+    {
+        GameObject backgroundObject = GameObject.FindGameObjectWithTag("Background");
+        RectTransform rectTransformBG = backgroundObject.GetComponent<RectTransform>();
+        Debug.Log("Cerrar Menu");
+
+        StartCoroutine("ItemsDissapear");
+        rectTransformBG.DOScale(1, fadeTime);
+        StartCoroutine(DisableMenuAfterFade());
+        //StartCoroutine(DisableMenuAfterFade());
+        
+        // rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic).SetUpdate(true);
+
+    }
+    private IEnumerator DisableMenuAfterFade()
+    {
+        // Espera el tiempo de fadeTime
+        yield return new WaitForSeconds(fadeTime*2);
+        // Desactiva el menú
+        menu.SetActive(false);
+
+    }
+
     IEnumerator ItemsAnimation()
     {
         foreach(var item in items)
@@ -119,6 +169,14 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
 
+    }   
+    IEnumerator ItemsDissapear()
+    {
+        foreach (var item in items)
+        {
+            item.transform.DOScale(0f, fadeTime/2);
+            yield return new WaitForSeconds(fadeTime/8);
+        }
     }
 
     public void BackToMenu()

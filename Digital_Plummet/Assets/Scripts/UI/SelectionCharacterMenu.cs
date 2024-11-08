@@ -70,6 +70,7 @@ public class SelectionCharacterMenu : MonoBehaviour
             PlayerPrefsManager.Instance.SetPlayerPref(characterManager.characters[index].id, 1);
             characterManager.characters[index].unlocked = PlayerPrefs.GetInt(characterManager.characters[index].id);
             selectionButton.text = "Select";
+            coinImage.SetActive(false);
             name.text = characterManager.characters[index].name;
             mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
             selectedCharacter.sprite = characterManager.characters[index].unlockedSprite;
@@ -154,12 +155,14 @@ public class SelectionCharacterMenu : MonoBehaviour
             name.text = characterManager.characters[index].name;
             mainCharacter.sprite = characterManager.characters[index].unlockedSprite;
             selectedCharacter.sprite = characterManager.characters[index].unlockedSprite;
+            coinImage.SetActive(false);
         }
         else
         {
             name.text = "???";
             mainCharacter.sprite = characterManager.characters[index].lockedSprite;
             selectedCharacter.sprite = characterManager.characters[index].lockedSprite;
+            coinImage.SetActive(true);
         }
         if (characterManager.characters[previousIndex].unlocked == 1)
         {
