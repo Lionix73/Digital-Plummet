@@ -5101,6 +5101,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1414988255}
+  - {fileID: 167944974}
   m_Father: {fileID: 420826866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &693083986
@@ -8533,7 +8534,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2114282173}
-  - {fileID: 167944974}
   m_Father: {fileID: 420826866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1142434045
@@ -24894,8 +24894,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1142434044}
+    m_TransformParent: {fileID: 693083985}
     m_Modifications:
+    - target: {fileID: 930077894509347347, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1883557105195082152, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
       propertyPath: m_Name
       value: Alarm_VFX
@@ -24909,6 +24913,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6563899519173392475, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.6831207
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563899519173392475, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
@@ -24919,6 +24927,10 @@ PrefabInstance:
     - target: {fileID: 6563899519173392475, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6974510119299847408, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
