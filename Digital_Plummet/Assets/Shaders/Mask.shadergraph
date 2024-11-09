@@ -752,7 +752,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "0dc109b7e7ce4f24973a5a49b65e086a",
     "m_Id": 0,
-    "m_DisplayName": "Mascara",
+    "m_DisplayName": "BaseMap",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1083,10 +1083,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3963cc22-09db-436d-a196-b83cab58a72d"
     },
-    "m_Name": "Mascara",
+    "m_Name": "BaseMap",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Mascara",
-    "m_DefaultReferenceName": "_Mascara",
+    "m_RefNameGeneratedByDisplayName": "BaseMap",
+    "m_DefaultReferenceName": "_BaseMap",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
