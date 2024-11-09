@@ -5071,7 +5071,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20.555555
+  orthographic size: 21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5096,7 +5096,7 @@ Transform:
   m_GameObject: {fileID: 693083980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000005722046, y: -9.683121, z: -10}
+  m_LocalPosition: {x: -0.0014719963, y: -10.127621, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5185,7 +5185,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693083980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
@@ -5661,10 +5661,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1981338165}
     m_Modifications:
-    - target: {fileID: 2416773040821515179, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 3258726195373555320, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: barrierDistance.x
       value: 7
@@ -5673,10 +5669,6 @@ PrefabInstance:
       propertyPath: barrierDistance.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4400931612588444279, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 5135125394606424933, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -5717,18 +5709,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 6481097415340443575, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     - target: {fileID: 8196641592892699288, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
       propertyPath: m_Name
       value: LaserBarrier
       objectReference: {fileID: 0}
-    - target: {fileID: 8694684268483290124, guid: f266dacf855ba8a4c8c95e2b99636421, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: efbdd04c0aa58db4a82edd0659ad3216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8503,7 +8487,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 20
+    OrthographicSize: 21
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8579,7 +8563,7 @@ MonoBehaviour:
   m_BoundingVolume: {fileID: 0}
   m_BoundingShape2D: {fileID: 1025976127}
   m_ConfineScreenEdges: 1
-  m_Damping: 0
+  m_Damping: 3
 --- !u!114 &1142434049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8604,7 +8588,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142434042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
@@ -23239,7 +23223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: -2, z: -10}
-  m_XDamping: 0
+  m_XDamping: 20
   m_YDamping: 0
   m_ZDamping: 0
   m_AngularDampingMode: 0
