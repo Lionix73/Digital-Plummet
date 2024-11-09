@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PEML3
+  m_Name: ChangeColorV2
   m_Shader: {fileID: -6465566751694194690, guid: 7eba9632c41efee4db0b990f4502422f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Mascara:
-        m_Texture: {fileID: 2800000, guid: 7ee841c02edad7b4fa7083dcfec391be, type: 3}
+        m_Texture: {fileID: 2800000, guid: ff3ee74f32475f14da5b74b3a3ee974a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ea5bbcb1f3244727843107f90f3cd44e_Texture_1_Texture2D:
@@ -51,7 +51,7 @@ Material:
     - _AlphaToMask: 1
     - _Blend: 0
     - _CastShadows: 1
-    - _Cull: 0
+    - _Cull: 2
     - _DstBlend: 0
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -61,9 +61,9 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _Color1: {r: 0.86274517, g: 0.16470589, b: 0.69411767, a: 1}
-    - _Color2: {r: 0.86274517, g: 0.16470589, b: 0.69411767, a: 1}
-    - _Color3: {r: 0.86274517, g: 0.16470589, b: 0.69411767, a: 1}
+    - _Color1: {r: 1, g: 0.25882348, b: 0.29411766, a: 1}
+    - _Color2: {r: 0.32941175, g: 0.9137256, b: 0.5294118, a: 1}
+    - _Color3: {r: 0.7137255, g: 0.5568628, b: 0.43137258, a: 1}
     - _Color4: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1480059043323058781

@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 674456122914926804, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e8f2988f3d2e754c91b32015ac26aae, type: 2}
+      objectReference: {fileID: 2100000, guid: 3c5e992c07f28f649ac96499e921ffea, type: 2}
     - target: {fileID: 715447626641361648, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_Name
       value: StaticSaw Variant 2

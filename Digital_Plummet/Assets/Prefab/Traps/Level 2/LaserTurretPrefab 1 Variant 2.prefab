@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1351179637790956965, guid: 5e6de1086b6771e4d9aa72b6bae74c0b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b0efddb1e55034b4d9e4ea26ab86ac1d, type: 2}
+      objectReference: {fileID: 2100000, guid: 6675bc4e2610af1428a4ebec198bf298, type: 2}
     - target: {fileID: 2865428662896229571, guid: 5e6de1086b6771e4d9aa72b6bae74c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967003099656291603, guid: 5e6de1086b6771e4d9aa72b6bae74c0b, type: 3}
       propertyPath: m_Name
-      value: LaserTurretPrefab Variant 2
+      value: LaserTurretPrefab 1 Variant 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
