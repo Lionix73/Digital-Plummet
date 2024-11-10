@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     GameObject backgroundObject;
     [SerializeField] GameObject menu;
     [SerializeField] GameObject buttonsMenu;
+    [SerializeField] GameObject bGTimer;
     [SerializeField] TextMeshProUGUI countdownText;
     [SerializeField] bool playMenu;
     private bool gameIsPaused;
@@ -238,6 +239,7 @@ public class UIManager : MonoBehaviour
     // Funci�n para la cuenta regresiva
     IEnumerator StartCountdown()
     {
+        bGTimer.SetActive(true);
         int countdown = 3;  // Tiempo en segundos
         buttonsMenu.SetActive(false);
 
@@ -252,6 +254,7 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);  // Mostrar "GO!" por un segundo
         UnpauseGame();  // Reanudar el juego
         countdownText.text = "";
+        bGTimer.SetActive(false);
         
     }
 }
