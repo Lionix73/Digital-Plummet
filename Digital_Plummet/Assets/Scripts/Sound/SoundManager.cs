@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     private AudioListener audioListener;
+    [SerializeField] AudioMixer masterMixer;
     private bool muteAudio;
     public static SoundManager Instance;
     OptionsBehav optionsBehav;
