@@ -77,10 +77,11 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private bool tutorialBlock;
 
-
+    [Header("Animations")]
     //Animation
     private Animator animator;
     private bool spawning;
+    [SerializeField] private int skinOn;
 
     public int Life
     {
@@ -138,6 +139,8 @@ public class PlayerControllerV2 : MonoBehaviour
         SpeedControl();
 
         SilouetteTrail.me.Silouette_Trail();
+
+        animator.SetInteger("Skin", skinOn);
     }
 
     private void FixedUpdate(){

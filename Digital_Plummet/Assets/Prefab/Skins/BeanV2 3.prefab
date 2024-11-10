@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeanV2 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8328763787040327368, guid: 91a5e43fc5725344fa4d5ec97bb72e83, type: 3}
+      propertyPath: skinOn
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
