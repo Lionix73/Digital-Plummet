@@ -5456,6 +5456,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2743138035775551136, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4331580542249389880, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_Name
       value: UIPlayMenu
@@ -16385,7 +16389,7 @@ AudioSource:
   m_GameObject: {fileID: 1657968054}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: fb2842bf30d56254b95b6458f4fc781a, type: 2}
   m_audioClip: {fileID: 8300000, guid: c04bb2a9edf9b3e449d44037e306138f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.658

@@ -54,6 +54,7 @@ public class Timer : MonoBehaviour
         audioSource.clip = countdownClip;
 
         indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
+        Debug.Log("Index tutorial: " + indexTutorial);
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         timerOn = PlayerPrefs.GetInt("GameMode");
         if (sceneIndex >= 2)
@@ -66,6 +67,7 @@ public class Timer : MonoBehaviour
         timer = 0;
         if (timerOn == 0 || indexTutorial == 0)
         {
+            Debug.Log("Timer desactivado");
             timerText.text = "";
         }
 

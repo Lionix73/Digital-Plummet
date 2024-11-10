@@ -25,35 +25,37 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        optionsBehav = FindObjectOfType<OptionsBehav>();
-        audioListener = FindObjectOfType<AudioListener>();
-        UpdateAudioListener();
+        //audioListener = FindObjectOfType<AudioListener>();
+        UpdateAudioMixer();
     }
 
     // Método que se ejecuta cada vez que una nueva escena es cargada
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Buscar un nuevo AudioListener y actualizar su estado de silencio
-        audioListener = FindObjectOfType<AudioListener>();
-        UpdateAudioListener();
+        //audioListener = FindObjectOfType<AudioListener>();
+        UpdateAudioMixer();
     }
 
     public void ToggleMute()
     {
         muteAudio = !muteAudio;
-        UpdateAudioListener();
+        UpdateAudioMixer();
     }
 
-    private void UpdateAudioListener()
+    private void UpdateAudioMixer()
     {
         if (muteAudio)
         {
-            audioListener.enabled = !muteAudio;
+            Debug.Log("Sound: Off");
+            masterMixer.SetFloat("MasterVolume", -80);
+            //audioListener.enabled = !muteAudio;
         }
         else
         {
-            audioListener.enabled = !muteAudio;
+            Debug.Log("Sound: On");
+            masterMixer.SetFloat("MasterVolume", 0);
+            //audioListener.enabled = !muteAudio;
         }
     }
 
