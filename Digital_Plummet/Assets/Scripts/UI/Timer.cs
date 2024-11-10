@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -33,6 +34,9 @@ public class Timer : MonoBehaviour
     [Header("Alarm Variables")]
     [SerializeField] private GameObject alarm;
 
+    private AudioSource audioSource;
+    private AudioClip countdownClip;
+
     private void Awake()
     {
         nextLevelPanel = GameObject.Find("NextLevelPanel");
@@ -40,6 +44,15 @@ public class Timer : MonoBehaviour
     }
     void Start()
     {
+        gameObject.AddComponent<AudioSource>();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.priority = 10;
+
+        countdownClip = Resources.Load<AudioClip>("alarma");
+        audioSource.clip = countdownClip;
+
         indexTutorial = PlayerPrefs.GetInt("IndexTutorial");
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         timerOn = PlayerPrefs.GetInt("GameMode");
@@ -82,7 +95,12 @@ public class Timer : MonoBehaviour
             SceneManager.LoadScene(sceneIndex);
         }
 
-        if(timeLeft <= 20 && timerOn == 1)
+        if (timeLeft <= 10f && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+
+        if (timeLeft <= 10 && timerOn == 1)
         {
             alarm.SetActive(true);
         }
