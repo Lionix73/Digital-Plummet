@@ -18711,11 +18711,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4966589, y: -1568.662}
-      - {x: 1.5438232, y: 13.765111}
-      - {x: -1.1914825, y: 13.530209}
-      - {x: -1.1208763, y: -1585.6914}
-      - {x: 1.4961567, y: -1585.5138}
+    - - {x: 0.9970354, y: 13.260385}
+      - {x: -0.56057477, y: 13.151663}
+      - {x: -0.51831985, y: -1565.5059}
+      - {x: 0.8936002, y: -1565.4286}
   m_UseDelaunayMesh: 0
 --- !u!4 &1025976128
 Transform:
@@ -21544,7 +21543,7 @@ MonoBehaviour:
   m_BoundingVolume: {fileID: 0}
   m_BoundingShape2D: {fileID: 1025976127}
   m_ConfineScreenEdges: 0
-  m_Damping: 3
+  m_Damping: 2
 --- !u!114 &1142434048
 MonoBehaviour:
   m_ObjectHideFlags: 0
