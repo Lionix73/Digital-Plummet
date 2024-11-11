@@ -25,6 +25,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Mascara:
         m_Texture: {fileID: 2800000, guid: af8d4fa4dee44834d817db122a331840, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -64,9 +68,9 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _Color1: {r: 0, g: 0.59066844, b: 1, a: 1}
-    - _Color2: {r: 0.9137255, g: 0.32941175, b: 0.8662209, a: 1}
-    - _Color3: {r: 0, g: 1, b: 0.1737299, a: 1}
+    - _Color1: {r: 1, g: 0, b: 0, a: 1}
+    - _Color2: {r: 0.25654447, g: 1, b: 0, a: 1}
+    - _Color3: {r: 0.90943396, g: 0.64908624, b: 0, a: 1}
     - _Color4: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1480059043323058781

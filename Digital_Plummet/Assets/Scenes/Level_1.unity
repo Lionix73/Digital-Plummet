@@ -3270,11 +3270,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 674456122914926804, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 674456122914926804, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 674456122914926804, guid: 8bfc8bdbf6dcb2a4c88b6460ac0e35c2, type: 3}
       propertyPath: m_DrawMode
@@ -28275,7 +28275,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
+  - {fileID: 2100000, guid: 3b7f667ed92f9e24fad130984dbd160a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28638,7 +28638,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f7b00f6d12caed24ea8bdf842648a408, type: 2}
+  - {fileID: 2100000, guid: 3b7f667ed92f9e24fad130984dbd160a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
