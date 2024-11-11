@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float timer;
     [SerializeField]float timeRecord;
     [SerializeField] int timerOn = 0;
-
+    [SerializeField] UIManager pausePanel;
 
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI activeLevel;
@@ -57,6 +57,7 @@ public class Timer : MonoBehaviour
         Debug.Log("Index tutorial: " + indexTutorial);
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         timerOn = PlayerPrefs.GetInt("GameMode");
+        Debug.Log("Timer: " + timerOn);
         if (sceneIndex >= 2)
         {
             timeRecord = PlayerPrefs.GetFloat(levels[sceneIndex - 2].levelRecord);
@@ -84,7 +85,7 @@ public class Timer : MonoBehaviour
         if (player.Life > 0 && timerOn == 0 && indexTutorial == 1)
         {
             timer += Time.deltaTime;
-            //UpdateTimer(timer, timerText);
+            UpdateTimer(timer, timerText);
         }
         else if (player.Life > 0 && timerOn == 1 && indexTutorial ==1)
         {
@@ -97,7 +98,7 @@ public class Timer : MonoBehaviour
             SceneManager.LoadScene(sceneIndex);
         }
 
-        if (timeLeft <= 10f && !audioSource.isPlaying)
+        if (timeLeft <= 10f && !audioSource.isPlaying && timerOn == 1)
         {
             audioSource.Play();
         }
@@ -110,7 +111,6 @@ public class Timer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        timerOn = 0;
         if (animatedPanel == null)
         {
             animatedPanel = FindObjectOfType<FadesAnimation>();
@@ -120,6 +120,7 @@ public class Timer : MonoBehaviour
         {
             if (indexTutorial == 1)
             {
+                pausePanel.PauseGame();
                 timerText.text = "";
                 UpdateTimer(timeLeft, timerPanel);
                 uiManager.PanelFadeIn();
@@ -138,19 +139,25 @@ public class Timer : MonoBehaviour
     private void GetActiveLevel()
     {
 
-        if ((timeLeft < timeRecord || timeRecord == 0) && timerOn == 0)
+        if ((timer < timeRecord || timeRecord == 0) && timerOn == 0)
         {
-            PlayerPrefs.SetFloat(levels[sceneIndex -2].levelRecord, timeLeft);
+            PlayerPrefs.SetFloat(levels[sceneIndex -2].levelRecord, timer);
             timerPanel.text = "NEW RECORD";
-            recordPanel.text = GetTimer(timeLeft);
+            recordPanel.text = GetTimer(timer);
             //recordPanel.text = timeLeft.ToString();
         }
-        else if (timeLeft > timeRecord && timerOn == 0)
+        else if (timer > timeRecord && timerOn == 0)
         {
-            timerPanel.text = "Time: " + GetTimer(timeLeft);
+            timerPanel.text = "Time: " + GetTimer(timer);
             recordPanel.text = "Record: " + GetTimer(timeRecord);
             //timerPanel.text = "Time: " + timeLeft.ToString();
             //recordPanel.text = "Record: " + timeRecord.ToString();
+        }
+        else if (timerOn == 1)
+        {
+            audioSource.mute = true;
+            timerPanel.text = "";
+            recordPanel.text = "";
         }
         //activeLevel.text = levels[sceneIndex].levelName + "COMPLETE";
         PlayerPrefs.Save();

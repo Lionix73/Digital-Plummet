@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42826d394dc7440bb3b9c9d493322a, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: 
-  status: 0
+  status: 1
   levelName: Level_2
   levelRecord: Record_Level2
   timerLevel: 60

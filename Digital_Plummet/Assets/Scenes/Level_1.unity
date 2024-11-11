@@ -8732,6 +8732,7 @@ MonoBehaviour:
   timer: 0
   timeRecord: 0
   timerOn: 0
+  pausePanel: {fileID: 1137672787}
   timerText: {fileID: 690596949}
   activeLevel: {fileID: 1095272499}
   timerPanel: {fileID: 902639826}
@@ -8930,6 +8931,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1180775149928610989, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
   m_PrefabInstance: {fileID: 1137672785}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137672787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5877432132629599861, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a5c3a6b07921499aa68f5b8fa3cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142434042
 GameObject:
   m_ObjectHideFlags: 0
@@ -26077,7 +26089,7 @@ Transform:
   m_GameObject: {fileID: 1879235560}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -25.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
