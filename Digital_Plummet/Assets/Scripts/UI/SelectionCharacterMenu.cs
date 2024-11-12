@@ -131,7 +131,7 @@ public class SelectionCharacterMenu : MonoBehaviour
     }
     public void ArrayOfSkins()
     {
-        for (int i = 1; i < characterManager.characters.Count - 1; i++)
+        for (int i = 1; i < characterManager.characters.Count; i++)
         {
             characterManager.characters[i].unlocked = PlayerPrefs.GetInt(characterManager.characters[i].id);
         }
