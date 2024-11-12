@@ -50,10 +50,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _LaserEdgeSmoothness: 5
-    - _LaserScale: 2
-    - _LaserThickness: 3
+    - _LaserEdgeSmoothness: 10
+    - _LaserScale: 1
+    - _LaserThickness: 1
     m_Colors:
-    - _Color: {r: 3.6377356, g: 0.021149626, b: 0, a: 0}
-    - _LaserSpeed: {r: 0, g: 1, b: 0, a: 0}
+    - _Color: {r: 1.7207953, g: 0.010004624, b: 0, a: 0}
+    - _LaserSpeed: {r: 0, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
