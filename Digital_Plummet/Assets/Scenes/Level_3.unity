@@ -29282,7 +29282,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1131159403}
-  - component: {fileID: 1131159402}
   - component: {fileID: 1131159401}
   - component: {fileID: 1131159404}
   m_Layer: 0
@@ -29337,24 +29336,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16, y: 3.5}
   m_EdgeRadius: 0
---- !u!114 &1131159402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131159400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defb2e5d89e83c5438e83f66e9f3dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextLevel: MainMenu
-  levels:
-  - {fileID: 11400000, guid: 3a928ed26cd63bd4583e41a6099b7e98, type: 2}
-  - {fileID: 11400000, guid: ed0d111409d0a6548928830ed66bd8a5, type: 2}
-  - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
-  animatedPanel: {fileID: 0}
 --- !u!4 &1131159403
 Transform:
   m_ObjectHideFlags: 0
@@ -29633,6 +29614,14 @@ PrefabInstance:
     - target: {fileID: 2148293540283944928, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699716476752525940, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1131159404}
+    - target: {fileID: 2699716476752525940, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2743138035775551136, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
       propertyPath: m_fontSize

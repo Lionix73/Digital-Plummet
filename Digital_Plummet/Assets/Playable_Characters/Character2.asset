@@ -18,4 +18,4 @@ MonoBehaviour:
   name: Main2
   id: Main02
   cost: 1
-  unlocked: 1
+  unlocked: 0
