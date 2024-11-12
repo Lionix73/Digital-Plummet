@@ -274,9 +274,25 @@ public class PlayerControllerV2 : MonoBehaviour
     public void DeadAnimation(string kind){
         animator.SetBool("Dead",true);
         animator.SetTrigger(kind);
-
+        DeathSound();
         OnDeathCharacter();
     }
+
+    public void DeathSound()
+    {
+        AudioSource audioSource;
+        AudioClip countdownClip;
+
+        audioSource =  gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.priority = 10;
+
+        countdownClip = Resources.Load<AudioClip>("death");
+        audioSource.clip = countdownClip;
+
+        audioSource.Play();
+    }
+
     public void TakeDmg(){ //its called as an event at the end of each animation...
         if(!inmortal){
             life -= 1;
