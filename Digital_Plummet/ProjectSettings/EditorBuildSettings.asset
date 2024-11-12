@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: edabdc3e7e7914f42b4356da4ee7b9f3
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: b79eca2bb13fea44cb4f2fb3ff3df787
   - enabled: 0
     path: Assets/Scenes/TesteoCambioDeEscena.unity
     guid: adf81a14d79557248b05855c76a8e4a9
