@@ -1265,11 +1265,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1703231560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &167944973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1883557105195082152, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
-  m_PrefabInstance: {fileID: 8449032871768750630}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &167944974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6563899519173392475, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
@@ -8752,7 +8747,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
   animatedPanel: {fileID: 0}
   nextLevelPanel: {fileID: 387581064}
-  alarm: {fileID: 167944973}
+  alarm: {fileID: 1137672788}
 --- !u!1001 &1137672785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8950,6 +8945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2a5c3a6b07921499aa68f5b8fa3cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1137672788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997792374649202342, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1142434042
 GameObject:
   m_ObjectHideFlags: 0

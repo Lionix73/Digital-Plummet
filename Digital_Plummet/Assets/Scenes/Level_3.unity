@@ -29453,7 +29453,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
   animatedPanel: {fileID: 0}
   nextLevelPanel: {fileID: 0}
-  alarm: {fileID: 365272814}
+  alarm: {fileID: 1481646296}
 --- !u!1 &1135194991
 GameObject:
   m_ObjectHideFlags: 0
@@ -60138,6 +60138,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1481646296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997792374649202342, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482108841
 GameObject:
   m_ObjectHideFlags: 0

@@ -20862,7 +20862,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef6a8e46246123542bc087a4fe0ca9ca, type: 2}
   animatedPanel: {fileID: 0}
   nextLevelPanel: {fileID: 1412428584}
-  alarm: {fileID: 2026798785}
+  alarm: {fileID: 1348194063}
 --- !u!1 &1133495244
 GameObject:
   m_ObjectHideFlags: 0
@@ -26001,6 +26001,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd3731ac25df3f4098b3f4ed7b46fc5, type: 3}
+--- !u!1 &1348194063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997792374649202342, guid: cb6ecfa81df4a5d4083b5d06a103f297, type: 3}
+  m_PrefabInstance: {fileID: 1137672785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1349899148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55491,11 +55496,6 @@ PrefabInstance:
 --- !u!4 &2026798784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6563899519173392475, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
-  m_PrefabInstance: {fileID: 2026798783}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2026798785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1883557105195082152, guid: f1413146ed22b0f4b89ccdbb9b1a5c71, type: 3}
   m_PrefabInstance: {fileID: 2026798783}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2029369461 stripped
