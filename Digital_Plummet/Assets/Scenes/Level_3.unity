@@ -26450,7 +26450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794867239710515371, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -125.6
+      value: -131.6
       objectReference: {fileID: 0}
     - target: {fileID: 5396064855326465414, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_LocalScale.x
@@ -59356,7 +59356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4794867239710515371, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.24
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: 5396064855326465414, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_LocalScale.x
@@ -63002,19 +63002,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Size.x
-      value: 10.668036
+      value: 9.169397
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Size.y
-      value: 13.950535
+      value: 11.239231
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Offset.x
-      value: 4.960074
+      value: 5.7093935
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Offset.y
-      value: 5.389967
+      value: 4.034315
       objectReference: {fileID: 0}
     - target: {fileID: 8780617659745333339, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: sawSpeed
@@ -63026,7 +63026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8780617659745333339, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: sawSpeedBack
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64144,19 +64144,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Size.x
-      value: 10.469633
+      value: 8.721221
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Size.y
-      value: 9.32114
+      value: 7.111912
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Offset.x
-      value: 5.0592756
+      value: 5.9334817
       objectReference: {fileID: 0}
     - target: {fileID: 6886294433286004716, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: m_Offset.y
-      value: 3.0752697
+      value: 1.9706554
       objectReference: {fileID: 0}
     - target: {fileID: 8780617659745333339, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: sawSpeed
@@ -64168,7 +64168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8780617659745333339, guid: d4d2fd22fa9eeee4bafbf91e30334347, type: 3}
       propertyPath: sawSpeedBack
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
