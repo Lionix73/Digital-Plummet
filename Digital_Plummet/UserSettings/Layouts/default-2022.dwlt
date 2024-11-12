@@ -282,7 +282,7 @@ MonoBehaviour:
   - {fileID: 21}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -331,7 +331,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 957
     y: 533
-    width: 496
+    width: 495
     height: 506
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab/Traps/Level 1
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -362,16 +362,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 54
   m_LastFolders:
-  - Assets/Prefab/Traps/Level 1
+  - Assets/Scenes
   m_LastFoldersGridSize: 54
   m_LastProjectPath: C:\Users\User\Documents\000 UPB\6to sem\Taller 6\Digital-Plummet\Digital_Plummet
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c9d0000
-    m_LastClickedID: 40220
-    m_ExpandedIDs: 00000000487c0000
+    m_SelectedIDs: 88900000
+    m_LastClickedID: 37000
+    m_ExpandedIDs: 00000000a08f000080900000be900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -399,7 +399,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000487c0000
+    m_ExpandedIDs: 00000000a08f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,9 +424,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 04b10000
-    m_LastClickedInstanceID: 45316
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: a4900000
+    m_LastClickedInstanceID: 37028
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2137,7 +2137,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 746.78986, y: 1112.8417, z: -1.0210779}
     speed: 2
-    m_Value: {x: 737.10913, y: 1111.7899, z: -1.0739038}
+    m_Value: {x: 746.78986, y: 1112.8417, z: -1.0210779}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2189,7 +2189,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 112.107635
     speed: 2
-    m_Value: 117.3902
+    m_Value: 112.107635
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3837,7 +3837,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5c6affff166bffff8e6effff6692ffff90b4ffff92c7ffff56cdffffaacfffffc2f7ffffccfaffff10840000
+      m_ExpandedIDs: ba41ffff7642ffffee45ffffc669fffff08bfffff29effffb6a4ffff0aa7ffffb0c2ffffccfaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3906,7 +3906,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Playable_Characters
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -3914,16 +3914,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Playable_Characters
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\User\Documents\000 UPB\6to sem\Taller 6\Digital-Plummet\Digital_Plummet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e07e0000
-    m_LastClickedID: 32480
-    m_ExpandedIDs: 00000000487c0000
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 7c900000
+    m_LastClickedID: 36988
+    m_ExpandedIDs: 00000000a08f0000809000008a900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3951,7 +3951,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000487c0000
+    m_ExpandedIDs: 00000000a08f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
