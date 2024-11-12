@@ -15,4 +15,4 @@ MonoBehaviour:
   status: 1
   levelName: Level_2
   levelRecord: Record_Level2
-  timerLevel: 60
+  timerLevel: 200

@@ -2041,19 +2041,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 5.4152565
+      value: 3.524584
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -0.7131124
+      value: -0.7312095
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 5.414965
+      value: 3.5242927
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: 0.7167785
+      value: 0.75297374
       objectReference: {fileID: 0}
     - target: {fileID: 5274617443604782037, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_LocalScale.x
@@ -9018,7 +9018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
@@ -10646,7 +10646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
@@ -11519,7 +11519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
@@ -19366,7 +19366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
@@ -19633,7 +19633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
@@ -43974,19 +43974,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 5.4152565
+      value: 4.616403
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -0.7131124
+      value: -0.71311235
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 5.414965
+      value: 4.6436553
       objectReference: {fileID: 0}
     - target: {fileID: 4261348748677644835, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: 0.7167785
+      value: 0.889149
       objectReference: {fileID: 0}
     - target: {fileID: 5274617443604782037, guid: d4c3661719bf35f438c56b8a516ce78d, type: 3}
       propertyPath: m_LocalScale.x
@@ -50671,7 +50671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: lifeTimeLaserBars
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1087811606628996802, guid: 41278b92cc1f817429428fe1c872ce06, type: 3}
       propertyPath: TimeNextActivationMax
