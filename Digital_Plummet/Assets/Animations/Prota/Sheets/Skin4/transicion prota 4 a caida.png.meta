@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8fbfe808c287974fb588b5c9c719094
+guid: 1417b28441d6f3241963e0e9c712dfaf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,20 +94,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 512
+    buildTarget: iPhone
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 50
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,55 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SierraOP2-SheetMASCARA_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 90
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee701f69dde0a7a46b6dc21153cc19c1
-      internalID: 1233181072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SierraOP2-SheetMASCARA_1
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 90
-        width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d42229a30435d054db6bfbbcf69b3d2c
-      internalID: -165365657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SierraOP2-SheetMASCARA_2
+      name: transicion prota 4 a caida_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 90
-        height: 90
+        width: 192.6
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0487d67a617b2f64982452e7f154b419
-      internalID: -2145300108
+      spriteID: f324b2b71e80a134d98a3c7943bf15b7
+      internalID: -1029162241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SierraOP2-SheetMASCARA_3
+      name: transicion prota 4 a caida_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 192
         y: 0
-        width: 90
-        height: 90
+        width: 192.6
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +158,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f75efeaf8085cb46a92bed43eeeab05
-      internalID: 1152686089
+      spriteID: f439a86c856567a41ac75b2af45001e1
+      internalID: 486305641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transicion prota 4 a caida_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4d0c7ee014dba43befc356e68fcbc3
+      internalID: 2017712573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transicion prota 4 a caida_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052b6ecf29b0d9f4c94d0a202008afd7
+      internalID: 147715916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transicion prota 4 a caida_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192.6
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2acb8ff9c0ae134b80596afb3c378ce
+      internalID: 1144462857
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SierraOP2-SheetMASCARA_0: 1233181072
-      SierraOP2-SheetMASCARA_1: -165365657
-      SierraOP2-SheetMASCARA_2: -2145300108
-      SierraOP2-SheetMASCARA_3: 1152686089
+      transicion prota 4 a caida_0: -1029162241
+      transicion prota 4 a caida_1: 486305641
+      transicion prota 4 a caida_2: 2017712573
+      transicion prota 4 a caida_3: 147715916
+      transicion prota 4 a caida_4: 1144462857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
