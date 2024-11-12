@@ -118,13 +118,17 @@ public class Timer : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            if (indexTutorial == 1)
+            if (indexTutorial == 1 && sceneIndex < 4)
             {
                 pausePanel.PauseGame();
                 timerText.text = "";
                 UpdateTimer(timeLeft, timerPanel);
                 uiManager.PanelFadeIn();
                 GetActiveLevel();
+            }
+            if (sceneIndex == 4)
+            {
+                animatedPanel.LoadIntScene(5);
             }
             else
             {
