@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 8720130740895262118}
   - component: {fileID: 3502764798784580317}
   - component: {fileID: 8328763787040327368}
-  - component: {fileID: 1533198208081393025}
   - component: {fileID: 8795748198470608338}
+  - component: {fileID: 1533198208081393025}
   m_Layer: 0
   m_Name: BeanV2
   m_TagString: Player
@@ -208,6 +208,23 @@ MonoBehaviour:
   playerStart: {fileID: 0}
   fallingDownVFX: {fileID: 7059787839446086353}
   fallingUpVFX: {fileID: 6140705038207421439}
+  skinOn: 0
+--- !u!114 &8795748198470608338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070948757191027559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8818633d752643b4096bb04c109f74cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  silouettePrefab: {fileID: 6487761215950762369, guid: 84ff83e7b50279242917055a14893ed1, type: 3}
+  pool: []
+  speed: 10
+  color: {r: 0.69717157, g: 1, b: 0.2999999, a: 0}
 --- !u!95 &1533198208081393025
 Animator:
   serializedVersion: 5
@@ -229,22 +246,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8795748198470608338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8070948757191027559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8818633d752643b4096bb04c109f74cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  silouettePrefab: {fileID: 6487761215950762369, guid: 84ff83e7b50279242917055a14893ed1, type: 3}
-  pool: []
-  speed: 10
-  color: {r: 0.69717157, g: 1, b: 0.2999999, a: 0}
 --- !u!1001 &4991070086299019684
 PrefabInstance:
   m_ObjectHideFlags: 0
